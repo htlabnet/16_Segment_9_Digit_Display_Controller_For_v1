@@ -1,9 +1,15 @@
-/* 
- * File:   segFonts.h
- * Author: thotgamma
- *
- * Created on 2016/07/21, 10:05
- */
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
+//
+//	segFonts.h
+//	16 segment 9 digit display Controller フォントデータ
+//
+//	Created by thotgamma. (http://lab.thotgamma.com)
+//
+//	16Segment9DigitDisplay公式:
+//		https://htlab.net/products/electronics/16-segment-9-digit-display-board-1/
+//		https://htlab.net/products/electronics/16-segment-9-digit-display-controller-1/
+//
+//=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=
 
 #ifndef SEGFONTS_H
 #define	SEGFONTS_H

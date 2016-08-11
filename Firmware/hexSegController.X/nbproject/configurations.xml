@@ -4,9 +4,6 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
-      <itemPath>segFonts.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/system.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usart.h</itemPath>
     </logicalFolder>
     <logicalFolder name="LinkerScript"
                    displayName="Linker Files"
@@ -15,35 +12,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
-      <itemPath>main.c</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/system.c</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb_events.c</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usart.c</itemPath>
-    </logicalFolder>
-    <logicalFolder name="usb" displayName="usb" projectFiles="true">
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device_local.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device.c</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_config.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_common.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_ch9.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_descriptors.c</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device_cdc.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_hal_pic18.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_hal.h</itemPath>
-      <itemPath>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device_cdc.c</itemPath>
     </logicalFolder>
     <logicalFolder name="ExternalFiles"
                    displayName="Important Files"
                    projectFiles="false">
       <itemPath>Makefile</itemPath>
     </logicalFolder>
+    <itemPath>main.c</itemPath>
+    <itemPath>segFonts.h</itemPath>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>/home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X</Elem>
-    <Elem>/home/thotgamma/microchip/mla/v2016_04_27/apps/usb/device/cdc_serial_emulator/firmware/pic18f46j50_pim.x</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">
