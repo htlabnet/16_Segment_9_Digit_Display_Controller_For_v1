@@ -5,9 +5,9 @@ Linker command line:
 -W-3 --edf=/opt/microchip/xc8/v1.38/dat/en_msgs.txt -cs \
   -h+dist/default/production/hexSegController.X.production.sym \
   --cmf=dist/default/production/hexSegController.X.production.cmf -z \
-  -Q18F4553 -o/tmp/xcXkWPhes \
+  -Q18F4553 -o/tmp/xcXL2czYT \
   -Mdist/default/production/hexSegController.X.production.map -E1 -ver=XC8 \
-  -ASTACK=0200h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
+  -ASTACK=0177h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
   -AABS1=00h-07FFh -ABIGRAM=01h-07FFh -ARAM=060h-0FFh,0100h-01FFhx7 \
   -ABANK0=060h-0FFh -ABANK1=0100h-01FFh -ABANK2=0200h-02FFh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  /tmp/xcX6RqCL3.obj \
+  /tmp/xcXvbs8IR.obj \
   dist/default/production/hexSegController.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-/tmp/xcX6RqCL3.obj
+/tmp/xcXvbs8IR.obj
                 end_init                             16       16        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -43,19 +43,19 @@ Call graph: (short form)
 dist/default/production/hexSegController.X.production.obj
                 intcode                               8        8        E        4       0
                 temp                                 40       40        1        1       1
-                text4                               378      378       70        4       0
-                text3                               472      472       28        4       0
-                text2                               43A      43A       38        4       0
-                intcode_body                        176      176      102        4       0
+                text4                               37C      37C       70        4       0
+                text3                               476      476       28        4       0
+                text2                               43E      43E       38        4       0
+                intcode_body                        27A      27A      102        4       0
                 text0                                1A       1A      15C        4       0
                 cstackCOMRAM                         25       25       19        1       1
                 cstackBANK0                          60       60       13       60       1
-                dataBANK1                           100      100      100      100       1
+                dataBIGRAM                           73       73      104       73       1
                 dataCOMRAM                            1        1       24        1       1
                 bssCOMRAM                            3E       3E        2        1       1
-                cinit                               3E8      3E8       52        4       0
-                idataBANK1                          278      278      100        4       0
-                idataCOMRAM                         49A      49A       24        4       0
+                cinit                               3EC      3EC       52        4       0
+                idataBIGRAM                         176      176      104        4       0
+                idataCOMRAM                         49E      49E       24        4       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -64,14 +64,14 @@ TOTAL           Name                               Link     Load   Length     Sp
                 end_init                             16       16        4         0
                 intcode                               8        8        E         0
                 reset_vec                             0        0        4         0
-                text4                               378      378       70         0
-                text3                               472      472       28         0
-                text2                               43A      43A       38         0
-                intcode_body                        176      176      102         0
+                text4                               37C      37C       70         0
+                text3                               476      476       28         0
+                text2                               43E      43E       38         0
+                intcode_body                        27A      27A      102         0
                 text0                                1A       1A      15C         0
-                cinit                               3E8      3E8       52         0
-                idataBANK1                          278      278      100         0
-                idataCOMRAM                         49A      49A       24         0
+                cinit                               3EC      3EC       52         0
+                idataBIGRAM                         176      176      104         0
+                idataCOMRAM                         49E      49E       24         0
 
         CLASS   CONST          
 
@@ -88,6 +88,7 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   ABS1           
 
         CLASS   BIGRAM         
+                dataBIGRAM                           73       73      104         1
 
         CLASS   RAM            
 
@@ -95,7 +96,6 @@ TOTAL           Name                               Link     Load   Length     Sp
                 cstackBANK0                          60       60       13         1
 
         CLASS   BANK1          
-                dataBANK1                           100      100      100         1
 
         CLASS   BANK2          
 
@@ -127,9 +127,9 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 dataCOMRAM                     000001  000040  000041         1       1  COMRAM  
-                intcode                        000008  0004B6  0004BE         4       0  CODE    
+                intcode                        000008  0004BA  0004C2         4       0  CODE    
                 cstackBANK0                    000060  000013  000073        60       1  BANK0   
-                dataBANK1                      000100  000100  000200       100       1  BANK1   
+                dataBIGRAM                     000073  000104  000177        73       1  BIGRAM  
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -137,7 +137,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 UNUSED ADDRESS RANGES
 
         Name                Unused          Largest block    Delta
-        BANK0            000073-0000FF               8D
+        BANK1            000177-0001FF               89
         BANK2            000200-0002FF              100
         BANK3            000300-0003FF              100
         BANK4            000400-0004FF              100
@@ -145,20 +145,18 @@ UNUSED ADDRESS RANGES
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
         BIGRAM           000041-00005F               1F
-                         000073-0000FF               8D
-                         000200-0007FF              600
+                         000177-0007FF              689
         CODE             000004-000007                4
-                         0004BE-007FFF             7B42
+                         0004C2-007FFF             7B3E
         COMRAM           000041-00005F               1F
         CONST            000004-000007                4
-                         0004BE-007FFF             7B42
+                         0004C2-007FFF             7B3E
         EEDATA           F00000-F000FF              100
         MEDIUMCONST      000800-007FFF             7800
-        RAM              000073-0000FF               8D
-                         000200-0007FF              100
+        RAM              000177-0007FF              100
         SFR              000F60-000FFF               A0
         SMALLCONST       000800-007FFF              100
-        STACK            000200-0007FF              600
+        STACK            000177-0007FF              689
 
                                   Symbol Table
 
@@ -214,7 +212,7 @@ __Hconst                 const        000000
 __HcstackBANK0           cstackBANK0  000000
 __HcstackCOMRAM          cstackCOMRAM 000000
 __Hdata                  data         000000
-__HdataBANK1             dataBANK1    000000
+__HdataBIGRAM            dataBIGRAM   000000
 __HdataCOMRAM            dataCOMRAM   000000
 __Heeprom_data           eeprom_data  000000
 __Hend_init              end_init     00001A
@@ -222,7 +220,7 @@ __Hfarbss                farbss       000000
 __Hfardata               fardata      000000
 __Hibigdata              ibigdata     000000
 __Hidata                 idata        000000
-__HidataBANK1            idataBANK1   000000
+__HidataBIGRAM           idataBIGRAM  000000
 __HidataCOMRAM           idataCOMRAM  000000
 __Hidloc                 idloc        200008
 __Hifardata              ifardata     000000
@@ -250,7 +248,7 @@ __Hrparam                rparam       000000
 __Hsfr                   sfr          000000
 __Hsmallconst            smallconst   000000
 __Hspace_0               (abs)        30000E
-__Hspace_1               (abs)        000200
+__Hspace_1               (abs)        000177
 __Hspace_2               (abs)        000000
 __Hstack                 stack        000000
 __Hstruct                struct       000000
@@ -283,7 +281,7 @@ __Lconst                 const        000000
 __LcstackBANK0           cstackBANK0  000000
 __LcstackCOMRAM          cstackCOMRAM 000000
 __Ldata                  data         000000
-__LdataBANK1             dataBANK1    000000
+__LdataBIGRAM            dataBIGRAM   000000
 __LdataCOMRAM            dataCOMRAM   000000
 __Leeprom_data           eeprom_data  000000
 __Lend_init              end_init     000016
@@ -291,7 +289,7 @@ __Lfarbss                farbss       000000
 __Lfardata               fardata      000000
 __Libigdata              ibigdata     000000
 __Lidata                 idata        000000
-__LidataBANK1            idataBANK1   000000
+__LidataBIGRAM           idataBIGRAM  000000
 __LidataCOMRAM           idataCOMRAM  000000
 __Lidloc                 idloc        200000
 __Lifardata              ifardata     000000
@@ -330,9 +328,9 @@ __Ltext2                 text2        000000
 __Ltext3                 text3        000000
 __Ltext4                 text4        000000
 __S0                     (abs)        30000E
-__S1                     (abs)        000200
+__S1                     (abs)        000177
 __S2                     (abs)        000000
-___awmod                 text4        000378
+___awmod                 text4        00037C
 ___awmod@counter         cstackCOMRAM 000029
 ___awmod@dividend        cstackCOMRAM 000025
 ___awmod@divisor         cstackCOMRAM 000027
@@ -344,28 +342,28 @@ ___rparam_used           (abs)        000001
 ___sp                    stack        000000
 __accesstop              (abs)        000060
 __activetblptr           (abs)        000000
-__end_of___awmod         text4        0003E8
-__end_of__initialization cinit        000430
-__end_of_isr             intcode_body 000278
+__end_of___awmod         text4        0003EC
+__end_of__initialization cinit        000434
+__end_of_isr             intcode_body 00037C
 __end_of_main            text0        000176
-__end_of_setDigitPin     text3        00049A
-__end_of_setSegPin       text2        000472
-__initialization         cinit        0003E8
+__end_of_setDigitPin     text3        00049E
+__end_of_setSegPin       text2        000476
+__initialization         cinit        0003EC
 __mediumconst            mediumconst  000000
 __pbssCOMRAM             bssCOMRAM    00003E
-__pcinit                 cinit        0003E8
+__pcinit                 cinit        0003EC
 __pcstackBANK0           cstackBANK0  000060
 __pcstackCOMRAM          cstackCOMRAM 000025
-__pdataBANK1             dataBANK1    000100
+__pdataBIGRAM            dataBIGRAM   000073
 __pdataCOMRAM            dataCOMRAM   000001
-__pidataBANK1            idataBANK1   000278
-__pidataCOMRAM           idataCOMRAM  00049A
+__pidataBIGRAM           idataBIGRAM  000176
+__pidataCOMRAM           idataCOMRAM  00049E
 __pintcode               intcode      000008
-__pintcode_body          intcode_body 000176
+__pintcode_body          intcode_body 00027A
 __ptext0                 text0        00001A
-__ptext2                 text2        00043A
-__ptext3                 text3        000472
-__ptext4                 text4        000378
+__ptext2                 text2        00043E
+__ptext3                 text3        000476
+__ptext4                 text4        00037C
 __ramtop                 ramtop       000800
 __size_of___awmod        (abs)        000000
 __size_of_isr            (abs)        000000
@@ -374,16 +372,16 @@ __size_of_setDigitPin    (abs)        000000
 __size_of_setSegPin      (abs)        000000
 __smallconst             smallconst   000000
 _digitPtr                bssCOMRAM    00003E
-_fontList                dataBANK1    000100
+_fontList                dataBIGRAM   000073
 _isr                     intcode      000008
 _main                    text0        00001A
 _segMap                  dataCOMRAM   000001
-_setDigitPin             text3        000472
-_setSegPin               text2        00043A
+_setDigitPin             text3        000476
+_setSegPin               text2        00043E
 btemp                    temp         000040
-end_of_initialization    cinit        000430
+end_of_initialization    cinit        000434
 int$flags                temp         000040
-int_func                 intcode_body 000176
+int_func                 intcode_body 00027A
 intlevel0                text         000000
 intlevel1                text         000000
 intlevel2                text         000000
@@ -394,9 +392,9 @@ main@dotflag             cstackBANK0  00006C
 setDigitPin@input        cstackCOMRAM 000025
 setSegPin@input          cstackCOMRAM 000025
 stackhi                  (abs)        0007FF
-stacklo                  (abs)        000200
+stacklo                  (abs)        000177
 start                    init         000016
-start_initialization     cinit        0003E8
+start_initialization     cinit        0003EC
 
 
 FUNCTION INFORMATION:
@@ -558,19 +556,19 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 /opt/microchip/xc8/v1.38/sources/common/awmod.c
-		___awmod       		CODE           	0378	0000	113
+		___awmod       		CODE           	037C	0000	113
 
 /opt/microchip/xc8/v1.38/sources/common/awmod.c estimated size: 113
 
 shared
-		__initialization		CODE           	03E8	0000	73
+		__initialization		CODE           	03EC	0000	73
 
 shared estimated size: 73
 
 main.c
-		_setDigitPin   		CODE           	0472	0000	41
+		_setDigitPin   		CODE           	0476	0000	41
 		_main          		CODE           	001A	0000	349
-		_setSegPin     		CODE           	043A	0000	57
+		_setSegPin     		CODE           	043E	0000	57
 		_isr           		CODE           	0008	0000	273
 
 main.c estimated size: 720
