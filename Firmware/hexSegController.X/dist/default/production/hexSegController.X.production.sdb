@@ -3,37 +3,586 @@
 [d edition pro ]
 [d chip 18F4553 ]
 [d frameptr 4065 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+"115 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/main.c
+[e E4275 . `uc
+SYSTEM_STATE_USB_START 0
+SYSTEM_STATE_USB_SUSPEND 1
+SYSTEM_STATE_USB_RESUME 2
+]
+"141 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device.c
+[e E4642 . `uc
+DETACHED_STATE 0
+ATTACHED_STATE 1
+POWERED_STATE 2
+DEFAULT_STATE 4
+ADR_PENDING_STATE 8
+ADDRESS_STATE 16
+CONFIGURED_STATE 32
+]
+"713
+[e E4391 . `ui
+EVENT_NONE 0
+EVENT_DEVICE_STACK_BASE 1
+EVENT_HOST_STACK_BASE 100
+EVENT_HUB_ATTACH 101
+EVENT_STALL 102
+EVENT_VBUS_SES_REQUEST 103
+EVENT_VBUS_OVERCURRENT 104
+EVENT_VBUS_REQUEST_POWER 105
+EVENT_VBUS_RELEASE_POWER 106
+EVENT_VBUS_POWER_AVAILABLE 107
+EVENT_UNSUPPORTED_DEVICE 108
+EVENT_CANNOT_ENUMERATE 109
+EVENT_CLIENT_INIT_ERROR 110
+EVENT_OUT_OF_MEMORY 111
+EVENT_UNSPECIFIED_ERROR 112
+EVENT_DETACH 113
+EVENT_TRANSFER 114
+EVENT_SOF 115
+EVENT_RESUME 116
+EVENT_SUSPEND 117
+EVENT_RESET 118
+EVENT_DATA_ISOC_READ 119
+EVENT_DATA_ISOC_WRITE 120
+EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION 121
+EVENT_1MS 122
+EVENT_ALT_INTERFACE 123
+EVENT_HOLD_BEFORE_CONFIGURATION 124
+EVENT_GENERIC_BASE 400
+EVENT_MSD_BASE 500
+EVENT_HID_BASE 600
+EVENT_PRINTER_BASE 700
+EVENT_CDC_BASE 800
+EVENT_CHARGER_BASE 900
+EVENT_AUDIO_BASE 1000
+EVENT_USER_BASE 10000
+EVENT_BUS_ERROR 32767
+]
+"2017
+[e E4651 . `uc
+EVENT_CONFIGURED 1
+EVENT_SET_DESCRIPTOR 2
+EVENT_EP0_REQUEST 3
+EVENT_ATTACH 4
+EVENT_TRANSFER_TERMINATED 5
+]
+"425 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device_cdc.c
+[e E40 . `ui
+EVENT_NONE 0
+EVENT_DEVICE_STACK_BASE 1
+EVENT_HOST_STACK_BASE 100
+EVENT_HUB_ATTACH 101
+EVENT_STALL 102
+EVENT_VBUS_SES_REQUEST 103
+EVENT_VBUS_OVERCURRENT 104
+EVENT_VBUS_REQUEST_POWER 105
+EVENT_VBUS_RELEASE_POWER 106
+EVENT_VBUS_POWER_AVAILABLE 107
+EVENT_UNSUPPORTED_DEVICE 108
+EVENT_CANNOT_ENUMERATE 109
+EVENT_CLIENT_INIT_ERROR 110
+EVENT_OUT_OF_MEMORY 111
+EVENT_UNSPECIFIED_ERROR 112
+EVENT_DETACH 113
+EVENT_TRANSFER 114
+EVENT_SOF 115
+EVENT_RESUME 116
+EVENT_SUSPEND 117
+EVENT_RESET 118
+EVENT_DATA_ISOC_READ 119
+EVENT_DATA_ISOC_WRITE 120
+EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION 121
+EVENT_1MS 122
+EVENT_ALT_INTERFACE 123
+EVENT_HOLD_BEFORE_CONFIGURATION 124
+EVENT_GENERIC_BASE 400
+EVENT_MSD_BASE 500
+EVENT_HID_BASE 600
+EVENT_PRINTER_BASE 700
+EVENT_CDC_BASE 800
+EVENT_CHARGER_BASE 900
+EVENT_AUDIO_BASE 1000
+EVENT_USER_BASE 10000
+EVENT_BUS_ERROR 32767
+]
+"426
+[e E300 . `uc
+EVENT_CONFIGURED 1
+EVENT_SET_DESCRIPTOR 2
+EVENT_EP0_REQUEST 3
+EVENT_ATTACH 4
+EVENT_TRANSFER_TERMINATED 5
+]
+"62 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/system.c
+[e E4274 . `uc
+SYSTEM_STATE_USB_START 0
+SYSTEM_STATE_USB_SUSPEND 1
+SYSTEM_STATE_USB_RESUME 2
+]
+"29 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb_events.c
+[e E4319 . `ui
+EVENT_NONE 0
+EVENT_DEVICE_STACK_BASE 1
+EVENT_HOST_STACK_BASE 100
+EVENT_HUB_ATTACH 101
+EVENT_STALL 102
+EVENT_VBUS_SES_REQUEST 103
+EVENT_VBUS_OVERCURRENT 104
+EVENT_VBUS_REQUEST_POWER 105
+EVENT_VBUS_RELEASE_POWER 106
+EVENT_VBUS_POWER_AVAILABLE 107
+EVENT_UNSUPPORTED_DEVICE 108
+EVENT_CANNOT_ENUMERATE 109
+EVENT_CLIENT_INIT_ERROR 110
+EVENT_OUT_OF_MEMORY 111
+EVENT_UNSPECIFIED_ERROR 112
+EVENT_DETACH 113
+EVENT_TRANSFER 114
+EVENT_SOF 115
+EVENT_RESUME 116
+EVENT_SUSPEND 117
+EVENT_RESET 118
+EVENT_DATA_ISOC_READ 119
+EVENT_DATA_ISOC_WRITE 120
+EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION 121
+EVENT_1MS 122
+EVENT_ALT_INTERFACE 123
+EVENT_HOLD_BEFORE_CONFIGURATION 124
+EVENT_GENERIC_BASE 400
+EVENT_MSD_BASE 500
+EVENT_HID_BASE 600
+EVENT_PRINTER_BASE 700
+EVENT_CDC_BASE 800
+EVENT_CHARGER_BASE 900
+EVENT_AUDIO_BASE 1000
+EVENT_USER_BASE 10000
+EVENT_BUS_ERROR 32767
+]
+"30
+[e E4579 . `uc
+EVENT_CONFIGURED 1
+EVENT_SET_DESCRIPTOR 2
+EVENT_EP0_REQUEST 3
+EVENT_ATTACH 4
+EVENT_TRANSFER_TERMINATED 5
+]
+"61 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+"46 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usart.c
+[v _USART_Initialize USART_Initialize `(v  1 e 1 0 ]
+"78
+[v _USART_putcUSART USART_putcUSART `(v  1 e 1 0 ]
+"104
+[v _USART_mySetLineCodingHandler USART_mySetLineCodingHandler `(v  1 e 1 0 ]
+"158
+[v _USART_getcUSART USART_getcUSART `(uc  1 e 1 0 ]
+"277 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device.c
+[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+"878
+[v _USBEnableEndpoint USBEnableEndpoint `(v  1 e 1 0 ]
+"995
+[v _USBTransferOnePacket USBTransferOnePacket `(*.39v  1 e 2 0 ]
+"1352
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
+"1416
+[v _USBCtrlEPAllowStatusStage USBCtrlEPAllowStatusStage `(v  1 e 1 0 ]
+"1488
+[v _USBCtrlEPAllowDataStage USBCtrlEPAllowDataStage `(v  1 e 1 0 ]
+"1543
+[v _USBConfigureEndpoint USBConfigureEndpoint `(v  1 s 1 USBConfigureEndpoint ]
+"1616
+[v _USBCtrlEPServiceComplete USBCtrlEPServiceComplete `(v  1 s 1 USBCtrlEPServiceComplete ]
+"1771
+[v _USBCtrlTrfTxService USBCtrlTrfTxService `(v  1 s 1 USBCtrlTrfTxService ]
+"1852
+[v _USBCtrlTrfRxService USBCtrlTrfRxService `(v  1 s 1 USBCtrlTrfRxService ]
+"1968
+[v _USBStdSetCfgHandler USBStdSetCfgHandler `(v  1 s 1 USBStdSetCfgHandler ]
+"2043
+[v _USBStdGetDscHandler USBStdGetDscHandler `(v  1 s 1 USBStdGetDscHandler ]
+"2129
+[v _USBStdGetStatusHandler USBStdGetStatusHandler `(v  1 s 1 USBStdGetStatusHandler ]
+"2202
+[v _USBStallHandler USBStallHandler `(v  1 s 1 USBStallHandler ]
+"2245
+[v _USBSuspend USBSuspend `(v  1 s 1 USBSuspend ]
+"2303
+[v _USBWakeFromSuspend USBWakeFromSuspend `(v  1 s 1 USBWakeFromSuspend ]
+"2372
+[v _USBCtrlEPService USBCtrlEPService `(v  1 s 1 USBCtrlEPService ]
+"2465
+[v _USBCtrlTrfSetupHandler USBCtrlTrfSetupHandler `(v  1 s 1 USBCtrlTrfSetupHandler ]
+"2538
+[v _USBCtrlTrfOutHandler USBCtrlTrfOutHandler `(v  1 s 1 USBCtrlTrfOutHandler ]
+"2592
+[v _USBCtrlTrfInHandler USBCtrlTrfInHandler `(v  1 s 1 USBCtrlTrfInHandler ]
+"2686
+[v _USBCheckStdRequest USBCheckStdRequest `(v  1 s 1 USBCheckStdRequest ]
+"2754
+[v _USBStdFeatureReqHandler USBStdFeatureReqHandler `(v  1 s 1 USBStdFeatureReqHandler ]
+"3025
+[v _USBIncrement1msInternalTimers USBIncrement1msInternalTimers `(v  1 e 1 0 ]
+"147 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device_cdc.c
+[v _USBCheckCDCRequest USBCheckCDCRequest `(v  1 e 1 0 ]
+"28 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb_events.c
+[v _USER_USB_CALLBACK_EVENT_HANDLER USER_USB_CALLBACK_EVENT_HANDLER `(uc  1 e 1 0 ]
+"8 /opt/microchip/xc8/v1.38/sources/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\float.c
+"62 /opt/microchip/xc8/v1.38/sources/common/float.c
 [v ___ftpack __ftpack `(f  1 e 3 0 ]
-"86 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftadd.c
+"86 /opt/microchip/xc8/v1.38/sources/common/ftadd.c
 [v ___ftadd __ftadd `(f  1 e 3 0 ]
-"54 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftdiv.c
+"54 /opt/microchip/xc8/v1.38/sources/common/ftdiv.c
 [v ___ftdiv __ftdiv `(f  1 e 3 0 ]
-"62 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftmul.c
+"62 /opt/microchip/xc8/v1.38/sources/common/ftmul.c
 [v ___ftmul __ftmul `(f  1 e 3 0 ]
-"20 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\ftsub.c
+"20 /opt/microchip/xc8/v1.38/sources/common/ftsub.c
 [v ___ftsub __ftsub `(f  1 e 3 0 ]
-"10 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\sprcadd.c
+"8 /opt/microchip/xc8/v1.38/sources/common/lldiv.c
+[v ___lldiv __lldiv `(ul  1 e 4 0 ]
+"11 /opt/microchip/xc8/v1.38/sources/common/memcpy.c
+[v _memcpy memcpy `(*.39v  1 e 2 0 ]
+"8 /opt/microchip/xc8/v1.38/sources/common/memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+"10 /opt/microchip/xc8/v1.38/sources/common/sprcadd.c
 [v ___fladd __fladd `(d  1 e 3 0 ]
 "245
 [v ___flsub __flsub `(d  1 e 3 0 ]
-"11 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\sprcdiv.c
+"11 /opt/microchip/xc8/v1.38/sources/common/sprcdiv.c
 [v ___fldiv __fldiv `(d  1 e 3 0 ]
-"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\sprcmul.c
+"8 /opt/microchip/xc8/v1.38/sources/common/sprcmul.c
 [v ___flmul __flmul `(d  1 e 3 0 ]
-"15 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\Umul32.c
+"15 /opt/microchip/xc8/v1.38/sources/common/Umul32.c
 [v ___lmul __lmul `(ul  1 e 4 0 ]
-"21 C:\Users\gamma\Desktop\hexSegController.X\main.c
+"28 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/main.c
 [v _setSegPin setSegPin `(v  1 e 1 0 ]
-"28
+"35
 [v _setDigitPin setDigitPin `(v  1 e 1 0 ]
-"72
+"79
 [v _main main `(v  1 e 1 0 ]
-"173
+"195
 [v _isr isr `II(v  1 e 1 0 ]
-"2571 C:\Program Files (x86)\Microchip\xc8\v1.37\include\pic18f4553.h
+[s S806 _USB_DEVICE_DESCRIPTOR 18 `uc 1 bLength 1 0 `uc 1 bDescriptorType 1 1 `ui 1 bcdUSB 2 2 `uc 1 bDeviceClass 1 4 `uc 1 bDeviceSubClass 1 5 `uc 1 bDeviceProtocol 1 6 `uc 1 bMaxPacketSize0 1 7 `ui 1 idVendor 2 8 `ui 1 idProduct 2 10 `ui 1 bcdDevice 2 12 `uc 1 iManufacturer 1 14 `uc 1 iProduct 1 15 `uc 1 iSerialNumber 1 16 `uc 1 bNumConfigurations 1 17 ]
+"152 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_descriptors.c
+[v _device_dsc device_dsc `CS806  1 e 18 0 ]
+"171
+[v _configDescriptor1 configDescriptor1 `C[67]uc  1 e 67 0 ]
+[s S1665 . 4 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[1]ui 1 string 2 2 ]
+"257
+[v _sd000 sd000 `CS1665  1 e 4 0 ]
+[s S1669 . 52 `uc 1 bLength 1 0 `uc 1 bDscType 1 1 `[25]ui 1 string 50 2 ]
+"261
+[v _sd001 sd001 `CS1669  1 e 52 0 ]
+"268
+[v _sd002 sd002 `CS1669  1 e 52 0 ]
+"275
+[v _USB_CD_Ptr USB_CD_Ptr `C[1]*.25Cuc  1 e 2 0 ]
+"280
+[v _USB_SD_Ptr USB_SD_Ptr `C[3]*.25Cuc  1 e 6 0 ]
+"141 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device.c
+[v _USBDeviceState USBDeviceState `VEE4642  1 e 1 0 ]
+"142
+[v _USBActiveConfiguration USBActiveConfiguration `VEuc  1 e 1 0 ]
+"143
+[v _USBAlternateInterface USBAlternateInterface `VE[2]uc  1 e 2 0 ]
+[s S248 . 1 `uc 1 BC8 1 0 :1:0 
+`uc 1 BC9 1 0 :1:1 
+`uc 1 BSTALL 1 0 :1:2 
+`uc 1 DTSEN 1 0 :1:3 
+`uc 1 INCDIS 1 0 :1:4 
+`uc 1 KEN 1 0 :1:5 
+`uc 1 DTS 1 0 :1:6 
+`uc 1 UOWN 1 0 :1:7 
+]
+"144
+[s S257 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID0 1 0 :1:2 
+`uc 1 PID1 1 0 :1:3 
+`uc 1 PID2 1 0 :1:4 
+`uc 1 PID3 1 0 :1:5 
+`uc 1 . 1 0 :1:6 
+]
+[s S264 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 PID 1 0 :4:2 
+`uc 1 . 1 0 :2:6 
+]
+[u S268 _BD_STAT 1 `uc 1 Val 1 0 `S248 1 . 1 0 `S257 1 . 1 0 `S264 1 . 1 0 ]
+[s S273 . 4 `S268 1 STAT 1 0 `uc 1 CNT 1 1 `uc 1 ADRL 1 2 `uc 1 ADRH 1 3 ]
+[s S278 . 4 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`ui 1 ADR 2 2 ]
+[u S282 __BDT 4 `S273 1 . 4 0 `S278 1 . 4 0 `ul 1 Val 4 0 `[4]uc 1 v 4 0 ]
+[v _pBDTEntryEP0OutCurrent pBDTEntryEP0OutCurrent `*.39VES282  1 e 2 0 ]
+"145
+[v _pBDTEntryEP0OutNext pBDTEntryEP0OutNext `*.39VES282  1 e 2 0 ]
+"146
+[v _pBDTEntryOut pBDTEntryOut `[3]*.39VES282  1 e 6 0 ]
+"147
+[v _pBDTEntryIn pBDTEntryIn `[3]*.39VES282  1 e 6 0 ]
+"148
+[v _shortPacketStatus shortPacketStatus `VEuc  1 e 1 0 ]
+"149
+[v _controlTransferState controlTransferState `VEuc  1 e 1 0 ]
+[u S287 . 3 `*.2uc 1 bRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2ui 1 wRam 3 0 `*.2Cui 1 wRom 3 0 ]
+"150
+[s S292 . 1 `uc 1 ctrl_trf_mem 1 0 :1:0 
+`uc 1 reserved 1 0 :5:1 
+`uc 1 includeZero 1 0 :1:6 
+`uc 1 busy 1 0 :1:7 
+]
+[u S297 . 1 `S292 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S300 . 2 `uc 1 LB 1 0 `uc 1 HB 1 1 ]
+[u S303 . 2 `ui 1 Val 2 0 `[2]uc 1 v 2 0 `S300 1 byte 2 0 ]
+[s S307 . 6 `S287 1 pSrc 3 0 `S297 1 info 1 3 `S303 1 wCount 2 4 ]
+[v _inPipes inPipes `VE[1]S307  1 e 6 0 ]
+[u S311 . 3 `*.2uc 1 bRam 3 0 `*.2ui 1 wRam 3 0 ]
+"151
+[s S314 . 1 `uc 1 reserved 1 0 :7:0 
+`uc 1 busy 1 0 :1:7 
+]
+[u S317 . 1 `S314 1 bits 1 0 `uc 1 Val 1 0 ]
+[s S321 . 8 `S311 1 pDst 3 0 `S317 1 info 1 3 `S303 1 wCount 2 4 `*.37(v 1 pFunc 2 6 ]
+[v _outPipes outPipes `VE[1]S321  1 e 8 0 ]
+"152
+[v _pDst pDst `*.39VEuc  1 e 2 0 ]
+"153
+[v _RemoteWakeup RemoteWakeup `VEuc  1 e 1 0 ]
+"154
+[v _USBBusIsSuspended USBBusIsSuspended `VEuc  1 e 1 0 ]
+[s S326 . 1 `uc 1 filler1 1 0 :1:0 
+`uc 1 ping_pong 1 0 :1:1 
+`uc 1 direction 1 0 :1:2 
+`uc 1 endpoint_number 1 0 :4:3 
+]
+"155
+[u S331 __USTAT 1 `S326 1 . 1 0 `uc 1 Val 1 0 ]
+[v _USTATcopy USTATcopy `VES331  1 e 1 0 ]
+"156
+[v _endpoint_number endpoint_number `VEuc  1 e 1 0 ]
+"157
+[v _BothEP0OutUOWNsSet BothEP0OutUOWNsSet `VEuc  1 e 1 0 ]
+[s S334 . 1 `uc 1 ping_pong_state 1 0 :1:0 
+`uc 1 transfer_terminated 1 0 :1:1 
+]
+"158
+[u S337 . 1 `S334 1 bits 1 0 `uc 1 Val 1 0 ]
+[v _ep_data_in ep_data_in `VE[3]S337  1 e 3 0 ]
+"159
+[v _ep_data_out ep_data_out `VE[3]S337  1 e 3 0 ]
+"160
+[v _USBStatusStageTimeoutCounter USBStatusStageTimeoutCounter `VEuc  1 e 1 0 ]
+"161
+[v _USBDeferStatusStagePacket USBDeferStatusStagePacket `VEuc  1 e 1 0 ]
+"162
+[v _USBStatusStageEnabledFlag1 USBStatusStageEnabledFlag1 `VEuc  1 e 1 0 ]
+"163
+[v _USBStatusStageEnabledFlag2 USBStatusStageEnabledFlag2 `VEuc  1 e 1 0 ]
+"164
+[v _USBDeferINDataStagePackets USBDeferINDataStagePackets `VEuc  1 e 1 0 ]
+"165
+[v _USBDeferOUTDataStagePackets USBDeferOUTDataStagePackets `VEuc  1 e 1 0 ]
+"166
+[v _USB1msTickCount USB1msTickCount `VEul  1 e 4 0 ]
+"167
+[v _USBTicksSinceSuspendEnd USBTicksSinceSuspendEnd `VEuc  1 e 1 0 ]
+"174
+[v _BDT BDT `VE[12]S282  1 e 48 @1024 ]
+[s S340 . 8 `uc 1 bmRequestType 1 0 `uc 1 bRequest 1 1 `ui 1 wValue 2 2 `ui 1 wIndex 2 4 `ui 1 wLength 2 6 ]
+"179
+[s S367 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`S303 1 W_Value 2 2 `S303 1 W_Index 2 4 `S303 1 W_Length 2 6 ]
+[s S373 . 8 `uc 1 Recipient 1 0 :5:0 
+`uc 1 RequestType 1 0 :2:5 
+`uc 1 DataDir 1 0 :1:7 
+`uc 1 . 1 1 :8:0 
+`uc 1 bFeature 1 2 `uc 1 . 1 3 :8:0 
+`uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S384 . 1 `uc 1 recipient 1 0 :5:0 
+`uc 1 type 1 0 :2:5 
+`uc 1 direction 1 0 :1:7 
+]
+[u S388 . 1 `uc 1 bmRequestType 1 0 `S384 1 . 1 0 ]
+[s S391 . 1 `S388 1 requestInfo 1 0 ]
+[s S393 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bDscIndex 1 2 `uc 1 bDescriptorType 1 3 `ui 1 wLangID 2 4 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S401 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bDevADR 1 2 `uc 1 bDevADRH 1 3 `uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S410 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bConfigurationValue 1 2 `uc 1 bCfgRSD 1 3 `uc 1 . 1 4 :8:0 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S419 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 bAltID 1 2 `uc 1 bAltID_H 1 3 `uc 1 bIntfID 1 4 `uc 1 bIntfID_H 1 5 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S428 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 . 1 2 :8:0 
+`uc 1 . 1 3 :8:0 
+`uc 1 bEPID 1 4 `uc 1 bEPID_H 1 5 `uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[s S437 . 8 `uc 1 . 1 0 :8:0 
+`uc 1 . 1 1 :8:0 
+`uc 1 . 1 2 :8:0 
+`uc 1 . 1 3 :8:0 
+`uc 1 EPNum 1 4 :4:0 
+`uc 1 . 1 4 :3:4 
+`uc 1 EPDir 1 4 :1:7 
+`uc 1 . 1 5 :8:0 
+`uc 1 . 1 6 :8:0 
+`uc 1 . 1 7 :8:0 
+]
+[u S448 . 8 `S340 1 . 8 0 `S367 1 . 8 0 `S373 1 . 8 0 `S391 1 . 1 0 `S393 1 . 8 0 `S401 1 . 8 0 `S410 1 . 8 0 `S419 1 . 8 0 `S428 1 . 8 0 `S437 1 . 8 0 ]
+[v _SetupPkt SetupPkt `VES448  1 e 8 @1072 ]
+"180
+[v _CtrlTrfData CtrlTrfData `VE[8]uc  1 e 8 @1080 ]
+"65 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device_cdc.c
+[v _cdc_data_tx cdc_data_tx `VE[64]uc  1 e 64 0 ]
+"66
+[v _cdc_data_rx cdc_data_rx `VE[64]uc  1 e 64 0 ]
+[s S1699 . 7 `[7]uc 1 _byte 7 0 ]
+"76
+[s S1701 . 7 `ul 1 dwDTERate 4 0 `uc 1 bCharFormat 1 4 `uc 1 bParityType 1 5 `uc 1 bDataBits 1 6 ]
+[u S1706 _LINE_CODING 7 `S1699 1 . 7 0 `S1701 1 . 7 0 ]
+[v _line_coding line_coding `S1706  1 e 7 0 ]
+"77
+[u S1709 _CDC_NOTICE 10 `S1706 1 GetLineCoding 7 0 `S1706 1 SetLineCoding 7 0 `[10]uc 1 packet 10 0 ]
+[v _cdc_notice cdc_notice `S1709  1 e 10 0 ]
+"83
+[v _cdc_rx_len cdc_rx_len `uc  1 e 1 0 ]
+"84
+[v _cdc_trf_state cdc_trf_state `uc  1 e 1 0 ]
+[s S1713 . 2 `uc 1 bLow 1 0 `uc 1 bHigh 1 1 ]
+"85
+[u S1716 _POINTER 3 `S1713 1 . 2 0 `ui 1 _word 2 0 `*.2uc 1 bRam 3 0 `*.2ui 1 wRam 3 0 `*.2Cuc 1 bRom 3 0 `*.2Cui 1 wRom 3 0 ]
+[v _pCDCSrc pCDCSrc `S1716  1 e 3 0 ]
+"86
+[v _pCDCDst pCDCDst `S1716  1 e 3 0 ]
+"87
+[v _cdc_tx_len cdc_tx_len `uc  1 e 1 0 ]
+"88
+[v _cdc_mem_type cdc_mem_type `uc  1 e 1 0 ]
+"90
+[v _CDCDataOutHandle CDCDataOutHandle `*.39v  1 e 2 0 ]
+"91
+[v _CDCDataInHandle CDCDataInHandle `*.39v  1 e 2 0 ]
+[s S1723 . 1 `uc 1 DTE_PRESENT 1 0 :1:0 
+`uc 1 CARRIER_CONTROL 1 0 :1:1 
+]
+"94
+[u S1726 _CONTROL_SIGNAL_BITMAP 1 `uc 1 _byte 1 0 `S1723 1 . 1 0 ]
+[v _control_signal_bitmap control_signal_bitmap `S1726  1 e 1 0 ]
+"110
+[v _dummy_encapsulated_cmd_response dummy_encapsulated_cmd_response `[8]uc  1 e 8 0 ]
+"364 /opt/microchip/xc8/v1.38/include/pic18f4553.h
+[v _UIR UIR `VEuc  1 e 1 @3944 ]
+[s S521 . 1 `uc 1 URSTIF 1 0 :1:0 
+`uc 1 UERRIF 1 0 :1:1 
+`uc 1 ACTVIF 1 0 :1:2 
+`uc 1 TRNIF 1 0 :1:3 
+`uc 1 IDLEIF 1 0 :1:4 
+`uc 1 STALLIF 1 0 :1:5 
+`uc 1 SOFIF 1 0 :1:6 
+]
+"380
+[u S529 . 1 `S521 1 . 1 0 ]
+[v _UIRbits UIRbits `VES529  1 e 1 @3944 ]
+"419
+[v _UIE UIE `VEuc  1 e 1 @3945 ]
+[s S540 . 1 `uc 1 URSTIE 1 0 :1:0 
+`uc 1 UERRIE 1 0 :1:1 
+`uc 1 ACTVIE 1 0 :1:2 
+`uc 1 TRNIE 1 0 :1:3 
+`uc 1 IDLEIE 1 0 :1:4 
+`uc 1 STALLIE 1 0 :1:5 
+`uc 1 SOFIE 1 0 :1:6 
+]
+"435
+[u S548 . 1 `S540 1 . 1 0 ]
+[v _UIEbits UIEbits `VES548  1 e 1 @3945 ]
+"474
+[v _UEIR UEIR `VEuc  1 e 1 @3946 ]
+"524
+[v _UEIE UEIE `VEuc  1 e 1 @3947 ]
+"574
+[v _USTAT USTAT `VEuc  1 e 1 @3948 ]
+"633
+[v _UCON UCON `VEuc  1 e 1 @3949 ]
+[s S501 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 SUSPND 1 0 :1:1 
+`uc 1 RESUME 1 0 :1:2 
+`uc 1 USBEN 1 0 :1:3 
+`uc 1 PKTDIS 1 0 :1:4 
+`uc 1 SE0 1 0 :1:5 
+`uc 1 PPBRST 1 0 :1:6 
+]
+"649
+[u S509 . 1 `S501 1 . 1 0 ]
+[v _UCONbits UCONbits `VES509  1 e 1 @3949 ]
+"683
+[v _UADDR UADDR `VEuc  1 e 1 @3950 ]
+"746
+[v _UCFG UCFG `VEuc  1 e 1 @3951 ]
+"827
+[v _UEP0 UEP0 `VEuc  1 e 1 @3952 ]
+[s S840 . 1 `uc 1 EPSTALL 1 0 :1:0 
+`uc 1 EPINEN 1 0 :1:1 
+`uc 1 EPOUTEN 1 0 :1:2 
+`uc 1 EPCONDIS 1 0 :1:3 
+`uc 1 EPHSHK 1 0 :1:4 
+]
+"879
+[s S846 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 EP0CONDIS 1 0 :1:3 
+]
+[s S849 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 EP0HSHK 1 0 :1:4 
+]
+[s S852 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 EP0INEN 1 0 :1:1 
+]
+[s S855 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 EP0OUTEN 1 0 :1:2 
+]
+[s S858 . 1 `uc 1 EP0STALL 1 0 :1:0 
+]
+[s S860 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 EPCONDIS0 1 0 :1:3 
+]
+[s S863 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 EPHSHK0 1 0 :1:4 
+]
+[s S866 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 EPINEN0 1 0 :1:1 
+]
+[s S869 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 EPOUTEN0 1 0 :1:2 
+]
+[s S872 . 1 `uc 1 EPSTALL0 1 0 :1:0 
+]
+[u S874 . 1 `S840 1 . 1 0 `S846 1 . 1 0 `S849 1 . 1 0 `S852 1 . 1 0 `S855 1 . 1 0 `S858 1 . 1 0 `S860 1 . 1 0 `S863 1 . 1 0 `S866 1 . 1 0 `S869 1 . 1 0 `S872 1 . 1 0 ]
+[v _UEP0bits UEP0bits `VES874  1 e 1 @3952 ]
+"958
+[v _UEP1 UEP1 `VEuc  1 e 1 @3953 ]
+"2571
 [v _PORTA PORTA `VEuc  1 e 1 @3968 ]
 "2709
 [v _PORTB PORTB `VEuc  1 e 1 @3969 ]
@@ -49,6 +598,23 @@
 [v _TRISB TRISB `VEuc  1 e 1 @3987 ]
 "4196
 [v _TRISC TRISC `VEuc  1 e 1 @3988 ]
+[s S2178 . 1 `uc 1 TRISC0 1 0 :1:0 
+`uc 1 TRISC1 1 0 :1:1 
+`uc 1 TRISC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 TRISC6 1 0 :1:6 
+`uc 1 TRISC7 1 0 :1:7 
+]
+"4224
+[s S2185 . 1 `uc 1 RC0 1 0 :1:0 
+`uc 1 RC1 1 0 :1:1 
+`uc 1 RC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 RC6 1 0 :1:6 
+`uc 1 RC7 1 0 :1:7 
+]
+[u S2192 . 1 `S2178 1 . 1 0 `S2185 1 . 1 0 ]
+[v _TRISCbits TRISCbits `VES2192  1 e 1 @3988 ]
 "4349
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4570
@@ -74,7 +640,7 @@
 ]
 [u S54 . 1 `S36 1 . 1 0 `S45 1 . 1 0 `S48 1 . 1 0 `S51 1 . 1 0 ]
 [v _PIE1bits PIE1bits `VES54  1 e 1 @3997 ]
-[s S132 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[s S158 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -84,19 +650,94 @@
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4846
-[s S141 . 1 `uc 1 . 1 0 :7:0 
+[s S167 . 1 `uc 1 . 1 0 :7:0 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[s S144 . 1 `uc 1 . 1 0 :5:0 
+[s S170 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 RC1IF 1 0 :1:5 
 ]
-[s S147 . 1 `uc 1 . 1 0 :4:0 
+[s S173 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 ]
-[u S150 . 1 `S132 1 . 1 0 `S141 1 . 1 0 `S144 1 . 1 0 `S147 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES150  1 e 1 @3998 ]
+[u S176 . 1 `S158 1 . 1 0 `S167 1 . 1 0 `S170 1 . 1 0 `S173 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES176  1 e 1 @3998 ]
+[s S459 . 1 `uc 1 CCP2IE 1 0 :1:0 
+`uc 1 TMR3IE 1 0 :1:1 
+`uc 1 HLVDIE 1 0 :1:2 
+`uc 1 BCLIE 1 0 :1:3 
+`uc 1 EEIE 1 0 :1:4 
+`uc 1 USBIE 1 0 :1:5 
+`uc 1 CMIE 1 0 :1:6 
+`uc 1 OSCFIE 1 0 :1:7 
+]
+"5014
+[s S468 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIE 1 0 :1:2 
+]
+[u S471 . 1 `S459 1 . 1 0 `S468 1 . 1 0 ]
+[v _PIE2bits PIE2bits `VES471  1 e 1 @4000 ]
+[s S563 . 1 `uc 1 CCP2IF 1 0 :1:0 
+`uc 1 TMR3IF 1 0 :1:1 
+`uc 1 HLVDIF 1 0 :1:2 
+`uc 1 BCLIF 1 0 :1:3 
+`uc 1 EEIF 1 0 :1:4 
+`uc 1 USBIF 1 0 :1:5 
+`uc 1 CMIF 1 0 :1:6 
+`uc 1 OSCFIF 1 0 :1:7 
+]
+"5084
+[s S572 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIF 1 0 :1:2 
+]
+[u S575 . 1 `S563 1 . 1 0 `S572 1 . 1 0 ]
+[v _PIR2bits PIR2bits `VES575  1 e 1 @4001 ]
+[s S741 . 1 `uc 1 CCP2IP 1 0 :1:0 
+`uc 1 TMR3IP 1 0 :1:1 
+`uc 1 HLVDIP 1 0 :1:2 
+`uc 1 BCLIP 1 0 :1:3 
+`uc 1 EEIP 1 0 :1:4 
+`uc 1 USBIP 1 0 :1:5 
+`uc 1 CMIP 1 0 :1:6 
+`uc 1 OSCFIP 1 0 :1:7 
+]
+"5154
+[s S750 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 LVDIP 1 0 :1:2 
+]
+[u S753 . 1 `S741 1 . 1 0 `S750 1 . 1 0 ]
+[v _IPR2bits IPR2bits `VES753  1 e 1 @4002 ]
 "5286
 [v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
+[s S2233 . 1 `uc 1 RX9D 1 0 :1:0 
+`uc 1 OERR 1 0 :1:1 
+`uc 1 FERR 1 0 :1:2 
+`uc 1 ADDEN 1 0 :1:3 
+`uc 1 CREN 1 0 :1:4 
+`uc 1 SREN 1 0 :1:5 
+`uc 1 RX9 1 0 :1:6 
+`uc 1 SPEN 1 0 :1:7 
+]
+"5327
+[s S2242 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 ADEN 1 0 :1:3 
+]
+[s S2245 . 1 `uc 1 . 1 0 :5:0 
+`uc 1 SRENA 1 0 :1:5 
+]
+[s S2248 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC8_9 1 0 :1:6 
+]
+[s S2251 . 1 `uc 1 . 1 0 :6:0 
+`uc 1 RC9 1 0 :1:6 
+]
+[s S2254 . 1 `uc 1 RCD8 1 0 :1:0 
+]
+[u S2256 . 1 `S2233 1 . 1 0 `S2242 1 . 1 0 `S2245 1 . 1 0 `S2248 1 . 1 0 `S2251 1 . 1 0 `S2254 1 . 1 0 ]
+[v _RCSTAbits RCSTAbits `VES2256  1 e 1 @4011 ]
+"5495
+[v _TXSTA TXSTA `VEuc  1 e 1 @4012 ]
+"5792
+[v _TXREG TXREG `VEuc  1 e 1 @4013 ]
 "5803
 [v _RCREG RCREG `VEuc  1 e 1 @4014 ]
 "5814
@@ -115,6 +756,45 @@
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "7789
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
+[s S663 . 1 `uc 1 NOT_BOR 1 0 :1:0 
+]
+"7966
+[s S665 . 1 `uc 1 . 1 0 :1:0 
+`uc 1 NOT_POR 1 0 :1:1 
+]
+[s S668 . 1 `uc 1 . 1 0 :2:0 
+`uc 1 NOT_PD 1 0 :1:2 
+]
+[s S671 . 1 `uc 1 . 1 0 :3:0 
+`uc 1 NOT_TO 1 0 :1:3 
+]
+[s S674 . 1 `uc 1 . 1 0 :4:0 
+`uc 1 NOT_RI 1 0 :1:4 
+]
+[s S677 . 1 `uc 1 nBOR 1 0 :1:0 
+`uc 1 nPOR 1 0 :1:1 
+`uc 1 nPD 1 0 :1:2 
+`uc 1 nTO 1 0 :1:3 
+`uc 1 nRI 1 0 :1:4 
+`uc 1 . 1 0 :1:5 
+`uc 1 SBOREN 1 0 :1:6 
+`uc 1 IPEN 1 0 :1:7 
+]
+[s S686 . 1 `uc 1 . 1 0 :7:0 
+`uc 1 NOT_IPEN 1 0 :1:7 
+]
+[s S689 . 1 `uc 1 BOR 1 0 :1:0 
+`uc 1 POR 1 0 :1:1 
+`uc 1 PD 1 0 :1:2 
+`uc 1 TO 1 0 :1:3 
+`uc 1 RI 1 0 :1:4 
+`uc 1 . 1 0 :2:5 
+`uc 1 nIPEN 1 0 :1:7 
+]
+[u S697 . 1 `S663 1 . 1 0 `S665 1 . 1 0 `S668 1 . 1 0 `S671 1 . 1 0 `S674 1 . 1 0 `S677 1 . 1 0 `S686 1 . 1 0 `S689 1 . 1 0 ]
+[v _RCONbits RCONbits `VES697  1 e 1 @4048 ]
+"8361
+[v _OSCCON OSCCON `VEuc  1 e 1 @4051 ]
 [s S78 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
@@ -142,39 +822,93 @@
 [v _INTCONbits INTCONbits `VES100  1 e 1 @4082 ]
 "9313
 [v _BRGH BRGH `VEb  1 e 0 @32098 ]
-"33 C:\Users\gamma\Desktop\hexSegController.X\main.c
+"40 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/main.c
 [v _segMap segMap `[9]ul  1 e 36 0 ]
-"57
+"64
 [v _digitPtr digitPtr `s  1 e 2 0 ]
-"15 C:\Users\gamma\Desktop\hexSegController.X\segFonts.h
+"15 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/segFonts.h
 [v _fontList fontList `[128]ui  1 e 256 0 ]
-"72 C:\Users\gamma\Desktop\hexSegController.X\main.c
+"79 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"110
-[v main@digitSelector digitSelector `s  1 a 2 0 ]
-"109
-[v main@RxData RxData `uc  1 a 1 2 ]
-"171
+"123
+[v main@digitSelector digitSelector `s  1 a 2 7 ]
+"122
+[v main@RxData RxData `uc  1 a 1 10 ]
+"137
+[v main@buff buff `uc  1 a 1 9 ]
+"193
 } 0
-"173
+"277 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device.c
+[v _USBDeviceInit USBDeviceInit `(v  1 e 1 0 ]
+{
+"279
+[v USBDeviceInit@i i `uc  1 a 1 2 ]
+"371
+} 0
+"8 /opt/microchip/xc8/v1.38/sources/common/memset.c
+[v _memset memset `(*.39v  1 e 2 0 ]
+{
+"15
+[v memset@p p `*.39uc  1 a 2 0 ]
+"8
+[v memset@p1 p1 `*.39v  1 p 2 0 ]
+[v memset@c c `i  1 p 2 2 ]
+[v memset@n n `ui  1 p 2 4 ]
+"22
+} 0
+"1352 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device.c
+[v _USBDeviceAttach USBDeviceAttach `(v  1 e 1 0 ]
+{
+"1382
+} 0
+"78 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usart.c
+[v _USART_putcUSART USART_putcUSART `(v  1 e 1 0 ]
+{
+[v USART_putcUSART@c c `uc  1 a 1 wreg ]
+[v USART_putcUSART@c c `uc  1 a 1 wreg ]
+"80
+[v USART_putcUSART@c c `uc  1 a 1 0 ]
+"81
+} 0
+"158
+[v _USART_getcUSART USART_getcUSART `(uc  1 e 1 0 ]
+{
+"160
+[v USART_getcUSART@c c `uc  1 a 1 0 ]
+"177
+} 0
+"61 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/system.c
+[v _SYSTEM_Initialize SYSTEM_Initialize `(v  1 e 1 0 ]
+{
+[v SYSTEM_Initialize@state state `E4274  1 a 1 wreg ]
+"102
+[v SYSTEM_Initialize@pll_startup_counter_2128 pll_startup_counter `ui  1 a 2 3 ]
+"73
+[v SYSTEM_Initialize@pll_startup_counter pll_startup_counter `ui  1 a 2 1 ]
+"61
+[v SYSTEM_Initialize@state state `E4274  1 a 1 wreg ]
+[v SYSTEM_Initialize@state state `E4274  1 a 1 0 ]
+"107
+} 0
+"195 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/main.c
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"182
+"204
 } 0
-"21
+"28
 [v _setSegPin setSegPin `(v  1 e 1 0 ]
 {
 [v setSegPin@input input `ul  1 p 4 0 ]
-"26
+"33
 } 0
-"28
+"35
 [v _setDigitPin setDigitPin `(v  1 e 1 0 ]
 {
 [v setDigitPin@input input `ui  1 p 2 0 ]
-"31
+"38
 } 0
-"8 C:\Program Files (x86)\Microchip\xc8\v1.37\sources\common\awmod.c
+"8 /opt/microchip/xc8/v1.38/sources/common/awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
 {
 "11

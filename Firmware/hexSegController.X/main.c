@@ -11,6 +11,13 @@
 
 #include "segFonts.h"
 
+#include "system.h"
+
+#include "usart.h"
+#include "usb/usb.h"
+#include "usb/usb_device.h"
+#include "usb/usb_device_cdc.h"
+
 #pragma config FOSC = HS //20MHz Xtal(No PLL)
 #pragma config MCLRE = ON
 #pragma config LVP = OFF        // 低電圧プログラミング機能使用しない(OFF)
@@ -103,6 +110,12 @@ void main(void) {
 	SPBRGH  = 0;
     BRGH = 0;
 	SPBRG   = 129;
+    
+    // USB 設定
+    SYSTEM_Initialize(SYSTEM_STATE_USB_START);
+
+    USBDeviceInit();
+    USBDeviceAttach();
 
 
 
@@ -120,6 +133,15 @@ void main(void) {
     segMap[6] = fontList['E']; //E
     segMap[7] = fontList['T']; //T
     segMap[8] = fontList['!']; //!
+    
+    unsigned char buff;
+    while(1){
+        buff = USART_getcUSART();
+        if(buff != 0){
+            USART_putcUSART(buff);
+            buff = 0;
+        }
+    }
     
 
 	while(1){

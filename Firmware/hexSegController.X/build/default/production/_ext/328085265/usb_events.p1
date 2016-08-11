@@ -1,108 +1,12 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"2818 /opt/microchip/xc8/v1.38/include/pic18f4553.h
-[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
-"2962
-[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
-"2709
-[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
-"2571
-[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
-"3082
-[v _PORTE `Vuc ~T0 @X0 0 e@3972 ]
-[p mainexit ]
-"6957
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"5971
-[v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
-"3778
-[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
-"3975
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"4196
-[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
-"4349
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"4570
-[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
-"7583
-[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
-"7789
-[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
-"7680
-[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
-"4735
-[s S303 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S303 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
-"4745
-[s S304 :7 `uc 1 :1 `uc 1 ]
-[n S304 . . PSPIE ]
-"4749
-[s S305 :5 `uc 1 :1 `uc 1 ]
-[n S305 . . RC1IE ]
-"4753
-[s S306 :4 `uc 1 :1 `uc 1 ]
-[n S306 . . TX1IE ]
-"4734
-[u S302 `S303 1 `S304 1 `S305 1 `S306 1 ]
-[n S302 . . . . . ]
-"4758
-[v _PIE1bits `VS302 ~T0 @X0 0 e@3997 ]
-"8937
-[s S521 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S521 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"8947
-[s S522 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S522 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"8957
-[s S523 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S523 . . GIEL GIEH ]
-"8936
-[u S520 `S521 1 `S522 1 `S523 1 ]
-[n S520 . . . . ]
-"8963
-[v _INTCONbits `VS520 ~T0 @X0 0 e@4082 ]
-"5286
-[v _RCSTA `Vuc ~T0 @X0 0 e@4011 ]
-"6448
-[v _BAUDCON `Vuc ~T0 @X0 0 e@4024 ]
-"5825
-[v _SPBRGH `Vuc ~T0 @X0 0 e@4016 ]
-"9313
-[v _BRGH `Vb ~T0 @X0 0 e@32098 ]
-"5814
-[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
-"115 main.c
-[c E4275 0 1 2 .. ]
-[n E4275 . SYSTEM_STATE_USB_START SYSTEM_STATE_USB_SUSPEND SYSTEM_STATE_USB_RESUME  ]
-"50 system.h
-[v _SYSTEM_Initialize `(v ~T0 @X0 0 ef1`E4275 ]
-"195 usb/usb_device.h
-[v _USBDeviceInit `(v ~T0 @X0 0 ef ]
-"635
-[v _USBDeviceAttach `(v ~T0 @X0 0 ef ]
-"121 usart.h
-[v _USART_getcUSART `(uc ~T0 @X0 0 ef ]
-"82
-[v _USART_putcUSART `(v ~T0 @X0 0 ef1`uc ]
-"4823 /opt/microchip/xc8/v1.38/include/pic18f4553.h
-[s S308 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S308 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
-"4833
-[s S309 :7 `uc 1 :1 `uc 1 ]
-[n S309 . . PSPIF ]
-"4837
-[s S310 :5 `uc 1 :1 `uc 1 ]
-[n S310 . . RC1IF ]
-"4841
-[s S311 :4 `uc 1 :1 `uc 1 ]
-[n S311 . . TX1IF ]
-"4822
-[u S307 `S308 1 `S309 1 `S310 1 `S311 1 ]
-[n S307 . . . . . ]
-"4846
-[v _PIR1bits `VS307 ~T0 @X0 0 e@3998 ]
-"5803
-[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"29 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb_events.c
+[c E4319 0 1 100 101 102 103 104 105 106 107 108 109 110 111 112 113 114 115 116 117 118 119 120 121 122 123 124 400 500 600 700 800 900 1000 10000 32767 .. ]
+[n E4319 . EVENT_NONE EVENT_DEVICE_STACK_BASE EVENT_HOST_STACK_BASE EVENT_HUB_ATTACH EVENT_STALL EVENT_VBUS_SES_REQUEST EVENT_VBUS_OVERCURRENT EVENT_VBUS_REQUEST_POWER EVENT_VBUS_RELEASE_POWER EVENT_VBUS_POWER_AVAILABLE EVENT_UNSUPPORTED_DEVICE EVENT_CANNOT_ENUMERATE EVENT_CLIENT_INIT_ERROR EVENT_OUT_OF_MEMORY EVENT_UNSPECIFIED_ERROR EVENT_DETACH EVENT_TRANSFER EVENT_SOF EVENT_RESUME EVENT_SUSPEND EVENT_RESET EVENT_DATA_ISOC_READ EVENT_DATA_ISOC_WRITE EVENT_OVERRIDE_CLIENT_DRIVER_SELECTION EVENT_1MS EVENT_ALT_INTERFACE EVENT_HOLD_BEFORE_CONFIGURATION EVENT_GENERIC_BASE EVENT_MSD_BASE EVENT_HID_BASE EVENT_PRINTER_BASE EVENT_CDC_BASE EVENT_CHARGER_BASE EVENT_AUDIO_BASE EVENT_USER_BASE EVENT_BUS_ERROR  ]
+"562 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb/usb_device_cdc.h
+[v _USBCheckCDCRequest `(v ~T0 @X0 0 ef ]
+"30 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb_events.c
+[c E4579 1 2 3 4 5 .. ]
+[n E4579 . EVENT_CONFIGURED EVENT_SET_DESCRIPTOR EVENT_EP0_REQUEST EVENT_ATTACH EVENT_TRANSFER_TERMINATED  ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -4095,398 +3999,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 157: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 159: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 161: extern __nonreentrant void _delay3(unsigned char);
-"15 segFonts.h
-[v _fontList `ui ~T0 @X0 -> 0 `x e ]
-[i _fontList
-:U ..
-"16
--> -> 0 `i `ui
-"17
--> -> 0 `i `ui
-"18
--> -> 0 `i `ui
-"19
--> -> 0 `i `ui
-"20
--> -> 0 `i `ui
-"21
--> -> 0 `i `ui
-"22
--> -> 0 `i `ui
-"23
--> -> 0 `i `ui
-"24
--> -> 0 `i `ui
-"25
--> -> 0 `i `ui
-"26
--> -> 0 `i `ui
-"27
--> -> 0 `i `ui
-"28
--> -> 0 `i `ui
-"29
--> -> 0 `i `ui
-"30
--> -> 0 `i `ui
-"31
--> -> 0 `i `ui
-"32
--> -> 0 `i `ui
-"33
--> -> 0 `i `ui
-"34
--> -> 0 `i `ui
-"35
--> -> 0 `i `ui
-"36
--> -> 0 `i `ui
-"37
--> -> 0 `i `ui
-"38
--> -> 0 `i `ui
-"39
--> -> 0 `i `ui
-"40
--> -> 0 `i `ui
-"41
--> -> 0 `i `ui
-"42
--> -> 0 `i `ui
-"43
--> -> 0 `i `ui
-"44
--> -> 0 `i `ui
-"45
--> -> 0 `i `ui
-"46
--> -> 0 `i `ui
-"47
--> -> 0 `i `ui
-"48
--> -> 0 `i `ui
-"49
--> -> 6162 `i `ui
-"50
--> -> 2176 `i `ui
-"51
--> -> 0 `i `ui
-"52
--> 52275 `ui
-"53
--> -> 31657 `i `ui
-"54
--> 46139 `ui
-"55
--> -> 128 `i `ui
-"56
--> 36864 `ui
-"57
--> -> 9216 `i `ui
-"58
--> 65280 `ui
-"59
--> -> 19200 `i `ui
-"60
--> -> 0 `i `ui
-"61
--> -> 768 `i `ui
-"62
--> -> 0 `i `ui
-"63
--> -> 12288 `i `ui
-"64
--> -> 255 `i `ui
-"65
--> -> 18432 `i `ui
-"66
--> -> 887 `i `ui
-"67
--> -> 831 `i `ui
-"68
--> -> 908 `i `ui
-"69
--> -> 955 `i `ui
-"70
--> -> 1019 `i `ui
-"71
--> -> 143 `i `ui
-"72
--> -> 1023 `i `ui
-"73
--> -> 959 `i `ui
-"74
--> -> 0 `i `ui
-"75
--> -> 0 `i `ui
-"76
--> 36864 `ui
-"77
--> -> 816 `i `ui
-"78
--> -> 9216 `i `ui
-"79
--> -> 4115 `i `ui
-"80
--> -> 0 `i `ui
-"81
--> -> 975 `i `ui
-"82
--> 37363 `ui
-"83
--> -> 243 `i `ui
-"84
--> -> 892 `i `ui
-"85
--> -> 1011 `i `ui
-"86
--> -> 963 `i `ui
-"87
--> -> 763 `i `ui
-"88
--> -> 972 `i `ui
-"89
--> -> 18483 `i `ui
-"90
--> -> 18451 `i `ui
-"91
--> 37312 `ui
-"92
--> -> 240 `i `ui
-"93
--> -> 5324 `i `ui
-"94
--> 33996 `ui
-"95
--> -> 255 `i `ui
-"96
--> -> 967 `i `ui
-"97
--> 33023 `ui
-"98
--> 33735 `ui
-"99
--> -> 955 `i `ui
-"100
--> -> 18435 `i `ui
-"101
--> -> 252 `i `ui
-"102
--> -> 12480 `i `ui
-"103
--> 41164 `ui
-"104
--> 46080 `ui
-"105
--> -> 21504 `i `ui
-"106
--> -> 12339 `i `ui
-"107
--> -> 209 `i `ui
-"108
--> 33792 `ui
-"109
--> -> 46 `i `ui
-"110
--> -> 3 `i `ui
-"111
--> -> 48 `i `ui
-"112
--> 43776 `ui
-"113
--> -> 13504 `i `ui
-"114
--> -> 2939 `i `ui
-"115
--> -> 5891 `i `ui
-"116
--> -> 0 `i `ui
-"117
--> -> 0 `i `ui
-"118
--> -> 0 `i `ui
-"119
--> 65535 `ui
-"120
--> -> 1 `i `ui
-"121
--> -> 2 `i `ui
-"122
--> -> 4 `i `ui
-"123
--> -> 8 `i `ui
-"124
--> -> 32 `i `ui
-"125
--> -> 16 `i `ui
-"126
--> -> 64 `i `ui
-"127
--> -> 128 `i `ui
-"128
--> -> 2048 `i `ui
-"129
--> -> 4096 `i `ui
-"130
--> -> 512 `i `ui
-"131
--> 32768 `ui
-"132
--> -> 16384 `i `ui
-"133
--> -> 8192 `i `ui
-"134
--> -> 8192 `i `ui
-"135
--> -> 1024 `i `ui
-"136
--> -> 2048 `i `ui
-"137
--> -> 6144 `i `ui
-"138
--> -> 6400 `i `ui
-"139
--> 39168 `ui
-"140
--> 55552 `ui
-"141
--> 63744 `ui
-"142
--> 64256 `ui
-"144
--> 65280 `ui
-..
-]
-[; ;segFonts.h: 15: unsigned int fontList[] = {
-[; ;segFonts.h: 16: 0b00000000000000000,
-[; ;segFonts.h: 17: 0b00000000000000000,
-[; ;segFonts.h: 18: 0b00000000000000000,
-[; ;segFonts.h: 19: 0b00000000000000000,
-[; ;segFonts.h: 20: 0b00000000000000000,
-[; ;segFonts.h: 21: 0b00000000000000000,
-[; ;segFonts.h: 22: 0b00000000000000000,
-[; ;segFonts.h: 23: 0b00000000000000000,
-[; ;segFonts.h: 24: 0b00000000000000000,
-[; ;segFonts.h: 25: 0b00000000000000000,
-[; ;segFonts.h: 26: 0b00000000000000000,
-[; ;segFonts.h: 27: 0b00000000000000000,
-[; ;segFonts.h: 28: 0b00000000000000000,
-[; ;segFonts.h: 29: 0b00000000000000000,
-[; ;segFonts.h: 30: 0b00000000000000000,
-[; ;segFonts.h: 31: 0b00000000000000000,
-[; ;segFonts.h: 32: 0b00000000000000000,
-[; ;segFonts.h: 33: 0b00000000000000000,
-[; ;segFonts.h: 34: 0b00000000000000000,
-[; ;segFonts.h: 35: 0b00000000000000000,
-[; ;segFonts.h: 36: 0b00000000000000000,
-[; ;segFonts.h: 37: 0b00000000000000000,
-[; ;segFonts.h: 38: 0b00000000000000000,
-[; ;segFonts.h: 39: 0b00000000000000000,
-[; ;segFonts.h: 40: 0b00000000000000000,
-[; ;segFonts.h: 41: 0b00000000000000000,
-[; ;segFonts.h: 42: 0b00000000000000000,
-[; ;segFonts.h: 43: 0b00000000000000000,
-[; ;segFonts.h: 44: 0b00000000000000000,
-[; ;segFonts.h: 45: 0b00000000000000000,
-[; ;segFonts.h: 46: 0b00000000000000000,
-[; ;segFonts.h: 47: 0b00000000000000000,
-[; ;segFonts.h: 48: 0b00000000000000000,
-[; ;segFonts.h: 49: 0b00001100000010010,
-[; ;segFonts.h: 50: 0b00000100010000000,
-[; ;segFonts.h: 51: 0b00000000000000000,
-[; ;segFonts.h: 52: 0b01100110000110011,
-[; ;segFonts.h: 53: 0b00111101110101001,
-[; ;segFonts.h: 54: 0b01011010000111011,
-[; ;segFonts.h: 55: 0b00000000010000000,
-[; ;segFonts.h: 56: 0b01001000000000000,
-[; ;segFonts.h: 57: 0b00010010000000000,
-[; ;segFonts.h: 58: 0b01111111100000000,
-[; ;segFonts.h: 59: 0b00100101100000000,
-[; ;segFonts.h: 60: 0b00000000000000000,
-[; ;segFonts.h: 61: 0b00000001100000000,
-[; ;segFonts.h: 62: 0b00000000000000000,
-[; ;segFonts.h: 63: 0b00011000000000000,
-[; ;segFonts.h: 64: 0b00000000011111111,
-[; ;segFonts.h: 65: 0b00100100000000000,
-[; ;segFonts.h: 66: 0b00000001101110111,
-[; ;segFonts.h: 67: 0b00000001100111111,
-[; ;segFonts.h: 68: 0b00000001110001100,
-[; ;segFonts.h: 69: 0b00000001110111011,
-[; ;segFonts.h: 70: 0b00000001111111011,
-[; ;segFonts.h: 71: 0b00000000010001111,
-[; ;segFonts.h: 72: 0b00000001111111111,
-[; ;segFonts.h: 73: 0b00000001110111111,
-[; ;segFonts.h: 74: 0b00000000000000000,
-[; ;segFonts.h: 75: 0b00000000000000000,
-[; ;segFonts.h: 76: 0b01001000000000000,
-[; ;segFonts.h: 77: 0b00000001100110000,
-[; ;segFonts.h: 78: 0b00010010000000000,
-[; ;segFonts.h: 79: 0b00001000000010011,
-[; ;segFonts.h: 80: 0b00000000000000000,
-[; ;segFonts.h: 81: 0b00000001111001111,
-[; ;segFonts.h: 82: 0b01001000111110011,
-[; ;segFonts.h: 83: 0b00000000011110011,
-[; ;segFonts.h: 84: 0b00000001101111100,
-[; ;segFonts.h: 85: 0b00000001111110011,
-[; ;segFonts.h: 86: 0b00000001111000011,
-[; ;segFonts.h: 87: 0b00000001011111011,
-[; ;segFonts.h: 88: 0b00000001111001100,
-[; ;segFonts.h: 89: 0b00100100000110011,
-[; ;segFonts.h: 90: 0b00100100000010011,
-[; ;segFonts.h: 91: 0b01001000111000000,
-[; ;segFonts.h: 92: 0b00000000011110000,
-[; ;segFonts.h: 93: 0b00001010011001100,
-[; ;segFonts.h: 94: 0b01000010011001100,
-[; ;segFonts.h: 95: 0b00000000011111111,
-[; ;segFonts.h: 96: 0b00000001111000111,
-[; ;segFonts.h: 97: 0b01000000011111111,
-[; ;segFonts.h: 98: 0b01000001111000111,
-[; ;segFonts.h: 99: 0b00000001110111011,
-[; ;segFonts.h: 100: 0b00100100000000011,
-[; ;segFonts.h: 101: 0b00000000011111100,
-[; ;segFonts.h: 102: 0b00011000011000000,
-[; ;segFonts.h: 103: 0b01010000011001100,
-[; ;segFonts.h: 104: 0b01011010000000000,
-[; ;segFonts.h: 105: 0b00101010000000000,
-[; ;segFonts.h: 106: 0b00011000000110011,
-[; ;segFonts.h: 107: 0b00000000011010001,
-[; ;segFonts.h: 108: 0b01000010000000000,
-[; ;segFonts.h: 109: 0b00000000000101110,
-[; ;segFonts.h: 110: 0b00000000000000011,
-[; ;segFonts.h: 111: 0b00000000000110000,
-[; ;segFonts.h: 112: 0b01010101100000000,
-[; ;segFonts.h: 113: 0b00011010011000000,
-[; ;segFonts.h: 114: 0b00000101101111011,
-[; ;segFonts.h: 115: 0b00001011100000011,
-[; ;segFonts.h: 116: 0b00000000000000000,
-[; ;segFonts.h: 117: 0b00000000000000000,
-[; ;segFonts.h: 118: 0b00000000000000000,
-[; ;segFonts.h: 119: 0b01111111111111111,
-[; ;segFonts.h: 120: 0b00000000000000001,
-[; ;segFonts.h: 121: 0b00000000000000010,
-[; ;segFonts.h: 122: 0b00000000000000100,
-[; ;segFonts.h: 123: 0b00000000000001000,
-[; ;segFonts.h: 124: 0b00000000000100000,
-[; ;segFonts.h: 125: 0b00000000000010000,
-[; ;segFonts.h: 126: 0b00000000001000000,
-[; ;segFonts.h: 127: 0b00000000010000000,
-[; ;segFonts.h: 128: 0b00000100000000000,
-[; ;segFonts.h: 129: 0b00001000000000000,
-[; ;segFonts.h: 130: 0b00000001000000000,
-[; ;segFonts.h: 131: 0b01000000000000000,
-[; ;segFonts.h: 132: 0b00100000000000000,
-[; ;segFonts.h: 133: 0b00010000000000000,
-[; ;segFonts.h: 134: 0b00010000000000000,
-[; ;segFonts.h: 135: 0b00000010000000000,
-[; ;segFonts.h: 136: 0b00000100000000000,
-[; ;segFonts.h: 137: 0b00001100000000000,
-[; ;segFonts.h: 138: 0b00001100100000000,
-[; ;segFonts.h: 139: 0b01001100100000000,
-[; ;segFonts.h: 140: 0b01101100100000000,
-[; ;segFonts.h: 141: 0b01111100100000000,
-[; ;segFonts.h: 142: 0b01111101100000000,
-[; ;segFonts.h: 143: 0b01111111100000000
-[; ;segFonts.h: 144: };
 [; ;stdbool.h: 12: typedef unsigned char bool;
 [; ;usart.h: 64: void USART_Initialize();
 [; ;usart.h: 82: void USART_putcUSART(char);
@@ -5155,430 +4667,111 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;usb_device_cdc.h: 952: extern LINE_CODING line_coding;
 [; ;usb_device_cdc.h: 954: extern volatile CTRL_TRF_SETUP SetupPkt;
 [; ;usb_device_cdc.h: 955: extern const uint8_t configDescriptor1[];
-"21 main.c
-[p x FOSC=HS ]
-"22
-[p x MCLRE=ON ]
-"23
-[p x LVP=OFF ]
-"28
-[v _setSegPin `(v ~T0 @X0 1 ef1`ul ]
-{
-[; ;main.c: 28: void setSegPin(unsigned long input){
-[e :U _setSegPin ]
-[v _input `ul ~T0 @X0 1 r1 ]
-[f ]
-[; ;main.c: 29: input = ~input;
+"28 /home/thotgamma/Git/htlabnet/16_Segment_9_Digit_Display_Controller_Ver1.0/Firmware/hexSegController.X/usb_events.c
+[v _USER_USB_CALLBACK_EVENT_HANDLER `(uc ~T0 @X0 1 ef3`E4319`*v`ui ]
 "29
-[e = _input ~ _input ]
-[; ;main.c: 30: PORTC = (input & 0b10000000000000000) >> 16;
+{
+[; ;usb_events.c: 28: bool USER_USB_CALLBACK_EVENT_HANDLER(USB_EVENT event, void *pdata, uint16_t size)
+[; ;usb_events.c: 29: {
+[e :U _USER_USB_CALLBACK_EVENT_HANDLER ]
+"28
+[v _event `E4319 ~T0 @X0 1 r1 ]
+[v _pdata `*v ~T0 @X0 1 r2 ]
+[v _size `ui ~T0 @X0 1 r3 ]
+"29
+[f ]
+[; ;usb_events.c: 30: switch( (int) event )
 "30
-[e = _PORTC -> >> & _input -> -> 65536 `l `ul -> 16 `i `uc ]
-[; ;main.c: 31: PORTD = (input & 0b01111111100000000) >> 8;
+[e $U 596  ]
+[; ;usb_events.c: 31: {
 "31
-[e = _PORTD -> >> & _input -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;main.c: 32: PORTB = input & 0b00000000011111111;
+{
+[; ;usb_events.c: 32: case EVENT_TRANSFER:
 "32
-[e = _PORTB -> & _input -> -> -> 255 `i `l `ul `uc ]
-[; ;main.c: 33: }
-"33
-[e :UE 594 ]
-}
-"35
-[v _setDigitPin `(v ~T0 @X0 1 ef1`ui ]
-{
-[; ;main.c: 35: void setDigitPin(unsigned int input){
-[e :U _setDigitPin ]
-[v _input `ui ~T0 @X0 1 r1 ]
-[f ]
-[; ;main.c: 36: PORTA = (input & 0b111111000) >> 3;
-"36
-[e = _PORTA -> >> & _input -> -> 504 `i `ui -> 3 `i `uc ]
-[; ;main.c: 37: PORTE = input & 0b000000111;
-"37
-[e = _PORTE -> & _input -> -> 7 `i `ui `uc ]
-[; ;main.c: 38: }
-"38
-[e :UE 595 ]
-}
-"40
-[v _segMap `ul ~T0 @X0 -> 9 `i e ]
-[i _segMap
-:U ..
-"52
--> -> 65280 `ui `ul
-"53
--> -> 65280 `ui `ul
-"54
--> -> 65280 `ui `ul
-"55
--> -> 65280 `ui `ul
-"56
--> -> 65280 `ui `ul
-"57
--> -> 65280 `ui `ul
-"58
--> -> 65280 `ui `ul
-"59
--> -> 65280 `ui `ul
-"61
--> -> 65280 `ui `ul
-..
-]
-[; ;main.c: 40: unsigned long segMap[9] = {
-[; ;main.c: 52: 0b01111111100000000,
-[; ;main.c: 53: 0b01111111100000000,
-[; ;main.c: 54: 0b01111111100000000,
-[; ;main.c: 55: 0b01111111100000000,
-[; ;main.c: 56: 0b01111111100000000,
-[; ;main.c: 57: 0b01111111100000000,
-[; ;main.c: 58: 0b01111111100000000,
-[; ;main.c: 59: 0b01111111100000000,
-[; ;main.c: 60: 0b01111111100000000
-[; ;main.c: 61: };
-"64
-[v _digitPtr `s ~T0 @X0 1 e ]
-[i _digitPtr
--> -> 0 `i `s
-]
-[; ;main.c: 64: short digitPtr = 0;
-"79
-[v _main `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 79: void main(void) {
-[e :U _main ]
-[f ]
-[; ;main.c: 81: ADCON1 = 0b00001111;
-"81
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;main.c: 82: CMCON = 0b00000111;
-"82
-[e = _CMCON -> -> 7 `i `uc ]
-[; ;main.c: 83: TRISA = 0b00000000;
-"83
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 84: TRISB = 0b00000000;
-"84
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 85: TRISC = 0b10000000;
-"85
-[e = _TRISC -> -> 128 `i `uc ]
-[; ;main.c: 86: TRISD = 0b00000000;
-"86
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 87: TRISE = 0b00000000;
-"87
-[e = _TRISE -> -> 0 `i `uc ]
-[; ;main.c: 97: T2CON = 0;
-"97
-[e = _T2CON -> -> 0 `i `uc ]
-[; ;main.c: 98: TMR2 = 0;
-"98
-[e = _TMR2 -> -> 0 `i `uc ]
-[; ;main.c: 99: PR2 = 125;
-"99
-[e = _PR2 -> -> 125 `i `uc ]
-[; ;main.c: 100: T2CON = 0b01111101;
-"100
-[e = _T2CON -> -> 125 `i `uc ]
-[; ;main.c: 102: PIE1bits.TMR2IE = 1;
-"102
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 103: INTCONbits.PEIE = 1;
-"103
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 104: INTCONbits.GIE = 1;
-"104
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 108: RCSTA = 0b10010000;
-"108
-[e = _RCSTA -> -> 144 `i `uc ]
-[; ;main.c: 109: BAUDCON = 0b00001000;
-"109
-[e = _BAUDCON -> -> 8 `i `uc ]
-[; ;main.c: 110: SPBRGH = 0;
-"110
-[e = _SPBRGH -> -> 0 `i `uc ]
-[; ;main.c: 111: BRGH = 0;
-"111
-[e = _BRGH -> -> 0 `i `b ]
-[; ;main.c: 112: SPBRG = 129;
-"112
-[e = _SPBRG -> -> 129 `i `uc ]
-[; ;main.c: 115: SYSTEM_Initialize(SYSTEM_STATE_USB_START);
-"115
-[e ( _SYSTEM_Initialize (1 . `E4275 0 ]
-[; ;main.c: 117: USBDeviceInit();
-"117
-[e ( _USBDeviceInit ..  ]
-[; ;main.c: 118: USBDeviceAttach();
-"118
-[e ( _USBDeviceAttach ..  ]
-"122
-[v _RxData `uc ~T0 @X0 1 a ]
-"123
-[v _digitSelector `s ~T0 @X0 1 a ]
-[; ;main.c: 122: char RxData;
-[; ;main.c: 123: short digitSelector;
-[; ;main.c: 127: segMap[0] = fontList['H'];
-"127
-[e = *U + &U _segMap * -> -> -> 0 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 72 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 128: segMap[1] = fontList['T'];
-"128
-[e = *U + &U _segMap * -> -> -> 1 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 84 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 129: segMap[2] = fontList['L'];
-"129
-[e = *U + &U _segMap * -> -> -> 2 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 76 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 130: segMap[3] = fontList['A'];
-"130
-[e = *U + &U _segMap * -> -> -> 3 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 65 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 131: segMap[4] = fontList['B'] | 0b10000000000000000;
-"131
-[e = *U + &U _segMap * -> -> -> 4 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> | -> *U + &U _fontList * -> -> 66 `ui `ux -> -> # *U &U _fontList `ui `ux `l -> 65536 `l `ul ]
-[; ;main.c: 132: segMap[5] = fontList['N'];
-"132
-[e = *U + &U _segMap * -> -> -> 5 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 78 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 133: segMap[6] = fontList['E'];
-"133
-[e = *U + &U _segMap * -> -> -> 6 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 69 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 134: segMap[7] = fontList['T'];
-"134
-[e = *U + &U _segMap * -> -> -> 7 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 84 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 135: segMap[8] = fontList['!'];
-"135
-[e = *U + &U _segMap * -> -> -> 8 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> 33 `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-"137
-[v _buff `uc ~T0 @X0 1 a ]
-[; ;main.c: 137: unsigned char buff;
-[; ;main.c: 138: while(1){
-"138
-[e :U 598 ]
-{
-[; ;main.c: 139: buff = USART_getcUSART();
-"139
-[e = _buff ( _USART_getcUSART ..  ]
-[; ;main.c: 140: if(buff != 0){
-"140
-[e $ ! != -> _buff `i -> 0 `i 600  ]
-{
-[; ;main.c: 141: USART_putcUSART(buff);
-"141
-[e ( _USART_putcUSART (1 _buff ]
-[; ;main.c: 142: buff = 0;
-"142
-[e = _buff -> -> 0 `i `uc ]
-"143
-}
-[e :U 600 ]
-"144
-}
 [e :U 597 ]
-"138
-[e $U 598  ]
+[; ;usb_events.c: 33: break;
+"33
+[e $U 595  ]
+[; ;usb_events.c: 35: case EVENT_SOF:
+"35
+[e :U 598 ]
+[; ;usb_events.c: 38: break;
+"38
+[e $U 595  ]
+[; ;usb_events.c: 40: case EVENT_SUSPEND:
+"40
 [e :U 599 ]
-[; ;main.c: 143: }
-[; ;main.c: 144: }
-[; ;main.c: 147: while(1){
-"147
-[e :U 602 ]
-{
-[; ;main.c: 148: while (!PIR1bits.RCIF);
-"148
-[e $U 604  ]
-[e :U 605 ]
-[e :U 604 ]
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 605  ]
-[e :U 606 ]
-[; ;main.c: 149: PIR1bits.RCIF = 0;
-"149
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 150: RxData = RCREG;
-"150
-[e = _RxData _RCREG ]
-[; ;main.c: 152: if ((RxData & 0b00000111) == 0b111){
-"152
-[e $ ! == & -> _RxData `i -> 7 `i -> 7 `i 607  ]
-{
-[; ;main.c: 153: digitSelector = (RxData & 0b11111000) >> 3;
-"153
-[e = _digitSelector -> >> & -> _RxData `i -> 248 `i -> 3 `i `s ]
-[; ;main.c: 154: while (!PIR1bits.RCIF);
-"154
-[e $U 608  ]
-[e :U 609 ]
-[e :U 608 ]
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 609  ]
-[e :U 610 ]
-[; ;main.c: 155: PIR1bits.RCIF = 0;
-"155
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 156: RxData = RCREG;
-"156
-[e = _RxData _RCREG ]
-[; ;main.c: 157: switch(digitSelector){
-"157
-[e $U 612  ]
-{
-[; ;main.c: 158: case 0b00111:
-"158
-[e :U 613 ]
-[; ;main.c: 159: segMap[0] = fontList[RxData];
-"159
-[e = *U + &U _segMap * -> -> -> 0 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 160: break;
-"160
-[e $U 611  ]
-[; ;main.c: 161: case 0b01000:
-"161
-[e :U 614 ]
-[; ;main.c: 162: segMap[1] = fontList[RxData];
-"162
-[e = *U + &U _segMap * -> -> -> 1 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 163: break;
-"163
-[e $U 611  ]
-[; ;main.c: 164: case 0b01001:
-"164
-[e :U 615 ]
-[; ;main.c: 165: segMap[2] = fontList[RxData];
-"165
-[e = *U + &U _segMap * -> -> -> 2 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 166: break;
-"166
-[e $U 611  ]
-[; ;main.c: 167: case 0b01010:
-"167
-[e :U 616 ]
-[; ;main.c: 168: segMap[3] = fontList[RxData];
-"168
-[e = *U + &U _segMap * -> -> -> 3 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 169: break;
-"169
-[e $U 611  ]
-[; ;main.c: 170: case 0b01011:
-"170
-[e :U 617 ]
-[; ;main.c: 171: segMap[4] = fontList[RxData];
-"171
-[e = *U + &U _segMap * -> -> -> 4 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 172: break;
-"172
-[e $U 611  ]
-[; ;main.c: 173: case 0b01100:
-"173
-[e :U 618 ]
-[; ;main.c: 174: segMap[5] = fontList[RxData];
-"174
-[e = *U + &U _segMap * -> -> -> 5 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 175: break;
-"175
-[e $U 611  ]
-[; ;main.c: 176: case 0b01101:
-"176
-[e :U 619 ]
-[; ;main.c: 177: segMap[6] = fontList[RxData];
-"177
-[e = *U + &U _segMap * -> -> -> 6 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 178: break;
-"178
-[e $U 611  ]
-[; ;main.c: 179: case 0b01110:
-"179
-[e :U 620 ]
-[; ;main.c: 180: segMap[7] = fontList[RxData];
-"180
-[e = *U + &U _segMap * -> -> -> 7 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 181: break;
-"181
-[e $U 611  ]
-[; ;main.c: 182: case 0b01111:
-"182
-[e :U 621 ]
-[; ;main.c: 183: segMap[8] = fontList[RxData];
-"183
-[e = *U + &U _segMap * -> -> -> 8 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 184: break;
-"184
-[e $U 611  ]
-[; ;main.c: 185: default:
-"185
-[e :U 622 ]
-[; ;main.c: 187: segMap[8] = fontList[0x45];
-"187
-[e = *U + &U _segMap * -> -> -> 8 `i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> -> 69 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-[; ;main.c: 188: break;
-"188
-[e $U 611  ]
-"189
-}
-[; ;main.c: 189: }
-[e $U 611  ]
-"157
-[e :U 612 ]
-[e [\ _digitSelector , $ -> -> 7 `i `s 613
- , $ -> -> 8 `i `s 614
- , $ -> -> 9 `i `s 615
- , $ -> -> 10 `i `s 616
- , $ -> -> 11 `i `s 617
- , $ -> -> 12 `i `s 618
- , $ -> -> 13 `i `s 619
- , $ -> -> 14 `i `s 620
- , $ -> -> 15 `i `s 621
- 622 ]
-"189
-[e :U 611 ]
-"190
-}
-[; ;main.c: 190: }else{
-[e $U 623  ]
-[e :U 607 ]
-{
-"191
-}
-[e :U 623 ]
-"192
-}
+[; ;usb_events.c: 42: break;
+"42
+[e $U 595  ]
+[; ;usb_events.c: 44: case EVENT_RESUME:
+"44
+[e :U 600 ]
+[; ;usb_events.c: 46: break;
+"46
+[e $U 595  ]
+[; ;usb_events.c: 48: case EVENT_CONFIGURED:
+"48
 [e :U 601 ]
-"147
-[e $U 602  ]
+[; ;usb_events.c: 51: break;
+"51
+[e $U 595  ]
+[; ;usb_events.c: 53: case EVENT_SET_DESCRIPTOR:
+"53
+[e :U 602 ]
+[; ;usb_events.c: 54: break;
+"54
+[e $U 595  ]
+[; ;usb_events.c: 56: case EVENT_EP0_REQUEST:
+"56
 [e :U 603 ]
-[; ;main.c: 191: }
-[; ;main.c: 192: }
-[; ;main.c: 193: }
-"193
-[e :UE 596 ]
+[; ;usb_events.c: 59: USBCheckCDCRequest();
+"59
+[e ( _USBCheckCDCRequest ..  ]
+[; ;usb_events.c: 60: break;
+"60
+[e $U 595  ]
+[; ;usb_events.c: 62: case EVENT_BUS_ERROR:
+"62
+[e :U 604 ]
+[; ;usb_events.c: 63: break;
+"63
+[e $U 595  ]
+[; ;usb_events.c: 65: case EVENT_TRANSFER_TERMINATED:
+"65
+[e :U 605 ]
+[; ;usb_events.c: 66: break;
+"66
+[e $U 595  ]
+[; ;usb_events.c: 68: default:
+"68
+[e :U 606 ]
+[; ;usb_events.c: 69: break;
+"69
+[e $U 595  ]
+"70
 }
-[v F5024 `(v ~T0 @X0 1 tf ]
-"195
-[v _isr `IF5024 ~T0 @X0 1 e ]
-{
-[; ;main.c: 195: void interrupt isr(void){
-[e :U _isr ]
-[f ]
-[; ;main.c: 196: if(PIR1bits.TMR2IF){
-"196
-[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 625  ]
-{
-[; ;main.c: 197: PIR1bits.TMR2IF = 0;
-"197
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 199: setSegPin(0b00000000000000000);
-"199
-[e ( _setSegPin (1 -> -> -> 0 `i `l `ul ]
-[; ;main.c: 200: setDigitPin(1<<digitPtr);
-"200
-[e ( _setDigitPin (1 -> << -> 1 `i _digitPtr `ui ]
-[; ;main.c: 201: setSegPin(segMap[digitPtr]);
-"201
-[e ( _setSegPin (1 *U + &U _segMap * -> -> _digitPtr `us `ux -> -> # *U &U _segMap `ui `ux ]
-[; ;main.c: 202: digitPtr = (digitPtr+1)%9;
-"202
-[e = _digitPtr -> % + -> _digitPtr `i -> 1 `i -> 9 `i `s ]
-"203
-}
-[e :U 625 ]
-[; ;main.c: 203: }
-[; ;main.c: 204: }
-"204
-[e :UE 624 ]
+[; ;usb_events.c: 70: }
+[e $U 595  ]
+"30
+[e :U 596 ]
+[e [\ -> _event `i , $ -> . `E4319 16 `i 597
+ , $ -> . `E4319 17 `i 598
+ , $ -> . `E4319 19 `i 599
+ , $ -> . `E4319 18 `i 600
+ , $ -> . `E4579 0 `i 601
+ , $ -> . `E4579 1 `i 602
+ , $ -> . `E4579 2 `i 603
+ , $ -> . `E4319 35 `i 604
+ , $ -> . `E4579 4 `i 605
+ 606 ]
+"70
+[e :U 595 ]
+[; ;usb_events.c: 71: return 1;
+"71
+[e ) -> -> 1 `i `uc ]
+[e $UE 594  ]
+[; ;usb_events.c: 72: }
+"72
+[e :UE 594 ]
 }
