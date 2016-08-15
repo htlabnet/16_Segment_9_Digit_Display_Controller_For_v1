@@ -112,12 +112,15 @@ void setHexSegStr(String input){
 		}
 	}
 
-	for(int i = 0; i < 9 || i < buff.length(); i++){
+	for(int i = 0; i < 9 && i < buff.length(); i++){
 		if(dotFlag[i] == 0){
 			setHexSegChar(i, buff[i]);
 		}else{
 			setHexSegCharWithDot(i, buff[i]);
 		}
+	}
+	for(int i = buff.length(); i < 9; i++){
+		setHexSegChar(i,'@');
 	}
 }
 
@@ -126,25 +129,29 @@ void setHexSegStr(String input){
 void setup() {
 	// put your setup code here, to run once:
 	hexSegClientInit();
-	sample1("THIS IS 16 SEGMENT 9 DIGIT DISPLAY CREATED BY HTLABNET");
-
+	sample1("MAKER FAIRE TOKYO 2016 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY");
 }
 
 //定型文表示の場合。ループで表示文を投げておくことをお勧めします。
 void loop() {
-	//setHexSegStr("HTLAB.NET!");   
+	// put your main code here, to run repeatedly:
+	//setHexSegStr("HTLAB.NET!");
 }
-
 
 //適当なサンプルです。長い文字列を入れると適当に流して表示してくれます。
 //ただし、「.」に関する適切な処理がなされていません。
 void sample1(String input){
-
+  input += "@@@@@@@@@";
 	while(true){
-		for(int i = 0; i < input.length()-9; i++){
-			setHexSegStr(input.substring(i,i+9));
-			delay(1000);
-		}
+	  for(int i = 0; i <= input.length()-9; i++){
+      setHexSegStr(input.substring(i,i+9));
+      delay(800);
+	  }
 	}
 }
+
+
+
+
+
 
