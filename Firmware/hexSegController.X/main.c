@@ -40,20 +40,6 @@ unsigned long segMap[9] = {
     0b110000000011111111
 };
 
-/*
-unsigned long segMap[9] = {
-    0b111111111111111111,
-    0b111111111111111111,
-    0b111111111111111111,
-    0b111111111111111111,
-    0b111111111111111111,
-    0b111111111111111111,
-    0b111111111111111111,
-    0b111111111111111111,
-    0b111111111111111111
-};
-*/
-
 // 現在表示している桁数
 short digitPtr = 0;
 
@@ -69,43 +55,6 @@ void showBinary(int input){
     }
 }
 
-/*
-    SP3
-    SP4
-    SP5
-    SP6
-    SP7
-    SP8
-    SP9
-    SP10
-
-    SN17
-    SN18
-    LED4
-    LED3
-    LED2
-    LED1
-    SP1
-    SP2
-
-    SN9
-    SN10
-    SN11
-    SN12
-    SN13
-    SN14
-    SN15
-    SN16
-
-    SN1
-    SN2
-    SN3
-    SN4
-    SN5
-    SN6
-    SN7
-    SN8
-*/
 
 
 void refreshShiftRegister(int ptr) {
@@ -119,7 +68,6 @@ void refreshShiftRegister(int ptr) {
                     | ((segMap[ptr] & 0b110000000000000000) >> 8)
                     | ((ledSelector & 0b1111111100) >> 2);
 
-    //uint32_t map = 0b11111111111111110010101100000001;
 
     for (int i = 0; i < 32; i++) {
         LATBbits.LATB2 = (map >> i) & 1;
@@ -147,6 +95,8 @@ void main(void) {
 
     LATCbits.LATC0 = 0; // OUTPUT ENABLE
     LATCbits.LATC1 = 1; // CLEAR
+
+    LATCbits.LATC2 = 0; // PWM
 
     LATAbits.LATA4 = 0; // USB_VCC -> VCC
     LATAbits.LATA5 = 0; // VCC -> LED

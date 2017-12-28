@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Microchip\xc8\v1.45\dat\en_msgs.txt -cs \
   -h+dist/default/production\hexSegController.X.production.sym \
   --cmf=dist/default/production\hexSegController.X.production.cmf -z \
-  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\sbgk.2 \
+  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\shng.2 \
   -Mdist/default/production/hexSegController.X.production.map -E1 -ver=XC8 \
   -ASTACK=019Bh-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj \
+  C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj \
   dist/default/production\hexSegController.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -43,19 +43,19 @@ C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
 dist/default/production\hexSegController.X.production.obj
                 intcode                               8        8        6        4       0
                 temp                                 54       54        1        1       1
-                text3                               56C      56C       70        4       0
+                text3                               56E      56E       70        4       0
                 text2                                12       12      25A        4       0
-                intcode_body                        49E      49E       CE        4       0
-                text0                               26C      26C      12E        4       0
+                intcode_body                        4A0      4A0       CE        4       0
+                text0                               26C      26C      130        4       0
                 cstackCOMRAM                          1        1       50        1       1
                 cstackBANK0                          84       84       13       60       1
                 dataBIGRAM                           97       97      104       97       1
                 dataBANK0                            60       60       24       60       1
                 bssCOMRAM                            51       51        2        1       1
-                cinit                               5DC      5DC       52        4       0
+                cinit                               5DE      5DE       52        4       0
                 nvCOMRAM                             53       53        1        1       1
-                idataBANK0                          62E      62E       24        4       0
-                idataBIGRAM                         39A      39A      104        4       0
+                idataBANK0                          630      630       24        4       0
+                idataBIGRAM                         39C      39C      104        4       0
 
 TOTAL           Name                               Link     Load   Length     Space
         CLASS   STACK          
@@ -64,13 +64,13 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
-                text3                               56C      56C       70         0
+                text3                               56E      56E       70         0
                 text2                                12       12      25A         0
-                intcode_body                        49E      49E       CE         0
-                text0                               26C      26C      12E         0
-                cinit                               5DC      5DC       52         0
-                idataBANK0                          62E      62E       24         0
-                idataBIGRAM                         39A      39A      104         0
+                intcode_body                        4A0      4A0       CE         0
+                text0                               26C      26C      130         0
+                cinit                               5DE      5DE       52         0
+                idataBANK0                          630      630       24         0
+                idataBIGRAM                         39C      39C      104         0
 
         CLASS   CONST          
 
@@ -127,7 +127,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
                 cstackCOMRAM                   000001  000054  000055         1       1  COMRAM  
-                intcode                        000008  00064A  000652         4       0  CODE    
+                intcode                        000008  00064C  000654         4       0  CODE    
                 dataBANK0                      000060  000037  000097        60       1  BANK0   
                 dataBIGRAM                     000097  000104  00019B        97       1  BIGRAM  
                 idloc                          200000  000008  200008    200000       0  IDLOC   
@@ -147,10 +147,10 @@ UNUSED ADDRESS RANGES
         BIGRAM           000055-00005F                B
                          00019B-0007FF              665
         CODE             000004-000007                4
-                         000652-007FFF             79AE
+                         000654-007FFF             79AC
         COMRAM           000055-00005F                B
         CONST            000004-000007                4
-                         000652-007FFF             79AE
+                         000654-007FFF             79AC
         EEDATA           F00000-F000FF              100
         MEDIUMCONST      000800-007FFF             7800
         RAM              00019B-0007FF              100
@@ -335,7 +335,7 @@ __Ltext3                         text3        000000
 __S0                             (abs)        30000E
 __S1                             (abs)        00019B
 __S2                             (abs)        000000
-___awmod                         text3        00056C
+___awmod                         text3        00056E
 ___awmod@counter                 cstackCOMRAM 000005
 ___awmod@dividend                cstackCOMRAM 000001
 ___awmod@divisor                 cstackCOMRAM 000003
@@ -347,27 +347,27 @@ ___rparam_used                   (abs)        000001
 ___sp                            stack        000000
 __accesstop                      (abs)        000060
 __activetblptr                   (abs)        000000
-__end_of___awmod                 text3        0005DC
-__end_of__initialization         cinit        000624
-__end_of_isr                     intcode_body 00056C
-__end_of_main                    text0        00039A
+__end_of___awmod                 text3        0005DE
+__end_of__initialization         cinit        000626
+__end_of_isr                     intcode_body 00056E
+__end_of_main                    text0        00039C
 __end_of_refreshShiftRegister    text2        00026C
-__initialization                 cinit        0005DC
+__initialization                 cinit        0005DE
 __mediumconst                    mediumconst  000000
 __pbssCOMRAM                     bssCOMRAM    000051
-__pcinit                         cinit        0005DC
+__pcinit                         cinit        0005DE
 __pcstackBANK0                   cstackBANK0  000084
 __pcstackCOMRAM                  cstackCOMRAM 000001
 __pdataBANK0                     dataBANK0    000060
 __pdataBIGRAM                    dataBIGRAM   000097
-__pidataBANK0                    idataBANK0   00062E
-__pidataBIGRAM                   idataBIGRAM  00039A
+__pidataBANK0                    idataBANK0   000630
+__pidataBIGRAM                   idataBIGRAM  00039C
 __pintcode                       intcode      000008
-__pintcode_body                  intcode_body 00049E
+__pintcode_body                  intcode_body 0004A0
 __pnvCOMRAM                      nvCOMRAM     000053
 __ptext0                         text0        00026C
 __ptext2                         text2        000012
-__ptext3                         text3        00056C
+__ptext3                         text3        00056E
 __ramtop                         ramtop       000800
 __size_of___awmod                (abs)        000000
 __size_of_isr                    (abs)        000000
@@ -382,9 +382,9 @@ _main                            text0        00026C
 _refreshShiftRegister            text2        000012
 _segMap                          dataBANK0    000060
 btemp                            temp         000054
-end_of_initialization            cinit        000624
+end_of_initialization            cinit        000626
 int$flags                        temp         000054
-int_func                         intcode_body 00049E
+int_func                         intcode_body 0004A0
 intlevel0                        text         000000
 intlevel1                        text         000000
 intlevel2                        text         000000
@@ -399,7 +399,7 @@ refreshShiftRegister@ptr         cstackCOMRAM 000001
 stackhi                          (abs)        0007FF
 stacklo                          (abs)        00019B
 start                            init         00000E
-start_initialization             cinit        0005DC
+start_initialization             cinit        0005DE
 wtemp6                           temp         000055
 
 
@@ -407,7 +407,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 138 in file "main.c"
+		line 86 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -438,7 +438,7 @@ Total ram usage:       19 bytes
 
  *************** function _isr *****************
  Defined at:
-		line 201 in file "main.c"
+		line 151 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -469,7 +469,7 @@ Total ram usage:       18 bytes
 
  *************** function _refreshShiftRegister *****************
  Defined at:
-		line 111 in file "main.c"
+		line 60 in file "main.c"
  Parameters:    Size  Location     Type
   ptr             2    0[COMRAM] int 
  Auto vars:     Size  Location     Type
@@ -534,19 +534,19 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 shared
-		__initialization		CODE           	05DC	0000	73
+		__initialization		CODE           	05DE	0000	73
 
 shared estimated size: 73
 
 D:\Microchip\xc8\v1.45\sources\common\awmod.c
-		___awmod       		CODE           	056C	0000	113
+		___awmod       		CODE           	056E	0000	113
 
 D:\Microchip\xc8\v1.45\sources\common\awmod.c estimated size: 113
 
 main.c
 		_refreshShiftRegister		CODE           	0012	0000	603
-		_main          		CODE           	026C	0000	303
+		_main          		CODE           	026C	0000	305
 		_isr           		CODE           	0008	0000	213
 
-main.c estimated size: 1119
+main.c estimated size: 1121
 

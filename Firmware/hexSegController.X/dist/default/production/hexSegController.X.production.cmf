@@ -12,22 +12,22 @@
 # in delta units.  Any other numeric values are decimal.
 %PSECTS
 $dist/default/production\hexSegController.X.production.obj
-cinit CODE 0 5DC 5DC 52 1
-intcode_body CODE 0 49E 49E CE 1
-text0 CODE 0 26C 26C 12E 1
+cinit CODE 0 5DE 5DE 52 1
+intcode_body CODE 0 4A0 4A0 CE 1
+text0 CODE 0 26C 26C 130 1
 text2 CODE 0 12 12 25A 1
-text3 CODE 0 56C 56C 70 1
+text3 CODE 0 56E 56E 70 1
 nvCOMRAM COMRAM 1 53 53 1 1
-idataBIGRAM CODE 0 39A 39A 104 1
+idataBIGRAM CODE 0 39C 39C 104 1
 cstackCOMRAM COMRAM 1 1 1 50 1
 cstackBANK0 BANK0 1 84 84 13 1
 temp COMRAM 1 54 54 1 1
 intcode CODE 0 8 8 6 1
-idataBANK0 CODE 0 62E 62E 24 1
+idataBANK0 CODE 0 630 630 24 1
 dataBANK0 BANK0 1 60 60 24 1
 dataBIGRAM BIGRAM 1 97 97 104 1
 bssCOMRAM COMRAM 1 51 51 2 1
-$C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+$C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -48,11 +48,11 @@ BANK5 500-5FF 1
 BANK6 600-6FF 1
 BANK7 700-7FF 1
 CONST 4-7 1
-CONST 652-7FFF 1
+CONST 654-7FFF 1
 STACK 19B-7FF 1
 SMALLCONST 800-7FFF 1
 CODE 4-7 1
-CODE 652-7FFF 1
+CODE 654-7FFF 1
 BIGRAM 55-5F 1
 BIGRAM 19B-7FF 1
 COMRAM 55-5F 1
@@ -72,133 +72,134 @@ MEDIUMCONST 800-7FFF 1
 # All other numeric values are in decimal.
 %LINETAB
 $dist/default/production\hexSegController.X.production.obj
-8 intcode CODE >198:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-8 intcode CODE >201:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-56C text3 CODE >8:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-56C text3 CODE >13:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-570 text3 CODE >14:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-574 text3 CODE >15:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-57C text3 CODE >16:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-580 text3 CODE >17:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-580 text3 CODE >18:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-584 text3 CODE >19:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-58C text3 CODE >20:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-594 text3 CODE >21:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-598 text3 CODE >22:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-59A text3 CODE >23:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5A0 text3 CODE >24:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5A2 text3 CODE >22:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5A2 text3 CODE >25:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5A6 text3 CODE >27:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5B2 text3 CODE >28:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5BA text3 CODE >29:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5C0 text3 CODE >30:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5C4 text3 CODE >32:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5CA text3 CODE >33:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-5D2 text3 CODE >34:D:\Microchip\xc8\v1.45\sources\common\awmod.c
-12 text2 CODE >111:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-12 text2 CODE >112:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-34 text2 CODE >120:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-1E6 text2 CODE >124:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-1F8 text2 CODE >125:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-22E text2 CODE >126:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-230 text2 CODE >127:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-238 text2 CODE >128:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-23A text2 CODE >129:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-242 text2 CODE >124:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-256 text2 CODE >132:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-258 text2 CODE >133:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-260 text2 CODE >134:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-262 text2 CODE >135:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-26A text2 CODE >136:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-49E intcode_body CODE >201:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-4E8 intcode_body CODE >202:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-4EC intcode_body CODE >203:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-4EE intcode_body CODE >204:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-4FA intcode_body CODE >205:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-51A intcode_body CODE >207:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-51E intcode_body CODE >208:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-520 intcode_body CODE >209:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-520 intcode_body CODE >210:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-26C text0 CODE >138:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-26C text0 CODE >140:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-270 text0 CODE >141:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-274 text0 CODE >142:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-278 text0 CODE >143:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-27C text0 CODE >144:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-280 text0 CODE >145:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-284 text0 CODE >146:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-288 text0 CODE >148:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-28A text0 CODE >149:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-28C text0 CODE >151:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-28E text0 CODE >152:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-290 text0 CODE >157:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-294 text0 CODE >158:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-298 text0 CODE >159:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-29C text0 CODE >160:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2A0 text0 CODE >163:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2A2 text0 CODE >164:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2A4 text0 CODE >165:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2A6 text0 CODE >168:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2AA text0 CODE >169:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2AE text0 CODE >170:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2B2 text0 CODE >171:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2B4 text0 CODE >172:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2B8 text0 CODE >174:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2BC text0 CODE >180:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2BC text0 CODE >181:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2C0 text0 CODE >182:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2C2 text0 CODE >183:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2C6 text0 CODE >186:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2D2 text0 CODE >187:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2E0 text0 CODE >188:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2F8 text0 CODE >189:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2FC text0 CODE >190:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-2FE text0 CODE >191:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-302 text0 CODE >192:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-314 text0 CODE >193:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-31C text0 CODE >194:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-398 text0 CODE >180:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-5DC cinit CODE >978:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5DC cinit CODE >980:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5DC cinit CODE >983:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5DC cinit CODE >1012:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5DE cinit CODE >1013:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5E0 cinit CODE >1014:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5E2 cinit CODE >1015:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5E4 cinit CODE >1016:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5E6 cinit CODE >1017:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5E8 cinit CODE >1018:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5EC cinit CODE >1019:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5F0 cinit CODE >1020:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5F0 cinit CODE >1021:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5F2 cinit CODE >1022:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5F6 cinit CODE >1023:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5F8 cinit CODE >1024:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5FA cinit CODE >1025:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5FC cinit CODE >1026:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-5FE cinit CODE >1027:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-600 cinit CODE >1031:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-602 cinit CODE >1032:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-604 cinit CODE >1033:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-606 cinit CODE >1034:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-608 cinit CODE >1035:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-60A cinit CODE >1036:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-60C cinit CODE >1037:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-610 cinit CODE >1038:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-614 cinit CODE >1039:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-614 cinit CODE >1040:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-616 cinit CODE >1041:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-61A cinit CODE >1042:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-61C cinit CODE >1043:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-61E cinit CODE >1044:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-620 cinit CODE >1048:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-622 cinit CODE >1049:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-624 cinit CODE >1055:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-624 cinit CODE >1057:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-626 cinit CODE >1058:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-628 cinit CODE >1059:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
-62A cinit CODE >1060:C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.
+8 intcode CODE >148:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+8 intcode CODE >151:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+56E text3 CODE >8:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+56E text3 CODE >13:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+572 text3 CODE >14:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+576 text3 CODE >15:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+57E text3 CODE >16:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+582 text3 CODE >17:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+582 text3 CODE >18:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+586 text3 CODE >19:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+58E text3 CODE >20:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+596 text3 CODE >21:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+59A text3 CODE >22:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+59C text3 CODE >23:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5A2 text3 CODE >24:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5A4 text3 CODE >22:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5A4 text3 CODE >25:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5A8 text3 CODE >27:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5B4 text3 CODE >28:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5BC text3 CODE >29:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5C2 text3 CODE >30:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5C6 text3 CODE >32:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5CC text3 CODE >33:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+5D4 text3 CODE >34:D:\Microchip\xc8\v1.45\sources\common\awmod.c
+12 text2 CODE >60:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+12 text2 CODE >61:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+34 text2 CODE >69:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+1E6 text2 CODE >72:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+1F8 text2 CODE >73:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+22E text2 CODE >74:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+230 text2 CODE >75:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+238 text2 CODE >76:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+23A text2 CODE >77:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+242 text2 CODE >72:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+256 text2 CODE >80:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+258 text2 CODE >81:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+260 text2 CODE >82:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+262 text2 CODE >83:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+26A text2 CODE >84:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+4A0 intcode_body CODE >151:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+4EA intcode_body CODE >152:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+4EE intcode_body CODE >153:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+4F0 intcode_body CODE >154:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+4FC intcode_body CODE >155:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+51C intcode_body CODE >157:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+520 intcode_body CODE >158:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+522 intcode_body CODE >159:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+522 intcode_body CODE >160:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+26C text0 CODE >86:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+26C text0 CODE >88:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+270 text0 CODE >89:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+274 text0 CODE >90:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+278 text0 CODE >91:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+27C text0 CODE >92:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+280 text0 CODE >93:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+284 text0 CODE >94:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+288 text0 CODE >96:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+28A text0 CODE >97:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+28C text0 CODE >99:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+28E text0 CODE >101:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+290 text0 CODE >102:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+292 text0 CODE >107:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+296 text0 CODE >108:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+29A text0 CODE >109:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+29E text0 CODE >110:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2A2 text0 CODE >113:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2A4 text0 CODE >114:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2A6 text0 CODE >115:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2A8 text0 CODE >118:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2AC text0 CODE >119:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2B0 text0 CODE >120:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2B4 text0 CODE >121:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2B6 text0 CODE >122:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2BA text0 CODE >124:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2BE text0 CODE >130:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2BE text0 CODE >131:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2C2 text0 CODE >132:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2C4 text0 CODE >133:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2C8 text0 CODE >136:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2D4 text0 CODE >137:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2E2 text0 CODE >138:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2FA text0 CODE >139:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+2FE text0 CODE >140:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+300 text0 CODE >141:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+304 text0 CODE >142:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+316 text0 CODE >143:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+31E text0 CODE >144:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+39A text0 CODE >130:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+5DE cinit CODE >978:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5DE cinit CODE >980:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5DE cinit CODE >983:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5DE cinit CODE >1012:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5E0 cinit CODE >1013:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5E2 cinit CODE >1014:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5E4 cinit CODE >1015:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5E6 cinit CODE >1016:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5E8 cinit CODE >1017:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5EA cinit CODE >1018:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5EE cinit CODE >1019:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5F2 cinit CODE >1020:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5F2 cinit CODE >1021:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5F4 cinit CODE >1022:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5F8 cinit CODE >1023:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5FA cinit CODE >1024:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5FC cinit CODE >1025:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+5FE cinit CODE >1026:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+600 cinit CODE >1027:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+602 cinit CODE >1031:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+604 cinit CODE >1032:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+606 cinit CODE >1033:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+608 cinit CODE >1034:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+60A cinit CODE >1035:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+60C cinit CODE >1036:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+60E cinit CODE >1037:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+612 cinit CODE >1038:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+616 cinit CODE >1039:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+616 cinit CODE >1040:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+618 cinit CODE >1041:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+61C cinit CODE >1042:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+61E cinit CODE >1043:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+620 cinit CODE >1044:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+622 cinit CODE >1048:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+624 cinit CODE >1049:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+626 cinit CODE >1055:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+626 cinit CODE >1057:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+628 cinit CODE >1058:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+62A cinit CODE >1059:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
+62C cinit CODE >1060:C:\Users\THOTGA~1\AppData\Local\Temp\shng.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -219,16 +220,16 @@ __Hspace_1 19B 0 ABS 0 - dist/default/production\hexSegController.X.production.o
 __Hspace_2 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __HidataBANK0 0 0 ABS 0 idataBANK0 dist/default/production\hexSegController.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\hexSegController.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\hexSegController.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\hexSegController.X.production.obj
 _BRGH 7D62 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _TMR2 FCC 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+___sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 _main 26C 0 CODE 0 text0 dist/default/production\hexSegController.X.production.obj
 btemp 54 0 COMRAM 1 temp dist/default/production\hexSegController.X.production.obj
-start E 0 CODE 0 init C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+start E 0 CODE 0 init C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\hexSegController.X.production.obj
@@ -237,32 +238,32 @@ __Hpowerup E 0 CODE 0 powerup dist/default/production\hexSegController.X.product
 __HdataBIGRAM 0 0 ABS 0 dataBIGRAM dist/default/production\hexSegController.X.production.obj
 ___awmod@sign 6 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
 __LnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\hexSegController.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
-intlevel0 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
-intlevel1 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
-intlevel2 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
-intlevel3 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+__accesstop 60 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
+intlevel0 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
+intlevel1 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
+intlevel2 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
+intlevel3 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\hexSegController.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\hexSegController.X.production.obj
 wtemp6 55 0 COMRAM 1 temp dist/default/production\hexSegController.X.production.obj
 _led_stat 53 0 COMRAM 1 nvCOMRAM dist/default/production\hexSegController.X.production.obj
 refreshShiftRegister@ledSelector 3B 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
 __Hifardata 0 0 CODE 0 ifardata dist/default/production\hexSegController.X.production.obj
-__pidataBIGRAM 39A 0 CODE 0 idataBIGRAM dist/default/production\hexSegController.X.production.obj
+__pidataBIGRAM 39C 0 CODE 0 idataBIGRAM dist/default/production\hexSegController.X.production.obj
 __Hclrtext 0 0 ABS 0 clrtext dist/default/production\hexSegController.X.production.obj
 _ADCON1 FC1 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __LdataBIGRAM 0 0 ABS 0 dataBIGRAM dist/default/production\hexSegController.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\hexSegController.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\hexSegController.X.production.obj
 __Hmediumconst 0 0 MEDIUMCONST 0 mediumconst dist/default/production\hexSegController.X.production.obj
 __Hintcodelo E 0 CODE 0 intcodelo dist/default/production\hexSegController.X.production.obj
-__end_of___awmod 5DC 0 CODE 0 text3 dist/default/production\hexSegController.X.production.obj
+__end_of___awmod 5DE 0 CODE 0 text3 dist/default/production\hexSegController.X.production.obj
 __LidataBIGRAM 0 0 ABS 0 idataBIGRAM dist/default/production\hexSegController.X.production.obj
 __HnvCOMRAM 0 0 ABS 0 nvCOMRAM dist/default/production\hexSegController.X.production.obj
 __Lintcodelo E 0 CODE 0 intcodelo dist/default/production\hexSegController.X.production.obj
-start_initialization 5DC 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
+start_initialization 5DE 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
 __HnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\hexSegController.X.production.obj
 ___rparam_used 1 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _refreshShiftRegister 12 0 CODE 0 text2 dist/default/production\hexSegController.X.production.obj
@@ -291,7 +292,7 @@ __Htext2 0 0 ABS 0 text2 dist/default/production\hexSegController.X.production.o
 __Htext3 0 0 ABS 0 text3 dist/default/production\hexSegController.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\hexSegController.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\hexSegController.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\hexSegController.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\hexSegController.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\hexSegController.X.production.obj
@@ -345,8 +346,8 @@ __HidataBIGRAM 0 0 ABS 0 idataBIGRAM dist/default/production\hexSegController.X.
 main@digitSelector 94 0 BANK0 1 cstackBANK0 dist/default/production\hexSegController.X.production.obj
 __Lbigdata 0 0 BIGRAM 1 bigdata dist/default/production\hexSegController.X.production.obj
 __Hnvrram 0 0 COMRAM 1 nvrram dist/default/production\hexSegController.X.production.obj
-__end_of_isr 56C 0 CODE 0 intcode_body dist/default/production\hexSegController.X.production.obj
-int_func 49E 0 CODE 0 intcode_body dist/default/production\hexSegController.X.production.obj
+__end_of_isr 56E 0 CODE 0 intcode_body dist/default/production\hexSegController.X.production.obj
+int_func 4A0 0 CODE 0 intcode_body dist/default/production\hexSegController.X.production.obj
 main@RxData 96 0 BANK0 1 cstackBANK0 dist/default/production\hexSegController.X.production.obj
 __Lintentry 0 0 ABS 0 intentry dist/default/production\hexSegController.X.production.obj
 __Hramtop 800 0 RAM 0 ramtop dist/default/production\hexSegController.X.production.obj
@@ -357,9 +358,9 @@ __Hstruct 0 0 COMRAM 1 struct dist/default/production\hexSegController.X.product
 ___awmod@counter 5 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
 _PIE1bits F9D 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 main@dotflag 90 0 BANK0 1 cstackBANK0 dist/default/production\hexSegController.X.production.obj
-___awmod 56C 0 CODE 0 text3 dist/default/production\hexSegController.X.production.obj
+___awmod 56E 0 CODE 0 text3 dist/default/production\hexSegController.X.production.obj
 _BAUDCON FB8 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
-__pintcode_body 49E 0 CODE 0 intcode_body dist/default/production\hexSegController.X.production.obj
+__pintcode_body 4A0 0 CODE 0 intcode_body dist/default/production\hexSegController.X.production.obj
 __Lbigbss 0 0 BIGRAM 1 bigbss dist/default/production\hexSegController.X.production.obj
 __Lbigram 0 0 ABS 0 bigram dist/default/production\hexSegController.X.production.obj
 __Lcomram 0 0 ABS 0 comram dist/default/production\hexSegController.X.production.obj
@@ -370,8 +371,8 @@ _LATCbits F8B 0 ABS 0 - dist/default/production\hexSegController.X.production.ob
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\hexSegController.X.production.obj
 _segMap 60 0 BANK0 1 dataBANK0 dist/default/production\hexSegController.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\hexSegController.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
-stacklo 19B 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+stackhi 7FF 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
+stacklo 19B 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\hexSegController.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\hexSegController.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\hexSegController.X.production.obj
@@ -384,7 +385,7 @@ __HcstackBANK0 0 0 ABS 0 cstackBANK0 dist/default/production\hexSegController.X.
 _PIR1bits F9E 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _fontList 97 0 BIGRAM 1 dataBIGRAM dist/default/production\hexSegController.X.production.obj
 __LcstackCOMRAM 0 0 ABS 0 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
-end_of_initialization 624 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
+end_of_initialization 626 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
 __Lnvrram 0 0 COMRAM 1 nvrram dist/default/production\hexSegController.X.production.obj
 __Hintentry 0 0 ABS 0 intentry dist/default/production\hexSegController.X.production.obj
 ?___awmod 1 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
@@ -395,13 +396,13 @@ ___awmod@dividend 1 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegContro
 __Lramtop 800 0 RAM 0 ramtop dist/default/production\hexSegController.X.production.obj
 refreshShiftRegister@i 3D 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
 __Lrparam 0 0 COMRAM 1 rparam dist/default/production\hexSegController.X.production.obj
-__pcinit 5DC 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
+__pcinit 5DE 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
 _SSPCON2bits FC5 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __ptext0 26C 0 CODE 0 text0 dist/default/production\hexSegController.X.production.obj
 __ptext2 12 0 CODE 0 text2 dist/default/production\hexSegController.X.production.obj
-__ptext3 56C 0 CODE 0 text3 dist/default/production\hexSegController.X.production.obj
+__ptext3 56E 0 CODE 0 text3 dist/default/production\hexSegController.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\hexSegController.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\THOTGA~1\AppData\Local\Temp\sbgk.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\THOTGA~1\AppData\Local\Temp\shng.obj
 __Lpowerup E 0 CODE 0 powerup dist/default/production\hexSegController.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\hexSegController.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\hexSegController.X.production.obj
@@ -409,17 +410,17 @@ __CFG_FOSC$HS 0 0 ABS 0 - dist/default/production\hexSegController.X.production.
 ___param_bank 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __CFG_WDT$OFF 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __Hbigdata 0 0 BIGRAM 1 bigdata dist/default/production\hexSegController.X.production.obj
-__end_of__initialization 624 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
+__end_of__initialization 626 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
 ___awmod@divisor 3 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
 __Libigdata 0 0 CODE 0 ibigdata dist/default/production\hexSegController.X.production.obj
-__pidataBANK0 62E 0 CODE 0 idataBANK0 dist/default/production\hexSegController.X.production.obj
+__pidataBANK0 630 0 CODE 0 idataBANK0 dist/default/production\hexSegController.X.production.obj
 __Lclrtext 0 0 ABS 0 clrtext dist/default/production\hexSegController.X.production.obj
 __pcstackCOMRAM 1 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
 __size_of_refreshShiftRegister 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _SSPCON1 FC6 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _SSPCON2 FC5 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _SSPSTAT FC7 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
-__end_of_main 39A 0 CODE 0 text0 dist/default/production\hexSegController.X.production.obj
+__end_of_main 39C 0 CODE 0 text0 dist/default/production\hexSegController.X.production.obj
 __pintcode 8 0 CODE 0 intcode dist/default/production\hexSegController.X.production.obj
 _CMCON FB4 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _RCREG FAE 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
@@ -446,7 +447,7 @@ _SSPSTATbits FC7 0 ABS 0 - dist/default/production\hexSegController.X.production
 __size_of_isr 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __HdataBANK0 0 0 ABS 0 dataBANK0 dist/default/production\hexSegController.X.production.obj
 __pdataBIGRAM 97 0 BIGRAM 1 dataBIGRAM dist/default/production\hexSegController.X.production.obj
-__initialization 5DC 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
+__initialization 5DE 0 CODE 0 cinit dist/default/production\hexSegController.X.production.obj
 __Hfardata 0 0 FARRAM 0 fardata dist/default/production\hexSegController.X.production.obj
 __Hsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\hexSegController.X.production.obj
 __Lifardata 0 0 CODE 0 ifardata dist/default/production\hexSegController.X.production.obj
@@ -479,7 +480,7 @@ __Hintcode E 0 CODE 0 intcode dist/default/production\hexSegController.X.product
 idloc 0 200000 200000 8 1
 cstackCOMRAM 1 1 1 54 1
 reset_vec 0 0 0 4 1
-intcode 0 8 8 64A 1
+intcode 0 8 8 64C 1
 dataBANK0 1 60 60 37 1
 dataBIGRAM 1 97 97 104 1
 config 0 300000 300000 E 1

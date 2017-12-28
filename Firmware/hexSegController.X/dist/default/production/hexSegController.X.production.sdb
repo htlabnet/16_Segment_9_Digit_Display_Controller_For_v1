@@ -27,11 +27,11 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "10 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\i2c.c
 [v _i2c_wait i2c_wait `(v  1 e 1 0 ]
-"111 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+"60 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 [v _refreshShiftRegister refreshShiftRegister `(v  1 e 1 0 ]
-"138
+"86
 [v _main main `(v  1 e 1 0 ]
-"201
+"151
 [v _isr isr `II(v  1 e 1 0 ]
 [s S106 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
@@ -279,38 +279,38 @@
 [v _led_stat led_stat `uc  1 e 1 0 ]
 "31
 [v _segMap segMap `[9]ul  1 e 36 0 ]
-"58
+"44
 [v _digitPtr digitPtr `s  1 e 2 0 ]
 "21 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\segFonts.h
 [v _fontList fontList `[130]ui  1 e 260 0 ]
-"138 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+"86 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"178
+"128
 [v main@dotflag dotflag `ul  1 a 4 12 ]
-"177
+"127
 [v main@digitSelector digitSelector `s  1 a 2 16 ]
-"176
+"126
 [v main@RxData RxData `uc  1 a 1 18 ]
-"198
+"148
 } 0
-"201
+"151
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"210
+"160
 } 0
-"111
+"60
 [v _refreshShiftRegister refreshShiftRegister `(v  1 e 1 0 ]
 {
-"124
+"72
 [v refreshShiftRegister@i i `i  1 a 2 60 ]
-"115
+"64
 [v refreshShiftRegister@map map `ul  1 a 4 54 ]
-"112
+"61
 [v refreshShiftRegister@ledSelector ledSelector `ui  1 a 2 58 ]
-"111
+"60
 [v refreshShiftRegister@ptr ptr `i  1 p 2 0 ]
-"136
+"84
 } 0
 "8 D:\Microchip\xc8\v1.45\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]

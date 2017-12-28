@@ -5065,7 +5065,7 @@ unsigned long segMap[9] = {
 0b110000000011111111
 };
 
-# 58
+
 short digitPtr = 0;
 
 
@@ -5080,7 +5080,8 @@ segMap[i] = fontList[0x31];
 }
 }
 
-# 111
+
+
 void refreshShiftRegister(int ptr) {
 uint16_t ledSelector = 0b1 << ptr;
 
@@ -5091,7 +5092,6 @@ uint32_t map = ((segMap[ptr] & 0b11111111) << 24)
 | ((led_stat & 0b00001111) << 10)
 | ((segMap[ptr] & 0b110000000000000000) >> 8)
 | ((ledSelector & 0b1111111100) >> 2);
-
 
 
 for (int i = 0; i < 32; i++) {
@@ -5120,6 +5120,8 @@ TRISE = 0b00000000;
 
 LATCbits.LATC0 = 0;
 LATCbits.LATC1 = 1;
+
+LATCbits.LATC2 = 0;
 
 LATAbits.LATA4 = 0;
 LATAbits.LATA5 = 0;
