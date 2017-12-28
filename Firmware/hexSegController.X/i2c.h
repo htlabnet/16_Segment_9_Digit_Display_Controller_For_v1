@@ -1,9 +1,9 @@
-/* 
- * File:   i2c.h
- * Author: thotgamma
- *
- * Created on 2017/12/28, 20:27
- */
+/*
+* File:   i2c.h
+* Author: thotgamma
+*
+* Created on 2017/12/28, 20:27
+*/
 
 #ifndef I2C_H
 #define	I2C_H
@@ -24,4 +24,3 @@ void    i2c_send_byte(unsigned char data);
 uint8_t i2c_read_byte(unsigned int ack);
 
 #endif	/* I2C_H */
-

@@ -27,7 +27,7 @@ intcode CODE 0 8 8 6 1
 dataBIGRAM BIGRAM 1 73 73 104 1
 dataCOMRAM COMRAM 1 1 1 24 1
 bssCOMRAM COMRAM 1 42 42 2 1
-$C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+$C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 idloc IDLOC 0 200000 200000 8 1
 init CODE 0 E E 4 1
 reset_vec CODE 0 0 0 4 1
@@ -151,46 +151,46 @@ F6 intcode_body CODE >138:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Fi
 1DE text0 CODE >119:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 1E6 text0 CODE >120:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 262 text0 CODE >106:C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-3D8 cinit CODE >976:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3D8 cinit CODE >978:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3D8 cinit CODE >981:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3D8 cinit CODE >1010:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3DA cinit CODE >1011:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3DC cinit CODE >1012:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3DE cinit CODE >1013:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3E0 cinit CODE >1014:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3E2 cinit CODE >1015:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3E4 cinit CODE >1016:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3E8 cinit CODE >1017:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3EC cinit CODE >1018:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3EC cinit CODE >1019:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3EE cinit CODE >1020:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3F2 cinit CODE >1021:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3F4 cinit CODE >1022:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3F6 cinit CODE >1023:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3F8 cinit CODE >1024:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3FA cinit CODE >1025:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3FC cinit CODE >1029:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-3FE cinit CODE >1030:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-400 cinit CODE >1031:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-402 cinit CODE >1032:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-404 cinit CODE >1033:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-406 cinit CODE >1034:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-408 cinit CODE >1035:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-40C cinit CODE >1036:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-410 cinit CODE >1037:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-410 cinit CODE >1038:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-412 cinit CODE >1039:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-416 cinit CODE >1040:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-418 cinit CODE >1041:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-41A cinit CODE >1042:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-41C cinit CODE >1046:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-41E cinit CODE >1047:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-420 cinit CODE >1053:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-420 cinit CODE >1055:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-422 cinit CODE >1056:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-424 cinit CODE >1057:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
-426 cinit CODE >1058:C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.
+3D8 cinit CODE >976:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3D8 cinit CODE >978:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3D8 cinit CODE >981:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3D8 cinit CODE >1010:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3DA cinit CODE >1011:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3DC cinit CODE >1012:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3DE cinit CODE >1013:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3E0 cinit CODE >1014:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3E2 cinit CODE >1015:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3E4 cinit CODE >1016:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3E8 cinit CODE >1017:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3EC cinit CODE >1018:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3EC cinit CODE >1019:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3EE cinit CODE >1020:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3F2 cinit CODE >1021:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3F4 cinit CODE >1022:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3F6 cinit CODE >1023:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3F8 cinit CODE >1024:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3FA cinit CODE >1025:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3FC cinit CODE >1029:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+3FE cinit CODE >1030:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+400 cinit CODE >1031:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+402 cinit CODE >1032:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+404 cinit CODE >1033:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+406 cinit CODE >1034:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+408 cinit CODE >1035:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+40C cinit CODE >1036:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+410 cinit CODE >1037:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+410 cinit CODE >1038:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+412 cinit CODE >1039:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+416 cinit CODE >1040:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+418 cinit CODE >1041:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+41A cinit CODE >1042:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+41C cinit CODE >1046:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+41E cinit CODE >1047:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+420 cinit CODE >1053:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+420 cinit CODE >1055:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+422 cinit CODE >1056:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+424 cinit CODE >1057:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
+426 cinit CODE >1058:C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.
 # %SYMTAB Section
 # An enumeration of all symbols in the program.
 # The beginning of the section is indicated by %SYMTAB.
@@ -209,16 +209,16 @@ __Hspace_0 30000E 0 ABS 0 - dist/default/production\hexSegController.X.productio
 __Hspace_1 177 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __Hspace_2 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __Hibigdata 0 0 CODE 0 ibigdata dist/default/production\hexSegController.X.production.obj
-__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+__mediumconst 0 0 MEDIUMCONST 0 mediumconst C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 __Heeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\hexSegController.X.production.obj
 __CFG_MCLRE$ON 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __Lsmallconst 0 0 SMALLCONST 0 smallconst dist/default/production\hexSegController.X.production.obj
 _BRGH 7D62 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 _TMR2 FCC 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
-___sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+___sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 _main 142 0 CODE 0 text0 dist/default/production\hexSegController.X.production.obj
 btemp 44 0 COMRAM 1 temp dist/default/production\hexSegController.X.production.obj
-start E 0 CODE 0 init C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+start E 0 CODE 0 init C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 __size_of___awmod 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __size_of_main 0 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __HbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\hexSegController.X.production.obj
@@ -227,11 +227,11 @@ __Hpowerup E 0 CODE 0 powerup dist/default/production\hexSegController.X.product
 __HdataBIGRAM 0 0 ABS 0 dataBIGRAM dist/default/production\hexSegController.X.production.obj
 ___awmod@sign 2A 0 COMRAM 1 cstackCOMRAM dist/default/production\hexSegController.X.production.obj
 __HdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\hexSegController.X.production.obj
-__accesstop 60 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
-intlevel0 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
-intlevel1 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
-intlevel2 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
-intlevel3 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+__accesstop 60 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
+intlevel0 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
+intlevel1 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
+intlevel2 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
+intlevel3 0 0 CODE 0 text C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 __LbssCOMRAM 0 0 ABS 0 bssCOMRAM dist/default/production\hexSegController.X.production.obj
 __LnvFARRAM 0 0 FARRAM 0 nvFARRAM dist/default/production\hexSegController.X.production.obj
 wtemp6 45 0 COMRAM 1 temp dist/default/production\hexSegController.X.production.obj
@@ -241,8 +241,8 @@ __Hclrtext 0 0 ABS 0 clrtext dist/default/production\hexSegController.X.producti
 __pidataCOMRAM 48A 0 CODE 0 idataCOMRAM dist/default/production\hexSegController.X.production.obj
 _ADCON1 FC1 0 ABS 0 - dist/default/production\hexSegController.X.production.obj
 __LdataBIGRAM 0 0 ABS 0 dataBIGRAM dist/default/production\hexSegController.X.production.obj
-___inthi_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
-___intlo_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+___inthi_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
+___intlo_sp 0 0 STACK 2 stack C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 __LdataCOMRAM 0 0 ABS 0 dataCOMRAM dist/default/production\hexSegController.X.production.obj
 __Hintcode_body 0 0 ABS 0 intcode_body dist/default/production\hexSegController.X.production.obj
 __Lintsave_regs 0 0 BIGRAM 1 intsave_regs dist/default/production\hexSegController.X.production.obj
@@ -282,7 +282,7 @@ __Htext3 0 0 ABS 0 text3 dist/default/production\hexSegController.X.production.o
 __Htext4 0 0 ABS 0 text4 dist/default/production\hexSegController.X.production.obj
 __Hbigbss 0 0 BIGRAM 1 bigbss dist/default/production\hexSegController.X.production.obj
 __Hbigram 0 0 ABS 0 bigram dist/default/production\hexSegController.X.production.obj
-__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+__smallconst 0 0 SMALLCONST 0 smallconst C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 __Hcomram 0 0 ABS 0 comram dist/default/production\hexSegController.X.production.obj
 __Hconfig 30000E 0 CONFIG 0 config dist/default/production\hexSegController.X.production.obj
 __Lbank0 0 0 ABS 0 bank0 dist/default/production\hexSegController.X.production.obj
@@ -359,8 +359,8 @@ __Lconfig 300000 0 CONFIG 0 config dist/default/production\hexSegController.X.pr
 __Lfarbss 0 0 FARRAM 0 farbss dist/default/production\hexSegController.X.production.obj
 _segMap 1 0 COMRAM 1 dataCOMRAM dist/default/production\hexSegController.X.production.obj
 __Lfardata 0 0 FARRAM 0 fardata dist/default/production\hexSegController.X.production.obj
-stackhi 7FF 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
-stacklo 177 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+stackhi 7FF 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
+stacklo 177 0 ABS 0 - C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 __Lintcode 8 0 CODE 0 intcode dist/default/production\hexSegController.X.production.obj
 __Lintret 0 0 ABS 0 intret dist/default/production\hexSegController.X.production.obj
 __Lirdata 0 0 CODE 0 irdata dist/default/production\hexSegController.X.production.obj
@@ -390,7 +390,7 @@ __ptext2 42A 0 CODE 0 text2 dist/default/production\hexSegController.X.productio
 __ptext3 462 0 CODE 0 text3 dist/default/production\hexSegController.X.production.obj
 __ptext4 368 0 CODE 0 text4 dist/default/production\hexSegController.X.production.obj
 __Lstruct 0 0 COMRAM 1 struct dist/default/production\hexSegController.X.production.obj
-__ramtop 800 0 RAM 0 ramtop C:\Users\THOTGA~1\AppData\Local\Temp\sd8g.obj
+__ramtop 800 0 RAM 0 ramtop C:\Users\THOTGA~1\AppData\Local\Temp\sfrc.obj
 __Lpowerup E 0 CODE 0 powerup dist/default/production\hexSegController.X.production.obj
 __Leeprom_data 0 0 EEDATA 0 eeprom_data dist/default/production\hexSegController.X.production.obj
 __Lreset_vec 0 0 CODE 0 reset_vec dist/default/production\hexSegController.X.production.obj
