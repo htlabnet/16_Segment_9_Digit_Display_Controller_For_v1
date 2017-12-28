@@ -25,32 +25,34 @@
 
 #define _XTAL_FREQ 20000000
 
-//文字を指定する
-void setSegPin(unsigned long input){
-    input = ~input;
-    PORTC = (input & 0b10000000000000000) >> 16;
-    PORTD = (input & 0b01111111100000000) >> 8;
-    PORTB =  input & 0b00000000011111111;
-}
-
-//桁を指定する
-void setDigitPin(unsigned int input){
-    PORTA = (input & 0b111111000) >> 3;
-    PORTE =  input & 0b000000111;
-}
+uint8_t  led_stat;
 
 //初期値"*********"
 unsigned long segMap[9] = {
-    0b01111111100000000,
-    0b01111111100000000,
-    0b01111111100000000,
-    0b01111111100000000,
-    0b01111111100000000,
-    0b01111111100000000,
-    0b01111111100000000,
-    0b01111111100000000,
-    0b01111111100000000
+    0b110000000011111111,
+    0b110000000011111111,
+    0b110000000011111111,
+    0b110000000011111111,
+    0b110000000011111111,
+    0b110000000011111111,
+    0b110000000011111111,
+    0b110000000011111111,
+    0b110000000011111111
 };
+
+/*
+unsigned long segMap[9] = {
+    0b111111111111111111,
+    0b111111111111111111,
+    0b111111111111111111,
+    0b111111111111111111,
+    0b111111111111111111,
+    0b111111111111111111,
+    0b111111111111111111,
+    0b111111111111111111,
+    0b111111111111111111
+};
+*/
 
 // 現在表示している桁数
 short digitPtr = 0;
@@ -67,6 +69,72 @@ void showBinary(int input){
     }
 }
 
+/*
+    SP3
+    SP4
+    SP5
+    SP6
+    SP7
+    SP8
+    SP9
+    SP10
+
+    SN17
+    SN18
+    LED4
+    LED3
+    LED2
+    LED1
+    SP1
+    SP2
+
+    SN9
+    SN10
+    SN11
+    SN12
+    SN13
+    SN14
+    SN15
+    SN16
+
+    SN1
+    SN2
+    SN3
+    SN4
+    SN5
+    SN6
+    SN7
+    SN8
+*/
+
+
+void refreshShiftRegister(int ptr) {
+    uint16_t ledSelector = 0b1 << ptr;
+
+
+    uint32_t map =    ((segMap[ptr] & 0b11111111) << 24)
+                    | ((segMap[ptr] & 0b1111111100000000) << 8)
+                    | ((ledSelector & 0b0000000011) << 14)
+                    | ((led_stat    & 0b00001111) << 10)
+                    | ((segMap[ptr] & 0b110000000000000000) >> 8)
+                    | ((ledSelector & 0b1111111100) >> 2);
+
+    //uint32_t map = 0b11111111111111110010101100000001;
+
+    for (int i = 0; i < 32; i++) {
+        LATBbits.LATB2 = (map >> i) & 1;
+        LATBbits.LATB3 = 1;
+        __delay_us(10);
+        LATBbits.LATB3 = 0;
+        __delay_us(10);
+    }
+
+    LATBbits.LATB4 = 1;
+    __delay_us(10);
+    LATBbits.LATB4 = 0;
+    __delay_us(10);
+}
+
 void main(void) {
 
     ADCON1 = 0b00001111; //All Digital
@@ -76,6 +144,13 @@ void main(void) {
     TRISC  = 0b10000000; //Rxのみ入力
     TRISD  = 0b00000000;
     TRISE  = 0b00000000;
+
+    LATCbits.LATC0 = 0; // OUTPUT ENABLE
+    LATCbits.LATC1 = 1; // CLEAR
+
+    LATAbits.LATA4 = 0; // USB_VCC -> VCC
+    LATAbits.LATA5 = 0; // VCC -> LED
+
 
 
     //タイマー設定。比較機が使えるTimer2を使う
@@ -96,12 +171,11 @@ void main(void) {
     BRGH = 0;
     SPBRG   = 129;
 
+    led_stat = 0b11110011;
 
     char RxData;            // 受信データ用バッファ
     short digitSelector;    // 書き換え桁数
     unsigned long dotflag;  // ドットをつけるかどうか
-
-
 
     while(1){
         while (!PIR1bits.RCIF);      // 受信するまで待つ
@@ -127,11 +201,9 @@ void main(void) {
 void interrupt isr(void){
     if(PIR1bits.TMR2IF){
         PIR1bits.TMR2IF = 0;    // フラグを下げる
-
-        setSegPin(0b00000000000000000); // 移行する前に消灯する(でないと次の桁に引きずるため)
-        setDigitPin(1<<digitPtr);       // 桁の移行
-        setSegPin(segMap[digitPtr]);    // 値をセット
+        refreshShiftRegister(digitPtr);
         digitPtr = (digitPtr+1)%9;      // digitPtrを次の値にセット
+
     } else if (SSPIF) {
         SSPIF = 0;
     }

@@ -5050,34 +5050,22 @@ uint8_t i2c_read_byte(unsigned int ack);
 
 
 
-
-void setSegPin(unsigned long input){
-input = ~input;
-PORTC = (input & 0b10000000000000000) >> 16;
-PORTD = (input & 0b01111111100000000) >> 8;
-PORTB = input & 0b00000000011111111;
-}
-
-
-void setDigitPin(unsigned int input){
-PORTA = (input & 0b111111000) >> 3;
-PORTE = input & 0b000000111;
-}
+uint8_t led_stat;
 
 
 unsigned long segMap[9] = {
-0b01111111100000000,
-0b01111111100000000,
-0b01111111100000000,
-0b01111111100000000,
-0b01111111100000000,
-0b01111111100000000,
-0b01111111100000000,
-0b01111111100000000,
-0b01111111100000000
+0b110000000011111111,
+0b110000000011111111,
+0b110000000011111111,
+0b110000000011111111,
+0b110000000011111111,
+0b110000000011111111,
+0b110000000011111111,
+0b110000000011111111,
+0b110000000011111111
 };
 
-
+# 58
 short digitPtr = 0;
 
 
@@ -5092,6 +5080,34 @@ segMap[i] = fontList[0x31];
 }
 }
 
+# 111
+void refreshShiftRegister(int ptr) {
+uint16_t ledSelector = 0b1 << ptr;
+
+
+uint32_t map = ((segMap[ptr] & 0b11111111) << 24)
+| ((segMap[ptr] & 0b1111111100000000) << 8)
+| ((ledSelector & 0b0000000011) << 14)
+| ((led_stat & 0b00001111) << 10)
+| ((segMap[ptr] & 0b110000000000000000) >> 8)
+| ((ledSelector & 0b1111111100) >> 2);
+
+
+
+for (int i = 0; i < 32; i++) {
+LATBbits.LATB2 = (map >> i) & 1;
+LATBbits.LATB3 = 1;
+_delay((unsigned long)((10)*(20000000/4000000.0)));
+LATBbits.LATB3 = 0;
+_delay((unsigned long)((10)*(20000000/4000000.0)));
+}
+
+LATBbits.LATB4 = 1;
+_delay((unsigned long)((10)*(20000000/4000000.0)));
+LATBbits.LATB4 = 0;
+_delay((unsigned long)((10)*(20000000/4000000.0)));
+}
+
 void main(void) {
 
 ADCON1 = 0b00001111;
@@ -5101,6 +5117,13 @@ TRISB = 0b00000000;
 TRISC = 0b10000000;
 TRISD = 0b00000000;
 TRISE = 0b00000000;
+
+LATCbits.LATC0 = 0;
+LATCbits.LATC1 = 1;
+
+LATAbits.LATA4 = 0;
+LATAbits.LATA5 = 0;
+
 
 
 
@@ -5121,12 +5144,11 @@ SPBRGH = 0;
 BRGH = 0;
 SPBRG = 129;
 
+led_stat = 0b11110011;
 
 char RxData;
 short digitSelector;
 unsigned long dotflag;
-
-
 
 while(1){
 while (!PIR1bits.RCIF);
@@ -5152,11 +5174,9 @@ segMap[digitSelector] = fontList[RxData] | (dotflag << 16);
 void interrupt isr(void){
 if(PIR1bits.TMR2IF){
 PIR1bits.TMR2IF = 0;
-
-setSegPin(0b00000000000000000);
-setDigitPin(1<<digitPtr);
-setSegPin(segMap[digitPtr]);
+refreshShiftRegister(digitPtr);
 digitPtr = (digitPtr+1)%9;
+
 } else if (SSPIF) {
 SSPIF = 0;
 }

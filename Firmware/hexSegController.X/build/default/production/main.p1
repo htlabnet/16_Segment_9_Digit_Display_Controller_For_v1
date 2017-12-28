@@ -1,16 +1,21 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"2561 D:\Microchip\xc8\v1.45\include\pic18f4553.h
-[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
-"2703
-[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
-"2451
-[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
-"2312
-[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
-"2824
-[v _PORTE `Vuc ~T0 @X0 0 e@3972 ]
+"3077 D:\Microchip\xc8\v1.45\include\pic18f4553.h
+[s S125 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S125 . LATB0 LATB1 LATB2 LATB3 LATB4 LATB5 LATB6 LATB7 ]
+"3087
+[s S126 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S126 . LB0 LB1 LB2 LB3 LB4 LB5 LB6 LB7 ]
+"3076
+[u S124 `S125 1 `S126 1 ]
+[n S124 . . . ]
+"3098
+[v _LATBbits `VS124 ~T0 @X0 0 e@3978 ]
+[v F3783 `(v ~T0 @X0 1 tf1`ul ]
+"164 D:\Microchip\xc8\v1.45\include\pic18.h
+[v __delay `JF3783 ~T0 @X0 0 e ]
+[p i __delay ]
 [p mainexit ]
-"6579
+"6579 D:\Microchip\xc8\v1.45\include\pic18f4553.h
 [v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
 "5585
 [v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
@@ -24,6 +29,28 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
 "4221
 [v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
+"3189
+[s S128 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S128 . LATC0 LATC1 LATC2 . LATC6 LATC7 ]
+"3197
+[s S129 :1 `uc 1 :1 `uc 1 :1 `uc 1 :3 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S129 . LC0 LC1 LC2 . LC6 LC7 ]
+"3188
+[u S127 `S128 1 `S129 1 ]
+[n S127 . . . ]
+"3206
+[v _LATCbits `VS127 ~T0 @X0 0 e@3979 ]
+"2977
+[s S122 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S122 . LATA0 LATA1 LATA2 LATA3 LATA4 LATA5 LATA6 ]
+"2986
+[s S123 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S123 . LA0 LA1 LA2 LA3 LA4 LA5 LA6 ]
+"2976
+[u S121 `S122 1 `S123 1 ]
+[n S121 . . . ]
+"2996
+[v _LATAbits `VS121 ~T0 @X0 0 e@3977 ]
 "7198
 [v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
 "7406
@@ -4034,320 +4061,362 @@ Version 3.2 HI-TECH Software Intermediate Code
 [p x LVP=OFF ]
 "24
 [p x WDT=OFF ]
-"29
-[v _setSegPin `(v ~T0 @X0 1 ef1`ul ]
-{
-[; ;main.c: 29: void setSegPin(unsigned long input){
-[e :U _setSegPin ]
-[v _input `ul ~T0 @X0 1 r1 ]
-[f ]
-[; ;main.c: 30: input = ~input;
-"30
-[e = _input ~ _input ]
-[; ;main.c: 31: PORTC = (input & 0b10000000000000000) >> 16;
+"28
+[v _led_stat `uc ~T0 @X0 1 e ]
+[; ;main.c: 28: uint8_t led_stat;
 "31
-[e = _PORTC -> >> & _input -> -> 65536 `l `ul -> 16 `i `uc ]
-[; ;main.c: 32: PORTD = (input & 0b01111111100000000) >> 8;
-"32
-[e = _PORTD -> >> & _input -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;main.c: 33: PORTB = input & 0b00000000011111111;
-"33
-[e = _PORTB -> & _input -> -> -> 255 `i `l `ul `uc ]
-[; ;main.c: 34: }
-"34
-[e :UE 362 ]
-}
-"37
-[v _setDigitPin `(v ~T0 @X0 1 ef1`ui ]
-{
-[; ;main.c: 37: void setDigitPin(unsigned int input){
-[e :U _setDigitPin ]
-[v _input `ui ~T0 @X0 1 r1 ]
-[f ]
-[; ;main.c: 38: PORTA = (input & 0b111111000) >> 3;
-"38
-[e = _PORTA -> >> & _input -> -> 504 `i `ui -> 3 `i `uc ]
-[; ;main.c: 39: PORTE = input & 0b000000111;
-"39
-[e = _PORTE -> & _input -> -> 7 `i `ui `uc ]
-[; ;main.c: 40: }
-"40
-[e :UE 363 ]
-}
-"43
 [v _segMap `ul ~T0 @X0 -> 9 `i e ]
 [i _segMap
 :U ..
-"44
--> -> 65280 `ui `ul
-"45
--> -> 65280 `ui `ul
-"46
--> -> 65280 `ui `ul
-"47
--> -> 65280 `ui `ul
-"48
--> -> 65280 `ui `ul
-"49
--> -> 65280 `ui `ul
-"50
--> -> 65280 `ui `ul
-"51
--> -> 65280 `ui `ul
-"53
--> -> 65280 `ui `ul
+"32
+-> -> 196863 `l `ul
+"33
+-> -> 196863 `l `ul
+"34
+-> -> 196863 `l `ul
+"35
+-> -> 196863 `l `ul
+"36
+-> -> 196863 `l `ul
+"37
+-> -> 196863 `l `ul
+"38
+-> -> 196863 `l `ul
+"39
+-> -> 196863 `l `ul
+"41
+-> -> 196863 `l `ul
 ..
 ]
-[; ;main.c: 43: unsigned long segMap[9] = {
-[; ;main.c: 44: 0b01111111100000000,
-[; ;main.c: 45: 0b01111111100000000,
-[; ;main.c: 46: 0b01111111100000000,
-[; ;main.c: 47: 0b01111111100000000,
-[; ;main.c: 48: 0b01111111100000000,
-[; ;main.c: 49: 0b01111111100000000,
-[; ;main.c: 50: 0b01111111100000000,
-[; ;main.c: 51: 0b01111111100000000,
-[; ;main.c: 52: 0b01111111100000000
-[; ;main.c: 53: };
-"56
+[; ;main.c: 31: unsigned long segMap[9] = {
+[; ;main.c: 32: 0b110000000011111111,
+[; ;main.c: 33: 0b110000000011111111,
+[; ;main.c: 34: 0b110000000011111111,
+[; ;main.c: 35: 0b110000000011111111,
+[; ;main.c: 36: 0b110000000011111111,
+[; ;main.c: 37: 0b110000000011111111,
+[; ;main.c: 38: 0b110000000011111111,
+[; ;main.c: 39: 0b110000000011111111,
+[; ;main.c: 40: 0b110000000011111111
+[; ;main.c: 41: };
+"58
 [v _digitPtr `s ~T0 @X0 1 e ]
 [i _digitPtr
 -> -> 0 `i `s
 ]
-[; ;main.c: 56: short digitPtr = 0;
-"60
+[; ;main.c: 58: short digitPtr = 0;
+"62
 [v _showBinary `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;main.c: 60: void showBinary(int input){
+[; ;main.c: 62: void showBinary(int input){
 [e :U _showBinary ]
 [v _input `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 61: for(int i = 0; i < 8; i++){
-"61
+[; ;main.c: 63: for(int i = 0; i < 8; i++){
+"63
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 365  ]
-[e $U 366  ]
-[e :U 365 ]
+[e $ < _i -> 8 `i 363  ]
+[e $U 364  ]
+[e :U 363 ]
 {
-[; ;main.c: 62: if((input & (1 << i)) == 0){
-"62
-[e $ ! == & _input << -> 1 `i _i -> 0 `i 368  ]
-{
-[; ;main.c: 63: segMap[i] = fontList[0x30];
-"63
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> -> 48 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
+[; ;main.c: 64: if((input & (1 << i)) == 0){
 "64
-}
-[; ;main.c: 64: }else{
-[e $U 369  ]
-[e :U 368 ]
+[e $ ! == & _input << -> 1 `i _i -> 0 `i 366  ]
 {
-[; ;main.c: 65: segMap[i] = fontList[0x31];
+[; ;main.c: 65: segMap[i] = fontList[0x30];
 "65
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> -> 49 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> -> 48 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
 "66
 }
-[e :U 369 ]
-"67
-}
-"61
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 365  ]
+[; ;main.c: 66: }else{
+[e $U 367  ]
 [e :U 366 ]
+{
+[; ;main.c: 67: segMap[i] = fontList[0x31];
 "67
-}
-[; ;main.c: 66: }
-[; ;main.c: 67: }
-[; ;main.c: 68: }
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> -> 49 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
 "68
-[e :UE 364 ]
+}
+[e :U 367 ]
+"69
+}
+"63
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 8 `i 363  ]
+[e :U 364 ]
+"69
+}
+[; ;main.c: 68: }
+[; ;main.c: 69: }
+[; ;main.c: 70: }
+"70
+[e :UE 362 ]
+}
+"111
+[v _refreshShiftRegister `(v ~T0 @X0 1 ef1`i ]
+{
+[; ;main.c: 111: void refreshShiftRegister(int ptr) {
+[e :U _refreshShiftRegister ]
+[v _ptr `i ~T0 @X0 1 r1 ]
+[f ]
+"112
+[v _ledSelector `ui ~T0 @X0 1 a ]
+[; ;main.c: 112: uint16_t ledSelector = 0b1 << ptr;
+[e = _ledSelector -> << -> 1 `i _ptr `ui ]
+"115
+[v _map `ul ~T0 @X0 1 a ]
+[; ;main.c: 115: uint32_t map = ((segMap[ptr] & 0b11111111) << 24)
+[; ;main.c: 116: | ((segMap[ptr] & 0b1111111100000000) << 8)
+[; ;main.c: 117: | ((ledSelector & 0b0000000011) << 14)
+[; ;main.c: 118: | ((led_stat & 0b00001111) << 10)
+[; ;main.c: 119: | ((segMap[ptr] & 0b110000000000000000) >> 8)
+[; ;main.c: 120: | ((ledSelector & 0b1111111100) >> 2);
+"120
+[e = _map | | | | | << & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> -> 255 `i `l `ul -> 24 `i << & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> 65280 `ui `ul -> 8 `i -> << & _ledSelector -> -> 3 `i `ui -> 14 `i `ul -> -> << & -> _led_stat `i -> 15 `i -> 10 `i `l `ul >> & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> 196608 `l `ul -> 8 `i -> >> & _ledSelector -> -> 1020 `i `ui -> 2 `i `ul ]
+[; ;main.c: 124: for (int i = 0; i < 32; i++) {
+"124
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 32 `i 369  ]
+[e $U 370  ]
+[e :U 369 ]
+{
+[; ;main.c: 125: LATBbits.LATB2 = (map >> i) & 1;
+"125
+[e = . . _LATBbits 0 2 -> & >> _map _i -> -> -> 1 `i `l `ul `uc ]
+[; ;main.c: 126: LATBbits.LATB3 = 1;
+"126
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
+[; ;main.c: 127: _delay((unsigned long)((10)*(20000000/4000000.0)));
+"127
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 128: LATBbits.LATB3 = 0;
+"128
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 129: _delay((unsigned long)((10)*(20000000/4000000.0)));
+"129
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+"130
+}
+"124
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 32 `i 369  ]
+[e :U 370 ]
+"130
+}
+[; ;main.c: 130: }
+[; ;main.c: 132: LATBbits.LATB4 = 1;
+"132
+[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 133: _delay((unsigned long)((10)*(20000000/4000000.0)));
+"133
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 134: LATBbits.LATB4 = 0;
+"134
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 135: _delay((unsigned long)((10)*(20000000/4000000.0)));
+"135
+[e ( __delay (1 -> * -> -> 10 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 136: }
+"136
+[e :UE 368 ]
 }
 [v $root$_main `(v ~T0 @X0 0 e ]
-"70
+"138
 [v _main `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 70: void main(void) {
+[; ;main.c: 138: void main(void) {
 [e :U _main ]
 [f ]
-[; ;main.c: 72: ADCON1 = 0b00001111;
-"72
+[; ;main.c: 140: ADCON1 = 0b00001111;
+"140
 [e = _ADCON1 -> -> 15 `i `uc ]
-[; ;main.c: 73: CMCON = 0b00000111;
-"73
+[; ;main.c: 141: CMCON = 0b00000111;
+"141
 [e = _CMCON -> -> 7 `i `uc ]
-[; ;main.c: 74: TRISA = 0b00000000;
-"74
+[; ;main.c: 142: TRISA = 0b00000000;
+"142
 [e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 75: TRISB = 0b00000000;
-"75
+[; ;main.c: 143: TRISB = 0b00000000;
+"143
 [e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 76: TRISC = 0b10000000;
-"76
+[; ;main.c: 144: TRISC = 0b10000000;
+"144
 [e = _TRISC -> -> 128 `i `uc ]
-[; ;main.c: 77: TRISD = 0b00000000;
-"77
+[; ;main.c: 145: TRISD = 0b00000000;
+"145
 [e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 78: TRISE = 0b00000000;
-"78
+[; ;main.c: 146: TRISE = 0b00000000;
+"146
 [e = _TRISE -> -> 0 `i `uc ]
-[; ;main.c: 82: T2CON = 0;
-"82
+[; ;main.c: 148: LATCbits.LATC0 = 0;
+"148
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 149: LATCbits.LATC1 = 1;
+"149
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 151: LATAbits.LATA4 = 0;
+"151
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 152: LATAbits.LATA5 = 0;
+"152
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 157: T2CON = 0;
+"157
 [e = _T2CON -> -> 0 `i `uc ]
-[; ;main.c: 83: TMR2 = 0;
-"83
+[; ;main.c: 158: TMR2 = 0;
+"158
 [e = _TMR2 -> -> 0 `i `uc ]
-[; ;main.c: 84: PR2 = 125;
-"84
+[; ;main.c: 159: PR2 = 125;
+"159
 [e = _PR2 -> -> 125 `i `uc ]
-[; ;main.c: 85: T2CON = 0b01111101;
-"85
+[; ;main.c: 160: T2CON = 0b01111101;
+"160
 [e = _T2CON -> -> 125 `i `uc ]
-[; ;main.c: 88: PIE1bits.TMR2IE = 1;
-"88
+[; ;main.c: 163: PIE1bits.TMR2IE = 1;
+"163
 [e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 89: INTCONbits.PEIE = 1;
-"89
+[; ;main.c: 164: INTCONbits.PEIE = 1;
+"164
 [e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 90: INTCONbits.GIE = 1;
-"90
+[; ;main.c: 165: INTCONbits.GIE = 1;
+"165
 [e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 93: RCSTA = 0b10010000;
-"93
+[; ;main.c: 168: RCSTA = 0b10010000;
+"168
 [e = _RCSTA -> -> 144 `i `uc ]
-[; ;main.c: 94: BAUDCON = 0b00001000;
-"94
+[; ;main.c: 169: BAUDCON = 0b00001000;
+"169
 [e = _BAUDCON -> -> 8 `i `uc ]
-[; ;main.c: 95: SPBRGH = 0;
-"95
+[; ;main.c: 170: SPBRGH = 0;
+"170
 [e = _SPBRGH -> -> 0 `i `uc ]
-[; ;main.c: 96: BRGH = 0;
-"96
+[; ;main.c: 171: BRGH = 0;
+"171
 [e = _BRGH -> -> 0 `i `b ]
-[; ;main.c: 97: SPBRG = 129;
-"97
+[; ;main.c: 172: SPBRG = 129;
+"172
 [e = _SPBRG -> -> 129 `i `uc ]
-"100
+[; ;main.c: 174: led_stat = 0b11110011;
+"174
+[e = _led_stat -> -> 243 `i `uc ]
+"176
 [v _RxData `uc ~T0 @X0 1 a ]
-"101
+"177
 [v _digitSelector `s ~T0 @X0 1 a ]
-"102
+"178
 [v _dotflag `ul ~T0 @X0 1 a ]
-[; ;main.c: 100: char RxData;
-[; ;main.c: 101: short digitSelector;
-[; ;main.c: 102: unsigned long dotflag;
-[; ;main.c: 106: while(1){
-"106
-[e :U 372 ]
+[; ;main.c: 176: char RxData;
+[; ;main.c: 177: short digitSelector;
+[; ;main.c: 178: unsigned long dotflag;
+[; ;main.c: 180: while(1){
+"180
+[e :U 374 ]
 {
-[; ;main.c: 107: while (!PIR1bits.RCIF);
-"107
+[; ;main.c: 181: while (!PIR1bits.RCIF);
+"181
+[e $U 376  ]
+[e :U 377 ]
+[e :U 376 ]
+[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 377  ]
+[e :U 378 ]
+[; ;main.c: 182: PIR1bits.RCIF = 0;
+"182
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 183: RxData = RCREG;
+"183
+[e = _RxData _RCREG ]
+[; ;main.c: 186: if ((RxData & 0b11100000) == 0b11100000){
+"186
+[e $ ! == & -> _RxData `i -> 224 `i -> 224 `i 379  ]
+{
+[; ;main.c: 187: digitSelector = (RxData & 0b00001111);
+"187
+[e = _digitSelector -> & -> _RxData `i -> 15 `i `s ]
+[; ;main.c: 188: dotflag = (RxData & 0b00010000) >> 4;
+"188
+[e = _dotflag -> -> >> & -> _RxData `i -> 16 `i -> 4 `i `l `ul ]
+[; ;main.c: 189: while (!PIR1bits.RCIF);
+"189
+[e $U 380  ]
+[e :U 381 ]
+[e :U 380 ]
+[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 381  ]
+[e :U 382 ]
+[; ;main.c: 190: PIR1bits.RCIF = 0;
+"190
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 191: RxData = RCREG;
+"191
+[e = _RxData _RCREG ]
+[; ;main.c: 192: if(digitSelector > 8)continue;
+"192
+[e $ ! > -> _digitSelector `i -> 8 `i 383  ]
+[e $U 373  ]
+[e :U 383 ]
+[; ;main.c: 193: if(RxData > 0b01111111) RxData = ~RxData;
+"193
+[e $ ! > -> _RxData `i -> 127 `i 384  ]
+[e = _RxData -> ~ -> _RxData `i `uc ]
+[e :U 384 ]
+[; ;main.c: 194: segMap[digitSelector] = fontList[RxData] | (dotflag << 16);
+"194
+[e = *U + &U _segMap * -> -> _digitSelector `us `ux -> -> # *U &U _segMap `ui `ux | -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul << _dotflag -> 16 `i ]
+"196
+}
+[e :U 379 ]
+"197
+}
+[e :U 373 ]
+"180
 [e $U 374  ]
 [e :U 375 ]
-[e :U 374 ]
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 375  ]
-[e :U 376 ]
-[; ;main.c: 108: PIR1bits.RCIF = 0;
-"108
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 109: RxData = RCREG;
-"109
-[e = _RxData _RCREG ]
-[; ;main.c: 112: if ((RxData & 0b11100000) == 0b11100000){
-"112
-[e $ ! == & -> _RxData `i -> 224 `i -> 224 `i 377  ]
-{
-[; ;main.c: 113: digitSelector = (RxData & 0b00001111);
-"113
-[e = _digitSelector -> & -> _RxData `i -> 15 `i `s ]
-[; ;main.c: 114: dotflag = (RxData & 0b00010000) >> 4;
-"114
-[e = _dotflag -> -> >> & -> _RxData `i -> 16 `i -> 4 `i `l `ul ]
-[; ;main.c: 115: while (!PIR1bits.RCIF);
-"115
-[e $U 378  ]
-[e :U 379 ]
-[e :U 378 ]
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 379  ]
-[e :U 380 ]
-[; ;main.c: 116: PIR1bits.RCIF = 0;
-"116
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 117: RxData = RCREG;
-"117
-[e = _RxData _RCREG ]
-[; ;main.c: 118: if(digitSelector > 8)continue;
-"118
-[e $ ! > -> _digitSelector `i -> 8 `i 381  ]
-[e $U 371  ]
-[e :U 381 ]
-[; ;main.c: 119: if(RxData > 0b01111111) RxData = ~RxData;
-"119
-[e $ ! > -> _RxData `i -> 127 `i 382  ]
-[e = _RxData -> ~ -> _RxData `i `uc ]
-[e :U 382 ]
-[; ;main.c: 120: segMap[digitSelector] = fontList[RxData] | (dotflag << 16);
-"120
-[e = *U + &U _segMap * -> -> _digitSelector `us `ux -> -> # *U &U _segMap `ui `ux | -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul << _dotflag -> 16 `i ]
-"122
-}
-[e :U 377 ]
-"123
-}
-[e :U 371 ]
-"106
-[e $U 372  ]
-[e :U 373 ]
-[; ;main.c: 122: }
-[; ;main.c: 123: }
-[; ;main.c: 124: }
-"124
-[e :UE 370 ]
+[; ;main.c: 196: }
+[; ;main.c: 197: }
+[; ;main.c: 198: }
+"198
+[e :UE 372 ]
 }
 [v $root$_isr `(v ~T0 @X0 0 e ]
-[v F3855 `(v ~T0 @X0 1 tf ]
-"127
-[v _isr `IF3855 ~T0 @X0 1 e ]
+[v F3861 `(v ~T0 @X0 1 tf ]
+"201
+[v _isr `IF3861 ~T0 @X0 1 e ]
 {
-[; ;main.c: 127: void interrupt isr(void){
+[; ;main.c: 201: void interrupt isr(void){
 [e :U _isr ]
 [f ]
-[; ;main.c: 128: if(PIR1bits.TMR2IF){
-"128
-[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 384  ]
+[; ;main.c: 202: if(PIR1bits.TMR2IF){
+"202
+[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 386  ]
 {
-[; ;main.c: 129: PIR1bits.TMR2IF = 0;
-"129
+[; ;main.c: 203: PIR1bits.TMR2IF = 0;
+"203
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 131: setSegPin(0b00000000000000000);
-"131
-[e ( _setSegPin (1 -> -> -> 0 `i `l `ul ]
-[; ;main.c: 132: setDigitPin(1<<digitPtr);
-"132
-[e ( _setDigitPin (1 -> << -> 1 `i _digitPtr `ui ]
-[; ;main.c: 133: setSegPin(segMap[digitPtr]);
-"133
-[e ( _setSegPin (1 *U + &U _segMap * -> -> _digitPtr `us `ux -> -> # *U &U _segMap `ui `ux ]
-[; ;main.c: 134: digitPtr = (digitPtr+1)%9;
-"134
+[; ;main.c: 204: refreshShiftRegister(digitPtr);
+"204
+[e ( _refreshShiftRegister (1 -> _digitPtr `i ]
+[; ;main.c: 205: digitPtr = (digitPtr+1)%9;
+"205
 [e = _digitPtr -> % + -> _digitPtr `i -> 1 `i -> 9 `i `s ]
-"135
+"207
 }
-[; ;main.c: 135: } else if (SSPIF) {
-[e $U 385  ]
-[e :U 384 ]
-[e $ ! _SSPIF 386  ]
-{
-[; ;main.c: 136: SSPIF = 0;
-"136
-[e = _SSPIF -> -> 0 `i `b ]
-"137
-}
+[; ;main.c: 207: } else if (SSPIF) {
+[e $U 387  ]
 [e :U 386 ]
-"138
-[e :U 385 ]
-[; ;main.c: 137: }
-[; ;main.c: 138: }
-[e :UE 383 ]
+[e $ ! _SSPIF 388  ]
+{
+[; ;main.c: 208: SSPIF = 0;
+"208
+[e = _SSPIF -> -> 0 `i `b ]
+"209
+}
+[e :U 388 ]
+"210
+[e :U 387 ]
+[; ;main.c: 209: }
+[; ;main.c: 210: }
+[e :UE 385 ]
 }

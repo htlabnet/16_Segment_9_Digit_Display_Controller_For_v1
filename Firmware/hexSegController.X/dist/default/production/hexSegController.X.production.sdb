@@ -27,24 +27,69 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "10 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\i2c.c
 [v _i2c_wait i2c_wait `(v  1 e 1 0 ]
-"29 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
-[v _setSegPin setSegPin `(v  1 e 1 0 ]
-"37
-[v _setDigitPin setDigitPin `(v  1 e 1 0 ]
-"70
+"111 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+[v _refreshShiftRegister refreshShiftRegister `(v  1 e 1 0 ]
+"138
 [v _main main `(v  1 e 1 0 ]
-"127
+"201
 [v _isr isr `II(v  1 e 1 0 ]
-"2312 D:\Microchip\xc8\v1.45\include\pic18f4553.h
-[v _PORTA PORTA `VEuc  1 e 1 @3968 ]
-"2451
-[v _PORTB PORTB `VEuc  1 e 1 @3969 ]
-"2561
-[v _PORTC PORTC `VEuc  1 e 1 @3970 ]
-"2703
-[v _PORTD PORTD `VEuc  1 e 1 @3971 ]
-"2824
-[v _PORTE PORTE `VEuc  1 e 1 @3972 ]
+[s S106 . 1 `uc 1 LATA0 1 0 :1:0 
+`uc 1 LATA1 1 0 :1:1 
+`uc 1 LATA2 1 0 :1:2 
+`uc 1 LATA3 1 0 :1:3 
+`uc 1 LATA4 1 0 :1:4 
+`uc 1 LATA5 1 0 :1:5 
+`uc 1 LATA6 1 0 :1:6 
+]
+"2996 D:\Microchip\xc8\v1.45\include\pic18f4553.h
+[s S114 . 1 `uc 1 LA0 1 0 :1:0 
+`uc 1 LA1 1 0 :1:1 
+`uc 1 LA2 1 0 :1:2 
+`uc 1 LA3 1 0 :1:3 
+`uc 1 LA4 1 0 :1:4 
+`uc 1 LA5 1 0 :1:5 
+`uc 1 LA6 1 0 :1:6 
+]
+[u S122 . 1 `S106 1 . 1 0 `S114 1 . 1 0 ]
+[v _LATAbits LATAbits `VES122  1 e 1 @3977 ]
+[s S21 . 1 `uc 1 LATB0 1 0 :1:0 
+`uc 1 LATB1 1 0 :1:1 
+`uc 1 LATB2 1 0 :1:2 
+`uc 1 LATB3 1 0 :1:3 
+`uc 1 LATB4 1 0 :1:4 
+`uc 1 LATB5 1 0 :1:5 
+`uc 1 LATB6 1 0 :1:6 
+`uc 1 LATB7 1 0 :1:7 
+]
+"3098
+[s S30 . 1 `uc 1 LB0 1 0 :1:0 
+`uc 1 LB1 1 0 :1:1 
+`uc 1 LB2 1 0 :1:2 
+`uc 1 LB3 1 0 :1:3 
+`uc 1 LB4 1 0 :1:4 
+`uc 1 LB5 1 0 :1:5 
+`uc 1 LB6 1 0 :1:6 
+`uc 1 LB7 1 0 :1:7 
+]
+[u S39 . 1 `S21 1 . 1 0 `S30 1 . 1 0 ]
+[v _LATBbits LATBbits `VES39  1 e 1 @3978 ]
+[s S74 . 1 `uc 1 LATC0 1 0 :1:0 
+`uc 1 LATC1 1 0 :1:1 
+`uc 1 LATC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 LATC6 1 0 :1:6 
+`uc 1 LATC7 1 0 :1:7 
+]
+"3206
+[s S81 . 1 `uc 1 LC0 1 0 :1:0 
+`uc 1 LC1 1 0 :1:1 
+`uc 1 LC2 1 0 :1:2 
+`uc 1 . 1 0 :3:3 
+`uc 1 LC6 1 0 :1:6 
+`uc 1 LC7 1 0 :1:7 
+]
+[u S88 . 1 `S74 1 . 1 0 `S81 1 . 1 0 ]
+[v _LATCbits LATCbits `VES88  1 e 1 @3979 ]
 "3425
 [v _TRISA TRISA `VEuc  1 e 1 @3986 ]
 "3623
@@ -55,7 +100,7 @@
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
 "4221
 [v _TRISE TRISE `VEuc  1 e 1 @3990 ]
-[s S36 . 1 `uc 1 TMR1IE 1 0 :1:0 
+[s S145 . 1 `uc 1 TMR1IE 1 0 :1:0 
 `uc 1 TMR2IE 1 0 :1:1 
 `uc 1 CCP1IE 1 0 :1:2 
 `uc 1 SSPIE 1 0 :1:3 
@@ -65,15 +110,15 @@
 `uc 1 SPPIE 1 0 :1:7 
 ]
 "4406
-[s S45 . 1 `uc 1 . 1 0 :4:0 
+[s S154 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IE 1 0 :1:4 
 `uc 1 RC1IE 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIE 1 0 :1:7 
 ]
-[u S51 . 1 `S36 1 . 1 0 `S45 1 . 1 0 ]
-[v _PIE1bits PIE1bits `VES51  1 e 1 @3997 ]
-[s S124 . 1 `uc 1 TMR1IF 1 0 :1:0 
+[u S160 . 1 `S145 1 . 1 0 `S154 1 . 1 0 ]
+[v _PIE1bits PIE1bits `VES160  1 e 1 @3997 ]
+[s S233 . 1 `uc 1 TMR1IF 1 0 :1:0 
 `uc 1 TMR2IF 1 0 :1:1 
 `uc 1 CCP1IF 1 0 :1:2 
 `uc 1 SSPIF 1 0 :1:3 
@@ -83,14 +128,14 @@
 `uc 1 SPPIF 1 0 :1:7 
 ]
 "4490
-[s S133 . 1 `uc 1 . 1 0 :4:0 
+[s S242 . 1 `uc 1 . 1 0 :4:0 
 `uc 1 TX1IF 1 0 :1:4 
 `uc 1 RC1IF 1 0 :1:5 
 `uc 1 . 1 0 :1:6 
 `uc 1 PSPIF 1 0 :1:7 
 ]
-[u S139 . 1 `S124 1 . 1 0 `S133 1 . 1 0 ]
-[v _PIR1bits PIR1bits `VES139  1 e 1 @3998 ]
+[u S248 . 1 `S233 1 . 1 0 `S242 1 . 1 0 ]
+[v _PIR1bits PIR1bits `VES248  1 e 1 @3998 ]
 "4934
 [v _RCSTA RCSTA `VEuc  1 e 1 @4011 ]
 "5412
@@ -107,7 +152,7 @@
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "6804
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
-[s S357 . 1 `uc 1 SEN 1 0 :1:0 
+[s S488 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -117,20 +162,20 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6821
-[u S366 . 1 `S357 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES366  1 e 1 @4037 ]
+[u S497 . 1 `S488 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES497  1 e 1 @4037 ]
 "6866
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
 "6936
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
-[s S211 . 1 `uc 1 . 1 0 :2:0 
+[s S342 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "7019
-[s S214 . 1 `uc 1 . 1 0 :5:0 
+[s S345 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S217 . 1 `uc 1 BF 1 0 :1:0 
+[s S348 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -139,56 +184,56 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S226 . 1 `uc 1 . 1 0 :2:0 
+[s S357 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S231 . 1 `uc 1 . 1 0 :2:0 
+[s S362 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S237 . 1 `uc 1 . 1 0 :2:0 
+[s S368 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S242 . 1 `uc 1 . 1 0 :2:0 
+[s S373 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S245 . 1 `uc 1 . 1 0 :5:0 
+[s S376 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S248 . 1 `uc 1 . 1 0 :2:0 
+[s S379 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S253 . 1 `uc 1 . 1 0 :2:0 
+[s S384 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S258 . 1 `uc 1 . 1 0 :2:0 
+[s S389 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S263 . 1 `uc 1 . 1 0 :2:0 
+[s S394 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
 `uc 1 STOP 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S269 . 1 `uc 1 . 1 0 :2:0 
+[s S400 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 NOT_A 1 0 :1:5 
 ]
-[u S274 . 1 `S211 1 . 1 0 `S214 1 . 1 0 `S217 1 . 1 0 `S226 1 . 1 0 `S231 1 . 1 0 `S237 1 . 1 0 `S242 1 . 1 0 `S245 1 . 1 0 `S248 1 . 1 0 `S253 1 . 1 0 `S258 1 . 1 0 `S263 1 . 1 0 `S269 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES274  1 e 1 @4039 ]
+[u S405 . 1 `S342 1 . 1 0 `S345 1 . 1 0 `S348 1 . 1 0 `S357 1 . 1 0 `S362 1 . 1 0 `S368 1 . 1 0 `S373 1 . 1 0 `S376 1 . 1 0 `S379 1 . 1 0 `S384 1 . 1 0 `S389 1 . 1 0 `S394 1 . 1 0 `S400 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES405  1 e 1 @4039 ]
 "7184
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "7191
@@ -199,7 +244,7 @@
 [v _PR2 PR2 `VEuc  1 e 1 @4043 ]
 "7406
 [v _TMR2 TMR2 `VEuc  1 e 1 @4044 ]
-[s S70 . 1 `uc 1 RBIF 1 0 :1:0 
+[s S179 . 1 `uc 1 RBIF 1 0 :1:0 
 `uc 1 INT0IF 1 0 :1:1 
 `uc 1 TMR0IF 1 0 :1:2 
 `uc 1 RBIE 1 0 :1:3 
@@ -209,7 +254,7 @@
 `uc 1 GIE_GIEH 1 0 :1:7 
 ]
 "8612
-[s S79 . 1 `uc 1 . 1 0 :1:0 
+[s S188 . 1 `uc 1 . 1 0 :1:0 
 `uc 1 INT0F 1 0 :1:1 
 `uc 1 T0IF 1 0 :1:2 
 `uc 1 . 1 0 :1:3 
@@ -218,51 +263,54 @@
 `uc 1 PEIE 1 0 :1:6 
 `uc 1 GIE 1 0 :1:7 
 ]
-[s S88 . 1 `uc 1 . 1 0 :6:0 
+[s S197 . 1 `uc 1 . 1 0 :6:0 
 `uc 1 GIEL 1 0 :1:6 
 `uc 1 GIEH 1 0 :1:7 
 ]
-[u S92 . 1 `S70 1 . 1 0 `S79 1 . 1 0 `S88 1 . 1 0 ]
-[v _INTCONbits INTCONbits `VES92  1 e 1 @4082 ]
+[u S201 . 1 `S179 1 . 1 0 `S188 1 . 1 0 `S197 1 . 1 0 ]
+[v _INTCONbits INTCONbits `VES201  1 e 1 @4082 ]
 "8979
 [v _BRGH BRGH `VEb  1 e 0 @32098 ]
 "10059
 [v _SSPIE SSPIE `VEb  1 e 0 @31979 ]
 "10061
 [v _SSPIF SSPIF `VEb  1 e 0 @31987 ]
-"43 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+"28 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+[v _led_stat led_stat `uc  1 e 1 0 ]
+"31
 [v _segMap segMap `[9]ul  1 e 36 0 ]
-"56
+"58
 [v _digitPtr digitPtr `s  1 e 2 0 ]
 "21 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\segFonts.h
 [v _fontList fontList `[130]ui  1 e 260 0 ]
-"70 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+"138 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"102
+"178
 [v main@dotflag dotflag `ul  1 a 4 12 ]
-"101
+"177
 [v main@digitSelector digitSelector `s  1 a 2 16 ]
-"100
+"176
 [v main@RxData RxData `uc  1 a 1 18 ]
-"124
+"198
 } 0
-"127
+"201
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"138
+"210
 } 0
-"29
-[v _setSegPin setSegPin `(v  1 e 1 0 ]
+"111
+[v _refreshShiftRegister refreshShiftRegister `(v  1 e 1 0 ]
 {
-[v setSegPin@input input `ul  1 p 4 0 ]
-"34
-} 0
-"37
-[v _setDigitPin setDigitPin `(v  1 e 1 0 ]
-{
-[v setDigitPin@input input `ui  1 p 2 0 ]
-"40
+"124
+[v refreshShiftRegister@i i `i  1 a 2 60 ]
+"115
+[v refreshShiftRegister@map map `ul  1 a 4 54 ]
+"112
+[v refreshShiftRegister@ledSelector ledSelector `ui  1 a 2 58 ]
+"111
+[v refreshShiftRegister@ptr ptr `i  1 p 2 0 ]
+"136
 } 0
 "8 D:\Microchip\xc8\v1.45\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]
