@@ -3,7 +3,7 @@
 //	main.c
 //	16 segment 9 digit display Controller 実体プログラム
 //
-//	Created by thotgamma. (http://lab.thotgamma.com)
+//	Created by thotgamma. (https://gammalab.net)
 //
 //	16Segment9DigitDisplay公式:
 //		https://htlab.net/products/electronics/16-segment-9-digit-display-board-1/
