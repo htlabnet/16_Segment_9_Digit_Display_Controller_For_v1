@@ -20,6 +20,8 @@
     </logicalFolder>
     <itemPath>main.c</itemPath>
     <itemPath>segFonts.h</itemPath>
+    <itemPath>i2c.h</itemPath>
+    <itemPath>i2c.c</itemPath>
   </logicalFolder>
   <projectmakefile>Makefile</projectmakefile>
   <confs>

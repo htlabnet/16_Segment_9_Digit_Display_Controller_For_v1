@@ -1,85 +1,98 @@
 Version 3.2 HI-TECH Software Intermediate Code
-"2561 D:\Microchip\xc8\v1.45\include\pic18f4553.h
-[v _PORTC `Vuc ~T0 @X0 0 e@3970 ]
-"2703
-[v _PORTD `Vuc ~T0 @X0 0 e@3971 ]
-"2451
-[v _PORTB `Vuc ~T0 @X0 0 e@3969 ]
-"2312
-[v _PORTA `Vuc ~T0 @X0 0 e@3968 ]
-"2824
-[v _PORTE `Vuc ~T0 @X0 0 e@3972 ]
-[p mainexit ]
-"6579
-[v _ADCON1 `Vuc ~T0 @X0 0 e@4033 ]
-"5585
-[v _CMCON `Vuc ~T0 @X0 0 e@4020 ]
-"3425
-[v _TRISA `Vuc ~T0 @X0 0 e@3986 ]
-"3623
-[v _TRISB `Vuc ~T0 @X0 0 e@3987 ]
-"3845
-[v _TRISC `Vuc ~T0 @X0 0 e@3988 ]
-"3999
-[v _TRISD `Vuc ~T0 @X0 0 e@3989 ]
-"4221
-[v _TRISE `Vuc ~T0 @X0 0 e@3990 ]
-"7198
-[v _T2CON `Vuc ~T0 @X0 0 e@4042 ]
-"7406
-[v _TMR2 `Vuc ~T0 @X0 0 e@4044 ]
-"7296
-[v _PR2 `Vuc ~T0 @X0 0 e@4043 ]
-"4388
-[s S170 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S170 . TMR1IE TMR2IE CCP1IE SSPIE TXIE RCIE ADIE SPPIE ]
-"4398
-[s S171 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S171 . . TX1IE RC1IE . PSPIE ]
-"4387
-[u S169 `S170 1 `S171 1 ]
-[n S169 . . . ]
-"4406
-[v _PIE1bits `VS169 ~T0 @X0 0 e@3997 ]
-"8586
-[s S355 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S355 . RBIF INT0IF TMR0IF RBIE INT0IE TMR0IE PEIE_GIEL GIE_GIEH ]
-"8596
-[s S356 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S356 . . INT0F T0IF . INT0E T0IE PEIE GIE ]
-"8606
-[s S357 :6 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S357 . . GIEL GIEH ]
-"8585
-[u S354 `S355 1 `S356 1 `S357 1 ]
-[n S354 . . . . ]
-"8612
-[v _INTCONbits `VS354 ~T0 @X0 0 e@4082 ]
-"4934
-[v _RCSTA `Vuc ~T0 @X0 0 e@4011 ]
-"6060
-[v _BAUDCON `Vuc ~T0 @X0 0 e@4024 ]
-"5436
-[v _SPBRGH `Vuc ~T0 @X0 0 e@4016 ]
-"8979
-[v _BRGH `Vb ~T0 @X0 0 e@32098 ]
-"5424
-[v _SPBRG `Vuc ~T0 @X0 0 e@4015 ]
-"4472
-[s S173 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S173 . TMR1IF TMR2IF CCP1IF SSPIF TXIF RCIF ADIF SPPIF ]
-"4482
-[s S174 :4 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
-[n S174 . . TX1IF RC1IF . PSPIF ]
-"4471
-[u S172 `S173 1 `S174 1 ]
-[n S172 . . . ]
-"4490
-[v _PIR1bits `VS172 ~T0 @X0 0 e@3998 ]
-"5412
-[v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"6804 D:\Microchip\xc8\v1.45\include\pic18f4553.h
+[v _SSPCON2 `Vuc ~T0 @X0 0 e@4037 ]
+"6942
+[s S282 :2 `uc 1 :1 `uc 1 ]
+[n S282 . . R_NOT_W ]
+"6946
+[s S283 :5 `uc 1 :1 `uc 1 ]
+[n S283 . . D_NOT_A ]
+"6950
+[s S284 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S284 . BF UA R_nW S P D_nA CKE SMP ]
+"6960
+[s S285 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S285 . . R_W . D_A ]
+"6966
+[s S286 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S286 . . I2C_READ I2C_START I2C_STOP I2C_DAT ]
+"6973
+[s S287 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S287 . . nW . nA ]
+"6979
+[s S288 :2 `uc 1 :1 `uc 1 ]
+[n S288 . . NOT_WRITE ]
+"6983
+[s S289 :5 `uc 1 :1 `uc 1 ]
+[n S289 . . NOT_ADDRESS ]
+"6987
+[s S290 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S290 . . nWRITE . nADDRESS ]
+"6993
+[s S291 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S291 . . READ_WRITE . DATA_ADDRESS ]
+"6999
+[s S292 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S292 . . R . D ]
+"7005
+[s S293 :2 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S293 . . RW START STOP DA ]
+"7012
+[s S294 :2 `uc 1 :1 `uc 1 :2 `uc 1 :1 `uc 1 ]
+[n S294 . . NOT_W . NOT_A ]
+"6941
+[u S281 `S282 1 `S283 1 `S284 1 `S285 1 `S286 1 `S287 1 `S288 1 `S289 1 `S290 1 `S291 1 `S292 1 `S293 1 `S294 1 ]
+[n S281 . . . . . . . . . . . . . . ]
+"7019
+[v _SSPSTATbits `VS281 ~T0 @X0 0 e@4039 ]
+"6936
+[v _SSPSTAT `Vuc ~T0 @X0 0 e@4039 ]
+"7184
+[v _SSPADD `Vuc ~T0 @X0 0 e@4040 ]
+"6866
+[v _SSPCON1 `Vuc ~T0 @X0 0 e@4038 ]
 "10061
 [v _SSPIF `Vb ~T0 @X0 0 e@31987 ]
+"10059
+[v _SSPIE `Vb ~T0 @X0 0 e@31979 ]
+"6810
+[s S277 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 :1 `uc 1 ]
+[n S277 . SEN RSEN PEN RCEN ACKEN ACKDT ACKSTAT GCEN ]
+"6809
+[u S276 `S277 1 ]
+[n S276 . . ]
+"6821
+[v _SSPCON2bits `VS276 ~T0 @X0 0 e@4037 ]
+"7191
+[v _SSPBUF `Vuc ~T0 @X0 0 e@4041 ]
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3590,432 +3603,6 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-"21 segFonts.h
-[v _fontList `ui ~T0 @X0 -> 0 `x e ]
-[i _fontList
-:U ..
-"22
--> -> 0 `i `ui
-"23
--> -> 0 `i `ui
-"24
--> -> 0 `i `ui
-"25
--> -> 0 `i `ui
-"26
--> -> 0 `i `ui
-"27
--> -> 0 `i `ui
-"28
--> -> 0 `i `ui
-"29
--> -> 0 `i `ui
-"30
--> -> 0 `i `ui
-"31
--> -> 0 `i `ui
-"32
--> -> 0 `i `ui
-"33
--> -> 0 `i `ui
-"34
--> -> 0 `i `ui
-"35
--> -> 0 `i `ui
-"36
--> -> 0 `i `ui
-"37
--> -> 0 `i `ui
-"38
--> -> 0 `i `ui
-"39
--> -> 0 `i `ui
-"40
--> -> 0 `i `ui
-"41
--> -> 0 `i `ui
-"42
--> -> 0 `i `ui
-"43
--> -> 0 `i `ui
-"44
--> -> 0 `i `ui
-"45
--> -> 0 `i `ui
-"46
--> -> 0 `i `ui
-"47
--> -> 0 `i `ui
-"48
--> -> 0 `i `ui
-"49
--> -> 0 `i `ui
-"50
--> -> 0 `i `ui
-"51
--> -> 0 `i `ui
-"52
--> -> 0 `i `ui
-"53
--> -> 0 `i `ui
-"54
--> -> 0 `i `ui
-"55
--> -> 6162 `i `ui
-"56
--> -> 2176 `i `ui
-"57
--> -> 0 `i `ui
-"58
--> 52275 `ui
-"59
--> -> 31657 `i `ui
-"60
--> 46139 `ui
-"61
--> -> 128 `i `ui
-"62
--> 36864 `ui
-"63
--> -> 9216 `i `ui
-"64
--> 65280 `ui
-"65
--> -> 19200 `i `ui
-"66
--> -> 0 `i `ui
-"67
--> -> 768 `i `ui
-"68
--> -> 0 `i `ui
-"69
--> -> 12288 `i `ui
-"70
--> -> 255 `i `ui
-"71
--> -> 18432 `i `ui
-"72
--> -> 887 `i `ui
-"73
--> -> 831 `i `ui
-"74
--> -> 908 `i `ui
-"75
--> -> 955 `i `ui
-"76
--> -> 1019 `i `ui
-"77
--> -> 143 `i `ui
-"78
--> -> 1023 `i `ui
-"79
--> -> 959 `i `ui
-"80
--> -> 0 `i `ui
-"81
--> -> 0 `i `ui
-"82
--> 36864 `ui
-"83
--> -> 816 `i `ui
-"84
--> -> 9216 `i `ui
-"85
--> -> 4115 `i `ui
-"86
--> -> 0 `i `ui
-"87
--> -> 975 `i `ui
-"88
--> 37363 `ui
-"89
--> -> 243 `i `ui
-"90
--> -> 892 `i `ui
-"91
--> -> 1011 `i `ui
-"92
--> -> 963 `i `ui
-"93
--> -> 763 `i `ui
-"94
--> -> 972 `i `ui
-"95
--> -> 18483 `i `ui
-"96
--> -> 18451 `i `ui
-"97
--> 37312 `ui
-"98
--> -> 240 `i `ui
-"99
--> -> 5324 `i `ui
-"100
--> 33996 `ui
-"101
--> -> 255 `i `ui
-"102
--> -> 967 `i `ui
-"103
--> 33023 `ui
-"104
--> 33735 `ui
-"105
--> -> 955 `i `ui
-"106
--> -> 18435 `i `ui
-"107
--> -> 252 `i `ui
-"108
--> -> 12480 `i `ui
-"109
--> 41164 `ui
-"110
--> 46080 `ui
-"111
--> -> 21504 `i `ui
-"112
--> -> 12339 `i `ui
-"113
--> -> 209 `i `ui
-"114
--> 33792 `ui
-"115
--> -> 46 `i `ui
-"116
--> -> 3 `i `ui
-"117
--> -> 48 `i `ui
-"118
--> 43776 `ui
-"119
--> -> 13504 `i `ui
-"120
--> -> 2939 `i `ui
-"121
--> -> 22275 `i `ui
-"122
--> -> 0 `i `ui
-"123
--> -> 0 `i `ui
-"124
--> -> 0 `i `ui
-"125
--> 65535 `ui
-"126
--> -> 1 `i `ui
-"127
--> -> 2 `i `ui
-"128
--> -> 4 `i `ui
-"129
--> -> 8 `i `ui
-"130
--> -> 32 `i `ui
-"131
--> -> 16 `i `ui
-"132
--> -> 64 `i `ui
-"133
--> -> 128 `i `ui
-"134
--> -> 2048 `i `ui
-"135
--> -> 4096 `i `ui
-"136
--> -> 512 `i `ui
-"137
--> 32768 `ui
-"138
--> -> 16384 `i `ui
-"139
--> -> 8192 `i `ui
-"140
--> -> 256 `i `ui
-"141
--> -> 1024 `i `ui
-"142
--> -> 2048 `i `ui
-"143
--> -> 6144 `i `ui
-"144
--> -> 6656 `i `ui
-"145
--> 39424 `ui
-"146
--> 55808 `ui
-"147
--> 64000 `ui
-"148
--> 64256 `ui
-"149
--> 65280 `ui
-"150
--> -> 0 `i `ui
-"151
--> -> 0 `i `ui
-..
-]
-[; ;segFonts.h: 21: unsigned int fontList[] = {
-[; ;segFonts.h: 22: 0b00000000000000000,
-[; ;segFonts.h: 23: 0b00000000000000000,
-[; ;segFonts.h: 24: 0b00000000000000000,
-[; ;segFonts.h: 25: 0b00000000000000000,
-[; ;segFonts.h: 26: 0b00000000000000000,
-[; ;segFonts.h: 27: 0b00000000000000000,
-[; ;segFonts.h: 28: 0b00000000000000000,
-[; ;segFonts.h: 29: 0b00000000000000000,
-[; ;segFonts.h: 30: 0b00000000000000000,
-[; ;segFonts.h: 31: 0b00000000000000000,
-[; ;segFonts.h: 32: 0b00000000000000000,
-[; ;segFonts.h: 33: 0b00000000000000000,
-[; ;segFonts.h: 34: 0b00000000000000000,
-[; ;segFonts.h: 35: 0b00000000000000000,
-[; ;segFonts.h: 36: 0b00000000000000000,
-[; ;segFonts.h: 37: 0b00000000000000000,
-[; ;segFonts.h: 38: 0b00000000000000000,
-[; ;segFonts.h: 39: 0b00000000000000000,
-[; ;segFonts.h: 40: 0b00000000000000000,
-[; ;segFonts.h: 41: 0b00000000000000000,
-[; ;segFonts.h: 42: 0b00000000000000000,
-[; ;segFonts.h: 43: 0b00000000000000000,
-[; ;segFonts.h: 44: 0b00000000000000000,
-[; ;segFonts.h: 45: 0b00000000000000000,
-[; ;segFonts.h: 46: 0b00000000000000000,
-[; ;segFonts.h: 47: 0b00000000000000000,
-[; ;segFonts.h: 48: 0b00000000000000000,
-[; ;segFonts.h: 49: 0b00000000000000000,
-[; ;segFonts.h: 50: 0b00000000000000000,
-[; ;segFonts.h: 51: 0b00000000000000000,
-[; ;segFonts.h: 52: 0b00000000000000000,
-[; ;segFonts.h: 53: 0b00000000000000000,
-[; ;segFonts.h: 54: 0b00000000000000000,
-[; ;segFonts.h: 55: 0b00001100000010010,
-[; ;segFonts.h: 56: 0b00000100010000000,
-[; ;segFonts.h: 57: 0b00000000000000000,
-[; ;segFonts.h: 58: 0b01100110000110011,
-[; ;segFonts.h: 59: 0b00111101110101001,
-[; ;segFonts.h: 60: 0b01011010000111011,
-[; ;segFonts.h: 61: 0b00000000010000000,
-[; ;segFonts.h: 62: 0b01001000000000000,
-[; ;segFonts.h: 63: 0b00010010000000000,
-[; ;segFonts.h: 64: 0b01111111100000000,
-[; ;segFonts.h: 65: 0b00100101100000000,
-[; ;segFonts.h: 66: 0b00000000000000000,
-[; ;segFonts.h: 67: 0b00000001100000000,
-[; ;segFonts.h: 68: 0b00000000000000000,
-[; ;segFonts.h: 69: 0b00011000000000000,
-[; ;segFonts.h: 70: 0b00000000011111111,
-[; ;segFonts.h: 71: 0b00100100000000000,
-[; ;segFonts.h: 72: 0b00000001101110111,
-[; ;segFonts.h: 73: 0b00000001100111111,
-[; ;segFonts.h: 74: 0b00000001110001100,
-[; ;segFonts.h: 75: 0b00000001110111011,
-[; ;segFonts.h: 76: 0b00000001111111011,
-[; ;segFonts.h: 77: 0b00000000010001111,
-[; ;segFonts.h: 78: 0b00000001111111111,
-[; ;segFonts.h: 79: 0b00000001110111111,
-[; ;segFonts.h: 80: 0b00000000000000000,
-[; ;segFonts.h: 81: 0b00000000000000000,
-[; ;segFonts.h: 82: 0b01001000000000000,
-[; ;segFonts.h: 83: 0b00000001100110000,
-[; ;segFonts.h: 84: 0b00010010000000000,
-[; ;segFonts.h: 85: 0b00001000000010011,
-[; ;segFonts.h: 86: 0b00000000000000000,
-[; ;segFonts.h: 87: 0b00000001111001111,
-[; ;segFonts.h: 88: 0b01001000111110011,
-[; ;segFonts.h: 89: 0b00000000011110011,
-[; ;segFonts.h: 90: 0b00000001101111100,
-[; ;segFonts.h: 91: 0b00000001111110011,
-[; ;segFonts.h: 92: 0b00000001111000011,
-[; ;segFonts.h: 93: 0b00000001011111011,
-[; ;segFonts.h: 94: 0b00000001111001100,
-[; ;segFonts.h: 95: 0b00100100000110011,
-[; ;segFonts.h: 96: 0b00100100000010011,
-[; ;segFonts.h: 97: 0b01001000111000000,
-[; ;segFonts.h: 98: 0b00000000011110000,
-[; ;segFonts.h: 99: 0b00001010011001100,
-[; ;segFonts.h: 100: 0b01000010011001100,
-[; ;segFonts.h: 101: 0b00000000011111111,
-[; ;segFonts.h: 102: 0b00000001111000111,
-[; ;segFonts.h: 103: 0b01000000011111111,
-[; ;segFonts.h: 104: 0b01000001111000111,
-[; ;segFonts.h: 105: 0b00000001110111011,
-[; ;segFonts.h: 106: 0b00100100000000011,
-[; ;segFonts.h: 107: 0b00000000011111100,
-[; ;segFonts.h: 108: 0b00011000011000000,
-[; ;segFonts.h: 109: 0b01010000011001100,
-[; ;segFonts.h: 110: 0b01011010000000000,
-[; ;segFonts.h: 111: 0b00101010000000000,
-[; ;segFonts.h: 112: 0b00011000000110011,
-[; ;segFonts.h: 113: 0b00000000011010001,
-[; ;segFonts.h: 114: 0b01000010000000000,
-[; ;segFonts.h: 115: 0b00000000000101110,
-[; ;segFonts.h: 116: 0b00000000000000011,
-[; ;segFonts.h: 117: 0b00000000000110000,
-[; ;segFonts.h: 118: 0b01010101100000000,
-[; ;segFonts.h: 119: 0b00011010011000000,
-[; ;segFonts.h: 120: 0b00000101101111011,
-[; ;segFonts.h: 121: 0b00101011100000011,
-[; ;segFonts.h: 122: 0b00000000000000000,
-[; ;segFonts.h: 123: 0b00000000000000000,
-[; ;segFonts.h: 124: 0b00000000000000000,
-[; ;segFonts.h: 125: 0b01111111111111111,
-[; ;segFonts.h: 126: 0b00000000000000001,
-[; ;segFonts.h: 127: 0b00000000000000010,
-[; ;segFonts.h: 128: 0b00000000000000100,
-[; ;segFonts.h: 129: 0b00000000000001000,
-[; ;segFonts.h: 130: 0b00000000000100000,
-[; ;segFonts.h: 131: 0b00000000000010000,
-[; ;segFonts.h: 132: 0b00000000001000000,
-[; ;segFonts.h: 133: 0b00000000010000000,
-[; ;segFonts.h: 134: 0b00000100000000000,
-[; ;segFonts.h: 135: 0b00001000000000000,
-[; ;segFonts.h: 136: 0b00000001000000000,
-[; ;segFonts.h: 137: 0b01000000000000000,
-[; ;segFonts.h: 138: 0b00100000000000000,
-[; ;segFonts.h: 139: 0b00010000000000000,
-[; ;segFonts.h: 140: 0b00000000100000000,
-[; ;segFonts.h: 141: 0b00000010000000000,
-[; ;segFonts.h: 142: 0b00000100000000000,
-[; ;segFonts.h: 143: 0b00001100000000000,
-[; ;segFonts.h: 144: 0b00001101000000000,
-[; ;segFonts.h: 145: 0b01001101000000000,
-[; ;segFonts.h: 146: 0b01101101000000000,
-[; ;segFonts.h: 147: 0b01111101000000000,
-[; ;segFonts.h: 148: 0b01111101100000000,
-[; ;segFonts.h: 149: 0b01111111100000000,
-[; ;segFonts.h: 150: 0b00000000000000000,
-[; ;segFonts.h: 151: 0b00000000000000000,
-[; ;segFonts.h: 152: };
-[; ;stdint.h: 13: typedef signed char int8_t;
-[; ;stdint.h: 20: typedef signed int int16_t;
-[; ;stdint.h: 28: typedef signed short long int int24_t;
-[; ;stdint.h: 36: typedef signed long int int32_t;
-[; ;stdint.h: 43: typedef unsigned char uint8_t;
-[; ;stdint.h: 49: typedef unsigned int uint16_t;
-[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
-[; ;stdint.h: 63: typedef unsigned long int uint32_t;
-[; ;stdint.h: 71: typedef signed char int_least8_t;
-[; ;stdint.h: 78: typedef signed int int_least16_t;
-[; ;stdint.h: 90: typedef signed short long int int_least24_t;
-[; ;stdint.h: 98: typedef signed long int int_least32_t;
-[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
-[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
-[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
-[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
-[; ;stdint.h: 137: typedef signed char int_fast8_t;
-[; ;stdint.h: 144: typedef signed int int_fast16_t;
-[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
-[; ;stdint.h: 164: typedef signed long int int_fast32_t;
-[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
-[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
-[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
-[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
-[; ;stdint.h: 200: typedef int32_t intmax_t;
-[; ;stdint.h: 205: typedef uint32_t uintmax_t;
-[; ;stdint.h: 210: typedef int16_t intptr_t;
-[; ;stdint.h: 215: typedef uint16_t uintptr_t;
 [; ;i2c.h: 15: void i2c_wait(void);
 [; ;i2c.h: 16: void i2c_enable_master(int baud_divisor);
 [; ;i2c.h: 17: void i2c_disable_master(void);
@@ -4026,328 +3613,192 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;i2c.h: 22: void i2c_stop(void);
 [; ;i2c.h: 23: void i2c_send_byte(unsigned char data);
 [; ;i2c.h: 24: uint8_t i2c_read_byte(unsigned int ack);
-"21 main.c
-[p x FOSC=HS ]
-"22
-[p x MCLRE=ON ]
-"23
-[p x LVP=OFF ]
-"24
-[p x WDT=OFF ]
-"29
-[v _setSegPin `(v ~T0 @X0 1 ef1`ul ]
+"10 i2c.c
+[v _i2c_wait `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 29: void setSegPin(unsigned long input){
-[e :U _setSegPin ]
-[v _input `ul ~T0 @X0 1 r1 ]
+[; ;i2c.c: 10: void i2c_wait(void) {
+[e :U _i2c_wait ]
 [f ]
-[; ;main.c: 30: input = ~input;
-"30
-[e = _input ~ _input ]
-[; ;main.c: 31: PORTC = (input & 0b10000000000000000) >> 16;
-"31
-[e = _PORTC -> >> & _input -> -> 65536 `l `ul -> 16 `i `uc ]
-[; ;main.c: 32: PORTD = (input & 0b01111111100000000) >> 8;
-"32
-[e = _PORTD -> >> & _input -> -> 65280 `ui `ul -> 8 `i `uc ]
-[; ;main.c: 33: PORTB = input & 0b00000000011111111;
-"33
-[e = _PORTB -> & _input -> -> -> 255 `i `l `ul `uc ]
-[; ;main.c: 34: }
-"34
+[; ;i2c.c: 11: while ( ( SSPCON2 & 0x1F ) || ( SSPSTATbits.R_nW ) );
+"11
+[e $U 363  ]
+[e :U 364 ]
+[e :U 363 ]
+[e $ || != & -> _SSPCON2 `i -> 31 `i -> 0 `i != -> . . _SSPSTATbits 2 2 `i -> -> -> 0 `i `Vuc `i 364  ]
+[e :U 365 ]
+[; ;i2c.c: 12: }
+"12
 [e :UE 362 ]
 }
+"14
+[v _i2c_enable_master `(v ~T0 @X0 1 ef1`i ]
+{
+[; ;i2c.c: 14: void i2c_enable_master(int baud_divisor) {
+[e :U _i2c_enable_master ]
+[v _baud_divisor `i ~T0 @X0 1 r1 ]
+[f ]
+[; ;i2c.c: 15: SSPSTAT = 0b00000000;
+"15
+[e = _SSPSTAT -> -> 0 `i `uc ]
+[; ;i2c.c: 16: SSPADD = baud_divisor;
+"16
+[e = _SSPADD -> _baud_divisor `uc ]
+[; ;i2c.c: 17: SSPCON1 = 0b00101000;
+"17
+[e = _SSPCON1 -> -> 40 `i `uc ]
+[; ;i2c.c: 18: }
+"18
+[e :UE 366 ]
+}
+"21
+[v _i2c_disable_master `(v ~T0 @X0 1 ef ]
+{
+[; ;i2c.c: 21: void i2c_disable_master(void) {
+[e :U _i2c_disable_master ]
+[f ]
+[; ;i2c.c: 22: SSPCON1 = 0b00001000;
+"22
+[e = _SSPCON1 -> -> 8 `i `uc ]
+[; ;i2c.c: 23: }
+"23
+[e :UE 367 ]
+}
+"25
+[v _i2c_enable_slave `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;i2c.c: 25: void i2c_enable_slave(uint8_t address) {
+[e :U _i2c_enable_slave ]
+[v _address `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;i2c.c: 26: SSPADD = address << 1;
+"26
+[e = _SSPADD -> << -> _address `i -> 1 `i `uc ]
+[; ;i2c.c: 27: }
+"27
+[e :UE 368 ]
+}
+"29
+[v _i2c_enable_isr `(v ~T0 @X0 1 ef ]
+{
+[; ;i2c.c: 29: void i2c_enable_isr(void) {
+[e :U _i2c_enable_isr ]
+[f ]
+[; ;i2c.c: 30: SSPIF = 0;
+"30
+[e = _SSPIF -> -> 0 `i `b ]
+[; ;i2c.c: 31: SSPIE = 1;
+"31
+[e = _SSPIE -> -> 1 `i `b ]
+[; ;i2c.c: 32: }
+"32
+[e :UE 369 ]
+}
+"34
+[v _i2c_start `(v ~T0 @X0 1 ef ]
+{
+[; ;i2c.c: 34: void i2c_start(void) {
+[e :U _i2c_start ]
+[f ]
+[; ;i2c.c: 35: SSPCON2bits.SEN = 1;
+"35
+[e = . . _SSPCON2bits 0 0 -> -> 1 `i `uc ]
+[; ;i2c.c: 36: i2c_wait();
+"36
+[e ( _i2c_wait ..  ]
+[; ;i2c.c: 37: }
 "37
-[v _setDigitPin `(v ~T0 @X0 1 ef1`ui ]
-{
-[; ;main.c: 37: void setDigitPin(unsigned int input){
-[e :U _setDigitPin ]
-[v _input `ui ~T0 @X0 1 r1 ]
-[f ]
-[; ;main.c: 38: PORTA = (input & 0b111111000) >> 3;
-"38
-[e = _PORTA -> >> & _input -> -> 504 `i `ui -> 3 `i `uc ]
-[; ;main.c: 39: PORTE = input & 0b000000111;
-"39
-[e = _PORTE -> & _input -> -> 7 `i `ui `uc ]
-[; ;main.c: 40: }
-"40
-[e :UE 363 ]
-}
-"43
-[v _segMap `ul ~T0 @X0 -> 9 `i e ]
-[i _segMap
-:U ..
-"44
--> -> 65280 `ui `ul
-"45
--> -> 65280 `ui `ul
-"46
--> -> 65280 `ui `ul
-"47
--> -> 65280 `ui `ul
-"48
--> -> 65280 `ui `ul
-"49
--> -> 65280 `ui `ul
-"50
--> -> 65280 `ui `ul
-"51
--> -> 65280 `ui `ul
-"53
--> -> 65280 `ui `ul
-..
-]
-[; ;main.c: 43: unsigned long segMap[9] = {
-[; ;main.c: 44: 0b01111111100000000,
-[; ;main.c: 45: 0b01111111100000000,
-[; ;main.c: 46: 0b01111111100000000,
-[; ;main.c: 47: 0b01111111100000000,
-[; ;main.c: 48: 0b01111111100000000,
-[; ;main.c: 49: 0b01111111100000000,
-[; ;main.c: 50: 0b01111111100000000,
-[; ;main.c: 51: 0b01111111100000000,
-[; ;main.c: 52: 0b01111111100000000
-[; ;main.c: 53: };
-"56
-[v _digitPtr `s ~T0 @X0 1 e ]
-[i _digitPtr
--> -> 0 `i `s
-]
-[; ;main.c: 56: short digitPtr = 0;
-"60
-[v _showBinary `(v ~T0 @X0 1 ef1`i ]
-{
-[; ;main.c: 60: void showBinary(int input){
-[e :U _showBinary ]
-[v _input `i ~T0 @X0 1 r1 ]
-[f ]
-[; ;main.c: 61: for(int i = 0; i < 8; i++){
-"61
-{
-[v _i `i ~T0 @X0 1 a ]
-[e = _i -> 0 `i ]
-[e $ < _i -> 8 `i 365  ]
-[e $U 366  ]
-[e :U 365 ]
-{
-[; ;main.c: 62: if((input & (1 << i)) == 0){
-"62
-[e $ ! == & _input << -> 1 `i _i -> 0 `i 368  ]
-{
-[; ;main.c: 63: segMap[i] = fontList[0x30];
-"63
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> -> 48 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-"64
-}
-[; ;main.c: 64: }else{
-[e $U 369  ]
-[e :U 368 ]
-{
-[; ;main.c: 65: segMap[i] = fontList[0x31];
-"65
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> *U + &U _fontList * -> -> -> 49 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-"66
-}
-[e :U 369 ]
-"67
-}
-"61
-[e ++ _i -> 1 `i ]
-[e $ < _i -> 8 `i 365  ]
-[e :U 366 ]
-"67
-}
-[; ;main.c: 66: }
-[; ;main.c: 67: }
-[; ;main.c: 68: }
-"68
-[e :UE 364 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
-"70
-[v _main `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 70: void main(void) {
-[e :U _main ]
-[f ]
-[; ;main.c: 72: ADCON1 = 0b00001111;
-"72
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;main.c: 73: CMCON = 0b00000111;
-"73
-[e = _CMCON -> -> 7 `i `uc ]
-[; ;main.c: 74: TRISA = 0b00000000;
-"74
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 75: TRISB = 0b00000000;
-"75
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 76: TRISC = 0b10000000;
-"76
-[e = _TRISC -> -> 128 `i `uc ]
-[; ;main.c: 77: TRISD = 0b00000000;
-"77
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 78: TRISE = 0b00000000;
-"78
-[e = _TRISE -> -> 0 `i `uc ]
-[; ;main.c: 82: T2CON = 0;
-"82
-[e = _T2CON -> -> 0 `i `uc ]
-[; ;main.c: 83: TMR2 = 0;
-"83
-[e = _TMR2 -> -> 0 `i `uc ]
-[; ;main.c: 84: PR2 = 125;
-"84
-[e = _PR2 -> -> 125 `i `uc ]
-[; ;main.c: 85: T2CON = 0b01111101;
-"85
-[e = _T2CON -> -> 125 `i `uc ]
-[; ;main.c: 88: PIE1bits.TMR2IE = 1;
-"88
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 89: INTCONbits.PEIE = 1;
-"89
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 90: INTCONbits.GIE = 1;
-"90
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 93: RCSTA = 0b10010000;
-"93
-[e = _RCSTA -> -> 144 `i `uc ]
-[; ;main.c: 94: BAUDCON = 0b00001000;
-"94
-[e = _BAUDCON -> -> 8 `i `uc ]
-[; ;main.c: 95: SPBRGH = 0;
-"95
-[e = _SPBRGH -> -> 0 `i `uc ]
-[; ;main.c: 96: BRGH = 0;
-"96
-[e = _BRGH -> -> 0 `i `b ]
-[; ;main.c: 97: SPBRG = 129;
-"97
-[e = _SPBRG -> -> 129 `i `uc ]
-"100
-[v _RxData `uc ~T0 @X0 1 a ]
-"101
-[v _digitSelector `s ~T0 @X0 1 a ]
-"102
-[v _dotflag `ul ~T0 @X0 1 a ]
-[; ;main.c: 100: char RxData;
-[; ;main.c: 101: short digitSelector;
-[; ;main.c: 102: unsigned long dotflag;
-[; ;main.c: 106: while(1){
-"106
-[e :U 372 ]
-{
-[; ;main.c: 107: while (!PIR1bits.RCIF);
-"107
-[e $U 374  ]
-[e :U 375 ]
-[e :U 374 ]
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 375  ]
-[e :U 376 ]
-[; ;main.c: 108: PIR1bits.RCIF = 0;
-"108
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 109: RxData = RCREG;
-"109
-[e = _RxData _RCREG ]
-[; ;main.c: 112: if ((RxData & 0b11100000) == 0b11100000){
-"112
-[e $ ! == & -> _RxData `i -> 224 `i -> 224 `i 377  ]
-{
-[; ;main.c: 113: digitSelector = (RxData & 0b00001111);
-"113
-[e = _digitSelector -> & -> _RxData `i -> 15 `i `s ]
-[; ;main.c: 114: dotflag = (RxData & 0b00010000) >> 4;
-"114
-[e = _dotflag -> -> >> & -> _RxData `i -> 16 `i -> 4 `i `l `ul ]
-[; ;main.c: 115: while (!PIR1bits.RCIF);
-"115
-[e $U 378  ]
-[e :U 379 ]
-[e :U 378 ]
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 379  ]
-[e :U 380 ]
-[; ;main.c: 116: PIR1bits.RCIF = 0;
-"116
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 117: RxData = RCREG;
-"117
-[e = _RxData _RCREG ]
-[; ;main.c: 118: if(digitSelector > 8)continue;
-"118
-[e $ ! > -> _digitSelector `i -> 8 `i 381  ]
-[e $U 371  ]
-[e :U 381 ]
-[; ;main.c: 119: if(RxData > 0b01111111) RxData = ~RxData;
-"119
-[e $ ! > -> _RxData `i -> 127 `i 382  ]
-[e = _RxData -> ~ -> _RxData `i `uc ]
-[e :U 382 ]
-[; ;main.c: 120: segMap[digitSelector] = fontList[RxData] | (dotflag << 16);
-"120
-[e = *U + &U _segMap * -> -> _digitSelector `us `ux -> -> # *U &U _segMap `ui `ux | -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul << _dotflag -> 16 `i ]
-"122
-}
-[e :U 377 ]
-"123
-}
-[e :U 371 ]
-"106
-[e $U 372  ]
-[e :U 373 ]
-[; ;main.c: 122: }
-[; ;main.c: 123: }
-[; ;main.c: 124: }
-"124
 [e :UE 370 ]
 }
-[v $root$_isr `(v ~T0 @X0 0 e ]
-[v F3855 `(v ~T0 @X0 1 tf ]
-"127
-[v _isr `IF3855 ~T0 @X0 1 e ]
+"40
+[v _i2c_repeat_start `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 127: void interrupt isr(void){
-[e :U _isr ]
+[; ;i2c.c: 40: void i2c_repeat_start(void) {
+[e :U _i2c_repeat_start ]
 [f ]
-[; ;main.c: 128: if(PIR1bits.TMR2IF){
-"128
-[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 384  ]
-{
-[; ;main.c: 129: PIR1bits.TMR2IF = 0;
-"129
-[e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 131: setSegPin(0b00000000000000000);
-"131
-[e ( _setSegPin (1 -> -> -> 0 `i `l `ul ]
-[; ;main.c: 132: setDigitPin(1<<digitPtr);
-"132
-[e ( _setDigitPin (1 -> << -> 1 `i _digitPtr `ui ]
-[; ;main.c: 133: setSegPin(segMap[digitPtr]);
-"133
-[e ( _setSegPin (1 *U + &U _segMap * -> -> _digitPtr `us `ux -> -> # *U &U _segMap `ui `ux ]
-[; ;main.c: 134: digitPtr = (digitPtr+1)%9;
-"134
-[e = _digitPtr -> % + -> _digitPtr `i -> 1 `i -> 9 `i `s ]
-"135
+[; ;i2c.c: 41: SSPCON2bits.RSEN = 1;
+"41
+[e = . . _SSPCON2bits 0 1 -> -> 1 `i `uc ]
+[; ;i2c.c: 42: i2c_wait();
+"42
+[e ( _i2c_wait ..  ]
+[; ;i2c.c: 43: }
+"43
+[e :UE 371 ]
 }
-[; ;main.c: 135: } else if (SSPIF) {
-[e $U 385  ]
-[e :U 384 ]
-[e $ ! _SSPIF 386  ]
+"46
+[v _i2c_stop `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 136: SSPIF = 0;
-"136
-[e = _SSPIF -> -> 0 `i `b ]
-"137
+[; ;i2c.c: 46: void i2c_stop(void) {
+[e :U _i2c_stop ]
+[f ]
+[; ;i2c.c: 47: SSPCON2bits.PEN = 1;
+"47
+[e = . . _SSPCON2bits 0 2 -> -> 1 `i `uc ]
+[; ;i2c.c: 48: i2c_wait();
+"48
+[e ( _i2c_wait ..  ]
+[; ;i2c.c: 49: }
+"49
+[e :UE 372 ]
 }
-[e :U 386 ]
-"138
-[e :U 385 ]
-[; ;main.c: 137: }
-[; ;main.c: 138: }
-[e :UE 383 ]
+"52
+[v _i2c_send_byte `(v ~T0 @X0 1 ef1`uc ]
+{
+[; ;i2c.c: 52: void i2c_send_byte(unsigned char data) {
+[e :U _i2c_send_byte ]
+[v _data `uc ~T0 @X0 1 r1 ]
+[f ]
+[; ;i2c.c: 53: SSPBUF = data;
+"53
+[e = _SSPBUF _data ]
+[; ;i2c.c: 54: i2c_wait();
+"54
+[e ( _i2c_wait ..  ]
+[; ;i2c.c: 55: }
+"55
+[e :UE 373 ]
+}
+"58
+[v _i2c_read_byte `(uc ~T0 @X0 1 ef1`ui ]
+{
+[; ;i2c.c: 58: unsigned char i2c_read_byte(unsigned int ack) {
+[e :U _i2c_read_byte ]
+[v _ack `ui ~T0 @X0 1 r1 ]
+[f ]
+[; ;i2c.c: 59: SSPCON2bits.RCEN = 1;
+"59
+[e = . . _SSPCON2bits 0 3 -> -> 1 `i `uc ]
+[; ;i2c.c: 60: i2c_wait();
+"60
+[e ( _i2c_wait ..  ]
+"61
+[v _data `uc ~T0 @X0 1 a ]
+[; ;i2c.c: 61: unsigned char data = SSPBUF;
+[e = _data _SSPBUF ]
+[; ;i2c.c: 62: i2c_wait();
+"62
+[e ( _i2c_wait ..  ]
+[; ;i2c.c: 64: if(ack) SSPCON2bits.ACKDT = 0;
+"64
+[e $ ! != _ack -> -> 0 `i `ui 375  ]
+[e = . . _SSPCON2bits 0 5 -> -> 0 `i `uc ]
+[e $U 376  ]
+"65
+[e :U 375 ]
+[; ;i2c.c: 65: else SSPCON2bits.ACKDT = 1;
+[e = . . _SSPCON2bits 0 5 -> -> 1 `i `uc ]
+[e :U 376 ]
+[; ;i2c.c: 67: SSPCON2bits.ACKEN = 1;
+"67
+[e = . . _SSPCON2bits 0 4 -> -> 1 `i `uc ]
+[; ;i2c.c: 69: i2c_wait();
+"69
+[e ( _i2c_wait ..  ]
+[; ;i2c.c: 70: return data;
+"70
+[e ) _data ]
+[e $UE 374  ]
+[; ;i2c.c: 71: }
+"71
+[e :UE 374 ]
 }

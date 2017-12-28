@@ -16,6 +16,7 @@
 #include <p18f4553.h>
 
 #include "segFonts.h"
+#include "i2c.h"
 
 #pragma config FOSC  = HS       // 20MHz Xtal(分周なし)
 #pragma config MCLRE = ON       // リセットピンを利用する
@@ -94,8 +95,8 @@ void main(void) {
 	SPBRGH  = 0;
     BRGH = 0;
 	SPBRG   = 129;
-
-    
+ 
+   
 	char RxData;            // 受信データ用バッファ
 	short digitSelector;    // 書き換え桁数
     unsigned long dotflag;  // ドットをつけるかどうか
@@ -131,5 +132,7 @@ void interrupt isr(void){
 		setDigitPin(1<<digitPtr);       // 桁の移行
 		setSegPin(segMap[digitPtr]);    // 値をセット
 		digitPtr = (digitPtr+1)%9;      // digitPtrを次の値にセット
-	}
+	} else if (SSPIF) {
+        SSPIF = 0;
+    }
 }

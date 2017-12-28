@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project>
-  <executable name="dist/default/production/hexSegController.X.production.hex">
+  <executable name="dist/default/production\hexSegController.X.production.hex">
     <memory name="program">
       <units>bytes</units>
       <length>32768</length>
-      <used>1214</used>
-      <free>31554</free>
+      <used>1194</used>
+      <free>31574</free>
     </memory>
     <memory name="data">
       <units>bytes</units>
       <length>2048</length>
-      <used>343</used>
-      <free>1705</free>
+      <used>347</used>
+      <free>1701</free>
     </memory>
   </executable>
 </project>
