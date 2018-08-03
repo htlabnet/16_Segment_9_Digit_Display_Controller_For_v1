@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Microchip\xc8\v1.45\dat\en_msgs.txt -cs \
   -h+dist/default/production\hexSegController.X.production.sym \
   --cmf=dist/default/production\hexSegController.X.production.cmf -z \
-  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\s794.2 \
+  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\sfro.2 \
   -Mdist/default/production/hexSegController.X.production.map -E1 -ver=XC8 \
   -ASTACK=02ADh-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\THOTGA~1\AppData\Local\Temp\s794.obj \
+  C:\Users\THOTGA~1\AppData\Local\Temp\sfro.obj \
   dist/default/production\hexSegController.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\THOTGA~1\AppData\Local\Temp\s794.obj
+C:\Users\THOTGA~1\AppData\Local\Temp\sfro.obj
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -45,10 +45,10 @@ dist/default/production\hexSegController.X.production.obj
                 temp                                 57       57        1        1       1
                 smallconst                          800      800       A8      400       0
                 text6                              1076     1076       70      454       0
-                text5                               8A8      8A8      252      454       0
-                text4                               E2A      E2A       CE      454       0
-                text3                              1152     1152       60      454       0
-                text2                               FC4      FC4       B2      454       0
+                text5                               E2A      E2A       CE      454       0
+                text4                              1152     1152       60      454       0
+                text3                               FC4      FC4       B2      454       0
+                text2                               8A8      8A8      252      454       0
                 intcode_body                        EF8      EF8       CC      454       0
                 text0                               CFE      CFE      12C      454       0
                 cstackCOMRAM                          1        1       50        1       1
@@ -70,10 +70,10 @@ TOTAL           Name                               Link     Load   Length     Sp
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
                 text6                              1076     1076       70         0
-                text5                               8A8      8A8      252         0
-                text4                               E2A      E2A       CE         0
-                text3                              1152     1152       60         0
-                text2                               FC4      FC4       B2         0
+                text5                               E2A      E2A       CE         0
+                text4                              1152     1152       60         0
+                text3                               FC4      FC4       B2         0
+                text2                               8A8      8A8      252         0
                 intcode_body                        EF8      EF8       CC         0
                 text0                               CFE      CFE      12C         0
                 cinit                              10E6     10E6       6C         0
@@ -141,7 +141,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 dataBANK0                      000060  000049  0000A9        60       1  BANK0   
                 dataBIGRAM                     0000A9  000204  0002AD        A9       1  BIGRAM  
                 smallconst                     000800  0000A8  0008A8       400       0  SMALLCON
-                text5                          0008A8  00092E  0011D6       454       0  CODE    
+                text2                          0008A8  00092E  0011D6       454       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -376,12 +376,12 @@ __end_of_DEMO_MESSAGE            smallconst   0008A7
 __end_of_MESSAGE_LENGTH          smallconst   000803
 __end_of___awmod                 text6        0010E6
 __end_of__initialization         cinit        001140
+__end_of_handleMessage           text3        001076
 __end_of_isr                     intcode_body 000FC4
 __end_of_main                    text0        000E2A
-__end_of_refreshShiftRegister    text5        000AFA
-__end_of_setMsgWithDot           text4        000EF8
-__end_of_strncpy                 text3        0011B2
-__end_of_timerfunc               text2        001076
+__end_of_refreshShiftRegister    text2        000AFA
+__end_of_setMsgWithDot           text5        000EF8
+__end_of_strncpy                 text4        0011B2
 __initialization                 cinit        0010E6
 __mediumconst                    mediumconst  000000
 __pbssBANK0                      bssBANK0     000084
@@ -398,33 +398,33 @@ __pintcode_body                  intcode_body 000EF8
 __pnvCOMRAM                      nvCOMRAM     000056
 __psmallconst                    smallconst   000800
 __ptext0                         text0        000CFE
-__ptext2                         text2        000FC4
-__ptext3                         text3        001152
-__ptext4                         text4        000E2A
-__ptext5                         text5        0008A8
+__ptext2                         text2        0008A8
+__ptext3                         text3        000FC4
+__ptext4                         text4        001152
+__ptext5                         text5        000E2A
 __ptext6                         text6        001076
 __ramtop                         ramtop       000800
 __size_of___awmod                (abs)        000000
+__size_of_handleMessage          (abs)        000000
 __size_of_isr                    (abs)        000000
 __size_of_main                   (abs)        000000
 __size_of_refreshShiftRegister   (abs)        000000
 __size_of_setMsgWithDot          (abs)        000000
 __size_of_strncpy                (abs)        000000
-__size_of_timerfunc              (abs)        000000
 __smallconst                     smallconst   000800
 _digitPtr                        bssCOMRAM    000055
 _disdot                          bssBANK0     000085
 _display                         bssBANK0     00008E
 _divisor                         bssCOMRAM    000053
 _fontList                        dataBIGRAM   0000A9
+_handleMessage                   text3        000FC4
 _isr                             intcode      000008
 _led_stat                        nvCOMRAM     000056
 _main                            text0        000CFE
-_refreshShiftRegister            text5        0008A8
+_refreshShiftRegister            text2        0008A8
 _segMap                          dataBANK0    000060
-_setMsgWithDot                   text4        000E2A
-_strncpy                         text3        001152
-_timerfunc                       text2        000FC4
+_setMsgWithDot                   text5        000E2A
+_strncpy                         text4        001152
 _tmrIsr                          bssBANK0     000084
 _writeItr                        bssCOMRAM    000051
 btemp                            temp         000057
@@ -460,7 +460,7 @@ FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 102 in file "main.c"
+		line 101 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -491,7 +491,7 @@ Total ram usage:       18 bytes
 
  *************** function _isr *****************
  Defined at:
-		line 203 in file "main.c"
+		line 200 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -514,16 +514,47 @@ Total ram usage:       18 bytes
  Hardware stack levels required when called:    2
  This function calls:
 		___awmod
+		_handleMessage
 		_refreshShiftRegister
-		_timerfunc
  This function is called by:
 		Interrupt level 2
  This function uses a non-reentrant model
 
 
- *************** function _timerfunc *****************
+ *************** function _refreshShiftRegister *****************
  Defined at:
-		line 189 in file "main.c"
+		line 77 in file "main.c"
+ Parameters:    Size  Location     Type
+  ptr             2    0[COMRAM] int 
+ Auto vars:     Size  Location     Type
+  i               2   60[COMRAM] int 
+  map             4   54[COMRAM] unsigned long 
+  ledSelector     2   58[COMRAM] unsigned int 
+ Return value:  Size  Location     Type
+                  1    wreg      void 
+ Registers used:
+		wreg, fsr2l, fsr2h, status,2, status,0
+ Tracked objects:
+		On entry : 
+		On exit  : 
+		Unchanged: 
+ Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
+      Params:         2       0       0       0       0       0       0       0       0
+      Locals:         8       0       0       0       0       0       0       0       0
+      Temps:         52       0       0       0       0       0       0       0       0
+      Totals:        62       0       0       0       0       0       0       0       0
+Total ram usage:       62 bytes
+ Hardware stack levels used:    1
+ This function calls:
+		Nothing
+ This function is called by:
+		_isr
+ This function uses a non-reentrant model
+
+
+ *************** function _handleMessage *****************
+ Defined at:
+		line 186 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -582,13 +613,13 @@ Total ram usage:        8 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_timerfunc
+		_handleMessage
  This function uses a non-reentrant model
 
 
  *************** function _setMsgWithDot *****************
  Defined at:
-		line 70 in file "main.c"
+		line 71 in file "main.c"
  Parameters:    Size  Location     Type
   message         2    0[COMRAM] PTR unsigned char 
 		 -> display(9), 
@@ -614,38 +645,7 @@ Total ram usage:       22 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_timerfunc
- This function uses a non-reentrant model
-
-
- *************** function _refreshShiftRegister *****************
- Defined at:
-		line 78 in file "main.c"
- Parameters:    Size  Location     Type
-  ptr             2    0[COMRAM] int 
- Auto vars:     Size  Location     Type
-  i               2   60[COMRAM] int 
-  map             4   54[COMRAM] unsigned long 
-  ledSelector     2   58[COMRAM] unsigned int 
- Return value:  Size  Location     Type
-                  1    wreg      void 
- Registers used:
-		wreg, fsr2l, fsr2h, status,2, status,0
- Tracked objects:
-		On entry : 
-		On exit  : 
-		Unchanged: 
- Data sizes:     COMRAM   BANK0   BANK1   BANK2   BANK3   BANK4   BANK5   BANK6   BANK7
-      Params:         2       0       0       0       0       0       0       0       0
-      Locals:         8       0       0       0       0       0       0       0       0
-      Temps:         52       0       0       0       0       0       0       0       0
-      Totals:        62       0       0       0       0       0       0       0       0
-Total ram usage:       62 bytes
- Hardware stack levels used:    1
- This function calls:
-		Nothing
- This function is called by:
-		_isr
+		_handleMessage
  This function uses a non-reentrant model
 
 
@@ -703,8 +703,8 @@ D:\Microchip\xc8\v1.45\sources\common\awmod.c
 D:\Microchip\xc8\v1.45\sources\common\awmod.c estimated size: 113
 
 main.c
+		_handleMessage 		CODE           	0FC4	0000	179
 		_refreshShiftRegister		CODE           	08A8	0000	595
-		_timerfunc     		CODE           	0FC4	0000	179
 		_setMsgWithDot 		CODE           	0E2A	0000	207
 		_main          		CODE           	0CFE	0000	301
 		_isr           		CODE           	0008	0000	211

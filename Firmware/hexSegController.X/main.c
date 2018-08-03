@@ -18,6 +18,7 @@
 #include "segFonts.h"
 #include <stdint.h>
 #include <string.h>
+#include <stdbool.h>
 
 #pragma config FOSC  = HS       // 20MHz Xtal(分周なし)
 #pragma config MCLRE = ON       // リセットピンを利用する
@@ -27,14 +28,16 @@
 #define _XTAL_FREQ 20000000
 
 
-const uint8_t DEMO_MESSAGE[] =  "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY        ";
-const uint8_t DEMO_DOTFLAG[] =  "                           .                                                     ";
+const uint8_t  DEMO_MESSAGE[] =  "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY        ";
+const uint8_t  DEMO_DOTFLAG[] =  "                           .                                                     ";
 const uint16_t MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 
-uint8_t  led_stat;
+uint8_t led_stat;     // コントローラについてる4つのbarLEDの点灯状態
+uint8_t digitPtr = 0;　// 現在表示している桁数
+bool    tmrIsr = false;    // タイマー割り込みがあったことをmainに伝えるのに使う
 
 //初期値"*********"
-unsigned long segMap[9] = {
+uint32_t segMap[9] = {
     0b110000000011111111,
     0b110000000011111111,
     0b110000000011111111,
@@ -46,8 +49,6 @@ unsigned long segMap[9] = {
     0b110000000011111111
 };
 
-// 現在表示している桁数
-uint8_t digitPtr = 0;
 
 // (デバッグ用関数)
 // 引数の数字を二進数でディスプレイに表示する
@@ -72,8 +73,6 @@ void setMsgWithDot(char message[], char dotFlag[]) {
         segMap[i] = ~(fontList[message[i]] | ((uint32_t)(dotFlag[i] == '.') << 16));
     }
 }
-
-uint8_t tmrIsr = 0;
 
 void refreshShiftRegister(int ptr) {
     uint16_t ledSelector = 0b1 << ptr;
@@ -169,8 +168,8 @@ void main(void) {
                 segMap[digitSelector] = ~(fontList[RxData] | (dotflag << 16)); // 値を実際にセット
             }
         }
-        if (tmrIsr == 1) {
-            tmrIsr = 0;
+        if (tmrIsr == true) {
+            tmrIsr = false;
             //refreshShiftRegister(digitPtr);
             //digitPtr = (digitPtr+1)%9;      // digitPtrを次の値にセット
         }
@@ -178,15 +177,13 @@ void main(void) {
     }
 }
 
-//const char DEMO_MESSAGE[] =  "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY";
-//const int MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 
 uint16_t divisor = 0;
 uint8_t display[9];
 uint8_t disdot[9];
 uint16_t writeItr = 0;
 
-void timerfunc() {
+void handleMessage() {
     if (divisor++ == 500) {
         divisor = 0;
         
@@ -203,8 +200,8 @@ void timerfunc() {
 void interrupt isr(void) {
     if (PIR1bits.TMR2IF) {
         PIR1bits.TMR2IF = 0;    // フラグを下げる
-        tmrIsr = 1;
-        timerfunc();
+        tmrIsr = true;
+        handleMessage();
         refreshShiftRegister(digitPtr);
         digitPtr = (digitPtr+1)%9;      // digitPtrを次の値にセット
     }

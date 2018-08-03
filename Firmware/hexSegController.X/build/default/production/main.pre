@@ -5065,8 +5065,11 @@ extern char * strichr(const char *, int);
 extern char * strrchr(const char *, int);
 extern char * strrichr(const char *, int);
 
+# 12 "D:\Microchip\xc8\v1.45\include\stdbool.h"
+typedef unsigned char bool;
 
-# 22 "main.c"
+
+# 23 "main.c"
 #pragma config FOSC = HS
 #pragma config MCLRE = ON
 #pragma config LVP = OFF
@@ -5080,9 +5083,11 @@ const uint8_t DEMO_DOTFLAG[] = "                           .                    
 const uint16_t MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 
 uint8_t led_stat;
+uint8_t digitPtr = 0;　
+bool tmrIsr = 0;
 
 
-unsigned long segMap[9] = {
+uint32_t segMap[9] = {
 0b110000000011111111,
 0b110000000011111111,
 0b110000000011111111,
@@ -5094,8 +5099,6 @@ unsigned long segMap[9] = {
 0b110000000011111111
 };
 
-
-uint8_t digitPtr = 0;
 
 
 
@@ -5120,8 +5123,6 @@ for (int i = 0; i < 9; i++) {
 segMap[i] = ~(fontList[message[i]] | ((uint32_t)(dotFlag[i] == '.') << 16));
 }
 }
-
-uint8_t tmrIsr = 0;
 
 void refreshShiftRegister(int ptr) {
 uint16_t ledSelector = 0b1 << ptr;
@@ -5166,7 +5167,7 @@ LATCbits.LATC2 = 0;
 LATAbits.LATA4 = 0;
 LATAbits.LATA5 = 0;
 
-# 130
+# 129
 T2CON = 0;
 TMR2 = 0;
 PR2 = 125;
@@ -5219,14 +5220,12 @@ tmrIsr = 0;
 }
 
 
-
-
 uint16_t divisor = 0;
 uint8_t display[9];
 uint8_t disdot[9];
 uint16_t writeItr = 0;
 
-void timerfunc() {
+void handleMessage() {
 if (divisor++ == 500) {
 divisor = 0;
 
@@ -5244,7 +5243,7 @@ void interrupt isr(void) {
 if (PIR1bits.TMR2IF) {
 PIR1bits.TMR2IF = 0;
 tmrIsr = 1;
-timerfunc();
+handleMessage();
 refreshShiftRegister(digitPtr);
 digitPtr = (digitPtr+1)%9;
 }
