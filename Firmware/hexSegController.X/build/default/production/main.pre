@@ -4900,7 +4900,8 @@ unsigned int fontList[] = {
 0b00011000000110011,
 0b00000000011010001,
 0b01000010000000000,
-0b00000000000101110,
+
+# 116
 0b00000000000000011,
 0b00000000000110000,
 0b01010101100000000,
@@ -5029,18 +5030,6 @@ typedef int16_t intptr_t;
 
 typedef uint16_t uintptr_t;
 
-# 15 "i2c.h"
-void i2c_wait(void);
-void i2c_enable_master(int baud_divisor);
-void i2c_disable_master(void);
-void i2c_enable_slave(uint8_t address);
-void i2c_enable_isr(void);
-void i2c_start(void);
-void i2c_repeat_start(void);
-void i2c_stop(void);
-void i2c_send_byte(unsigned char data);
-uint8_t i2c_read_byte(unsigned int ack);
-
 
 # 21 "main.c"
 #pragma config FOSC = HS
@@ -5049,6 +5038,10 @@ uint8_t i2c_read_byte(unsigned int ack);
 #pragma config WDT = OFF
 
 
+
+
+const char DEMO_MESSAGE[] = "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY";
+const int MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 
 uint8_t led_stat;
 
@@ -5073,18 +5066,23 @@ short digitPtr = 0;
 void showBinary(int input){
 for(int i = 0; i < 8; i++){
 if((input & (1 << i)) == 0){
-segMap[i] = fontList[0x30];
+segMap[i] = ~fontList[0x30];
 }else{
-segMap[i] = fontList[0x31];
+segMap[i] = ~fontList[0x31];
 }
 }
 }
 
+void setMsg(char input[]) {
+for (int i = 0; i < 9; i++) {
+segMap[i] = ~(fontList[input[i]] | (0 << 16));
+}
+}
 
+int tmrIsr = 0;
 
 void refreshShiftRegister(int ptr) {
 uint16_t ledSelector = 0b1 << ptr;
-
 
 uint32_t map = ((segMap[ptr] & 0b11111111) << 24)
 | ((segMap[ptr] & 0b1111111100000000) << 8)
@@ -5093,19 +5091,18 @@ uint32_t map = ((segMap[ptr] & 0b11111111) << 24)
 | ((segMap[ptr] & 0b110000000000000000) >> 8)
 | ((ledSelector & 0b1111111100) >> 2);
 
-
 for (int i = 0; i < 32; i++) {
 LATBbits.LATB2 = (map >> i) & 1;
 LATBbits.LATB3 = 1;
-_delay((unsigned long)((10)*(20000000/4000000.0)));
+_delay((unsigned long)((1)*(20000000/4000000.0)));
 LATBbits.LATB3 = 0;
-_delay((unsigned long)((10)*(20000000/4000000.0)));
+_delay((unsigned long)((1)*(20000000/4000000.0)));
 }
 
 LATBbits.LATB4 = 1;
-_delay((unsigned long)((10)*(20000000/4000000.0)));
+_delay((unsigned long)((1)*(20000000/4000000.0)));
 LATBbits.LATB4 = 0;
-_delay((unsigned long)((10)*(20000000/4000000.0)));
+_delay((unsigned long)((1)*(20000000/4000000.0)));
 }
 
 void main(void) {
@@ -5123,12 +5120,11 @@ LATCbits.LATC1 = 1;
 
 LATCbits.LATC2 = 0;
 
+
 LATAbits.LATA4 = 0;
 LATAbits.LATA5 = 0;
 
-
-
-
+# 124
 T2CON = 0;
 TMR2 = 0;
 PR2 = 125;
@@ -5152,34 +5148,51 @@ char RxData;
 short digitSelector;
 unsigned long dotflag;
 
-while(1){
-while (!PIR1bits.RCIF);
+
+setMsg("ABCDEFGHI");
+
+while (1){
+
+if (PIR1bits.RCIF) {
 PIR1bits.RCIF = 0;
 RxData = RCREG;
 
 
-if ((RxData & 0b11100000) == 0b11100000){
+if ((RxData & 0b11100000) == 0b11100000) {
 digitSelector = (RxData & 0b00001111);
 dotflag = (RxData & 0b00010000) >> 4;
 while (!PIR1bits.RCIF);
 PIR1bits.RCIF = 0;
 RxData = RCREG;
-if(digitSelector > 8)continue;
-if(RxData > 0b01111111) RxData = ~RxData;
-segMap[digitSelector] = fontList[RxData] | (dotflag << 16);
+if (digitSelector > 8) continue;
+if (RxData > 0b01111111) RxData = ~RxData;
+segMap[digitSelector] = ~(fontList[RxData] | (dotflag << 16));
+}
+}
+if (tmrIsr == 1) {
+tmrIsr = 0;
+
+
+}
 
 }
 }
+
+unsigned int divisor = 0;
+
+void timerfunc() {
+if (divisor++ == 100) {
+
+}
 }
 
 
-void interrupt isr(void){
-if(PIR1bits.TMR2IF){
+void interrupt isr(void) {
+if (PIR1bits.TMR2IF) {
 PIR1bits.TMR2IF = 0;
+tmrIsr = 1;
+timerfunc();
 refreshShiftRegister(digitPtr);
 digitPtr = (digitPtr+1)%9;
-
-} else if (SSPIF) {
-SSPIF = 0;
 }
 }
