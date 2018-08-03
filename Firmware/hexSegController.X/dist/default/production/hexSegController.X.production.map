@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Microchip\xc8\v1.45\dat\en_msgs.txt -cs \
   -h+dist/default/production\hexSegController.X.production.sym \
   --cmf=dist/default/production\hexSegController.X.production.cmf -z \
-  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\s24g.2 \
+  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\sfmg.2 \
   -Mdist/default/production/hexSegController.X.production.map -E1 -ver=XC8 \
   -ASTACK=01A9h-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\THOTGA~1\AppData\Local\Temp\s24g.obj \
+  C:\Users\THOTGA~1\AppData\Local\Temp\sfmg.obj \
   dist/default/production\hexSegController.X.production.obj 
 
 Object code version is 3.11
@@ -35,7 +35,7 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\THOTGA~1\AppData\Local\Temp\s24g.obj
+C:\Users\THOTGA~1\AppData\Local\Temp\sfmg.obj
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
@@ -44,11 +44,11 @@ dist/default/production\hexSegController.X.production.obj
                 intcode                               8        8        6        4       0
                 temp                                 56       56        1        1       1
                 smallconst                          800      800       58      400       0
-                text5                               E66      E66       70      42C       0
+                text5                               E70      E70       70      42C       0
                 text4                               858      858      252      42C       0
-                text3                               F5E      F5E        6      42C       0
+                text3                               F68      F68        6      42C       0
                 intcode_body                        D04      D04       D6      42C       0
-                text1                               DDA      DDA       8C      42C       0
+                text1                               DDA      DDA       96      42C       0
                 text0                               AAA      AAA      158      42C       0
                 cstackCOMRAM                          1        1       50        1       1
                 cstackBANK0                          84       84       21       60       1
@@ -56,9 +56,9 @@ dist/default/production\hexSegController.X.production.obj
                 dataBANK0                            60       60       24       60       1
                 bssBANK0                             A5       A5        2       60       1
                 bssCOMRAM                            51       51        4        1       1
-                cinit                               ED6      ED6       64      42C       0
+                cinit                               EE0      EE0       64      42C       0
                 nvCOMRAM                             55       55        1        1       1
-                idataBANK0                          F3A      F3A       24      42C       0
+                idataBANK0                          F44      F44       24      42C       0
                 idataBIGRAM                         C02      C02      102      42C       0
 
 TOTAL           Name                               Link     Load   Length     Space
@@ -68,14 +68,14 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
-                text5                               E66      E66       70         0
+                text5                               E70      E70       70         0
                 text4                               858      858      252         0
-                text3                               F5E      F5E        6         0
+                text3                               F68      F68        6         0
                 intcode_body                        D04      D04       D6         0
-                text1                               DDA      DDA       8C         0
+                text1                               DDA      DDA       96         0
                 text0                               AAA      AAA      158         0
-                cinit                               ED6      ED6       64         0
-                idataBANK0                          F3A      F3A       24         0
+                cinit                               EE0      EE0       64         0
+                idataBANK0                          F44      F44       24         0
                 idataBIGRAM                         C02      C02      102         0
 
         CLASS   CONST          
@@ -139,7 +139,7 @@ SEGMENTS        Name                           Load    Length   Top    Selector 
                 dataBANK0                      000060  000047  0000A7        60       1  BANK0   
                 dataBIGRAM                     0000A7  000102  0001A9        A7       1  BIGRAM  
                 smallconst                     000800  000058  000858       400       0  SMALLCON
-                text4                          000858  00070C  000F64       42C       0  CODE    
+                text4                          000858  000716  000F6E       42C       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -158,16 +158,16 @@ UNUSED ADDRESS RANGES
                          0001A9-0007FF              657
         CODE             000004-000007                4
                          000012-0007FF              7EE
-                         000F64-007FFF             709C
+                         000F6E-007FFF             7092
         COMRAM           000057-00005F                9
         CONST            000004-000007                4
                          000012-0007FF              7EE
-                         000F64-007FFF             709C
+                         000F6E-007FFF             7092
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      000F64-007FFF             709C
+        MEDIUMCONST      000F6E-007FFF             7092
         RAM              0001A9-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       000F64-007FFF              100
+        SMALLCONST       000F6E-007FFF              100
         STACK            0001A9-0007FF              657
 
                                   Symbol Table
@@ -354,7 +354,7 @@ __Ltext5                         text5        000000
 __S0                             (abs)        30000E
 __S1                             (abs)        0001A9
 __S2                             (abs)        000000
-___awmod                         text5        000E66
+___awmod                         text5        000E70
 ___awmod@counter                 cstackCOMRAM 000005
 ___awmod@dividend                cstackCOMRAM 000001
 ___awmod@divisor                 cstackCOMRAM 000003
@@ -368,23 +368,23 @@ __accesstop                      (abs)        000060
 __activetblptr                   (abs)        000001
 __end_of_DEMO_MESSAGE            smallconst   00084D
 __end_of_MESSAGE_LENGTH          smallconst   000803
-__end_of___awmod                 text5        000ED6
-__end_of__initialization         cinit        000F28
+__end_of___awmod                 text5        000EE0
+__end_of__initialization         cinit        000F32
 __end_of_isr                     intcode_body 000DDA
 __end_of_main                    text0        000C02
 __end_of_refreshShiftRegister    text4        000AAA
-__end_of_setMsg                  text1        000E66
-__end_of_timerfunc               text3        000F64
-__initialization                 cinit        000ED6
+__end_of_setMsg                  text1        000E70
+__end_of_timerfunc               text3        000F6E
+__initialization                 cinit        000EE0
 __mediumconst                    mediumconst  000000
 __pbssBANK0                      bssBANK0     0000A5
 __pbssCOMRAM                     bssCOMRAM    000051
-__pcinit                         cinit        000ED6
+__pcinit                         cinit        000EE0
 __pcstackBANK0                   cstackBANK0  000084
 __pcstackCOMRAM                  cstackCOMRAM 000001
 __pdataBANK0                     dataBANK0    000060
 __pdataBIGRAM                    dataBIGRAM   0000A7
-__pidataBANK0                    idataBANK0   000F3A
+__pidataBANK0                    idataBANK0   000F44
 __pidataBIGRAM                   idataBIGRAM  000C02
 __pintcode                       intcode      000008
 __pintcode_body                  intcode_body 000D04
@@ -392,9 +392,9 @@ __pnvCOMRAM                      nvCOMRAM     000055
 __psmallconst                    smallconst   000800
 __ptext0                         text0        000AAA
 __ptext1                         text1        000DDA
-__ptext3                         text3        000F5E
+__ptext3                         text3        000F68
 __ptext4                         text4        000858
-__ptext5                         text5        000E66
+__ptext5                         text5        000E70
 __ramtop                         ramtop       000800
 __size_of___awmod                (abs)        000000
 __size_of_isr                    (abs)        000000
@@ -412,10 +412,10 @@ _main                            text0        000AAA
 _refreshShiftRegister            text4        000858
 _segMap                          dataBANK0    000060
 _setMsg                          text1        000DDA
-_timerfunc                       text3        000F5E
+_timerfunc                       text3        000F68
 _tmrIsr                          bssBANK0     0000A5
 btemp                            temp         000056
-end_of_initialization            cinit        000F28
+end_of_initialization            cinit        000F32
 int$flags                        temp         000056
 int_func                         intcode_body 000D04
 intlevel0                        text         000000
@@ -434,7 +434,7 @@ setMsg@input                     cstackBANK0  000084
 stackhi                          (abs)        0007FF
 stacklo                          (abs)        0001A9
 start                            init         00000E
-start_initialization             cinit        000ED6
+start_initialization             cinit        000EE0
 wtemp6                           temp         000057
 
 
@@ -631,22 +631,22 @@ MODULE INFORMATION
 Module		Function		Class		Link	Load	Size
 shared
 		_MESSAGE_LENGTH		SMALLCONST     	0801	0000	3
-		__initialization		CODE           	0ED6	0000	83
+		__initialization		CODE           	0EE0	0000	83
 		_DEMO_MESSAGE  		SMALLCONST     	0000	0000	0
 
 shared estimated size: 86
 
 D:\Microchip\xc8\v1.45\sources\common\awmod.c
-		___awmod       		CODE           	0E66	0000	113
+		___awmod       		CODE           	0E70	0000	113
 
 D:\Microchip\xc8\v1.45\sources\common\awmod.c estimated size: 113
 
 main.c
 		_refreshShiftRegister		CODE           	0858	0000	595
-		_timerfunc     		CODE           	0F5E	0000	7
-		_setMsg        		CODE           	0DDA	0000	141
+		_timerfunc     		CODE           	0F68	0000	7
+		_setMsg        		CODE           	0DDA	0000	151
 		_main          		CODE           	0AAA	0000	345
 		_isr           		CODE           	0008	0000	221
 
-main.c estimated size: 1309
+main.c estimated size: 1319
 

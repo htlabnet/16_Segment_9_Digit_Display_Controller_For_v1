@@ -4197,18 +4197,18 @@ Version 3.2 HI-TECH Software Intermediate Code
 "54
 [e $ ! == & _input << -> 1 `i _i -> 0 `i 366  ]
 {
-[; ;main.c: 55: segMap[i] = ~fontList[0x30];
+[; ;main.c: 55: segMap[i] = ~(uint32_t)fontList[0x30];
 "55
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> ~ *U + &U _fontList * -> -> -> 48 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ -> *U + &U _fontList * -> -> -> 48 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
 "56
 }
 [; ;main.c: 56: }else{
 [e $U 367  ]
 [e :U 366 ]
 {
-[; ;main.c: 57: segMap[i] = ~fontList[0x31];
+[; ;main.c: 57: segMap[i] = ~(uint32_t)fontList[0x31];
 "57
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> ~ *U + &U _fontList * -> -> -> 49 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ -> *U + &U _fontList * -> -> -> 49 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
 "58
 }
 [e :U 367 ]
@@ -4242,9 +4242,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 370  ]
 [e :U 369 ]
 {
-[; ;main.c: 64: segMap[i] = ~(fontList[input[i]] | (0 << 16));
+[; ;main.c: 64: segMap[i] = ~(uint32_t)(fontList[input[i]] | (1 << 16));
 "64
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux -> ~ | *U + &U _fontList * -> *U + _input * -> _i `x -> -> # *U _input `i `x `ux -> -> # *U &U _fontList `ui `ux -> << -> 0 `i -> 16 `i `ui `ul ]
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ -> | *U + &U _fontList * -> *U + _input * -> _i `x -> -> # *U _input `i `x `ux -> -> # *U &U _fontList `ui `ux -> << -> 1 `i -> 16 `i `ui `ul ]
 "65
 }
 "63
@@ -4533,9 +4533,9 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e :UE 388 ]
 }
 [v $root$_isr `(v ~T0 @X0 0 e ]
-[v F3851 `(v ~T0 @X0 1 tf ]
+[v F3854 `(v ~T0 @X0 1 tf ]
 "186
-[v _isr `IF3851 ~T0 @X0 1 e ]
+[v _isr `IF3854 ~T0 @X0 1 e ]
 {
 [; ;main.c: 186: void interrupt isr(void) {
 [e :U _isr ]

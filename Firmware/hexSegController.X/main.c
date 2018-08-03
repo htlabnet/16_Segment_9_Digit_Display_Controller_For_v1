@@ -52,16 +52,16 @@ short digitPtr = 0;
 void showBinary(int input){
     for(int i = 0; i < 8; i++){
         if((input & (1 << i)) == 0){
-            segMap[i] = ~fontList[0x30];
+            segMap[i] = ~(uint32_t)fontList[0x30];
         }else{
-            segMap[i] = ~fontList[0x31];
+            segMap[i] = ~(uint32_t)fontList[0x31];
         }
     }
 }
 
 void setMsg(char input[]) {
     for (int i = 0; i < 9; i++) {
-        segMap[i] = ~(fontList[input[i]] | (0 << 16));
+        segMap[i] = ~(uint32_t)(fontList[input[i]] | (1 << 16));
     }
 }
 
@@ -146,7 +146,7 @@ void main(void) {
     
     
     setMsg("ABCDEFGHI");
-
+    
     while (1){
         
         if (PIR1bits.RCIF) {
