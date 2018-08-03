@@ -5085,6 +5085,7 @@ const uint16_t MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 uint8_t led_stat;
 uint8_t digitPtr = 0;　
 bool tmrIsr = 0;
+bool showDemoMessage = 0;
 
 
 uint32_t segMap[9] = {
@@ -5167,7 +5168,7 @@ LATCbits.LATC2 = 0;
 LATAbits.LATA4 = 0;
 LATAbits.LATA5 = 0;
 
-# 129
+# 130
 T2CON = 0;
 TMR2 = 0;
 PR2 = 125;
@@ -5191,6 +5192,8 @@ uint8_t RxData;
 uint8_t digitSelector;
 uint32_t dotflag;
 
+
+showDemoMessage = 1;
 
 while (1){
 
@@ -5243,7 +5246,7 @@ void interrupt isr(void) {
 if (PIR1bits.TMR2IF) {
 PIR1bits.TMR2IF = 0;
 tmrIsr = 1;
-handleMessage();
+if (showDemoMessage) handleMessage();
 refreshShiftRegister(digitPtr);
 digitPtr = (digitPtr+1)%9;
 }

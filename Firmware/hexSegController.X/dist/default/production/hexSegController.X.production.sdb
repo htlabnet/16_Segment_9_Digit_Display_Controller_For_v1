@@ -29,15 +29,15 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "10 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\i2c.c
 [v _i2c_wait i2c_wait `(v  1 e 1 0 ]
-"71 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+"72 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 [v _setMsgWithDot setMsgWithDot `(v  1 e 1 0 ]
-"77
+"78
 [v _refreshShiftRegister refreshShiftRegister `(v  1 e 1 0 ]
-"101
+"102
 [v _main main `(v  1 e 1 0 ]
-"186
+"189
 [v _handleMessage handleMessage `(v  1 e 1 0 ]
-"200
+"203
 [v _isr isr `II(v  1 e 1 0 ]
 [s S106 . 1 `uc 1 LATA0 1 0 :1:0 
 `uc 1 LATA1 1 0 :1:1 
@@ -158,7 +158,7 @@
 [v _ADCON1 ADCON1 `VEuc  1 e 1 @4033 ]
 "6804
 [v _SSPCON2 SSPCON2 `VEuc  1 e 1 @4037 ]
-[s S512 . 1 `uc 1 SEN 1 0 :1:0 
+[s S513 . 1 `uc 1 SEN 1 0 :1:0 
 `uc 1 RSEN 1 0 :1:1 
 `uc 1 PEN 1 0 :1:2 
 `uc 1 RCEN 1 0 :1:3 
@@ -168,20 +168,20 @@
 `uc 1 GCEN 1 0 :1:7 
 ]
 "6821
-[u S521 . 1 `S512 1 . 1 0 ]
-[v _SSPCON2bits SSPCON2bits `VES521  1 e 1 @4037 ]
+[u S522 . 1 `S513 1 . 1 0 ]
+[v _SSPCON2bits SSPCON2bits `VES522  1 e 1 @4037 ]
 "6866
 [v _SSPCON1 SSPCON1 `VEuc  1 e 1 @4038 ]
 "6936
 [v _SSPSTAT SSPSTAT `VEuc  1 e 1 @4039 ]
-[s S366 . 1 `uc 1 . 1 0 :2:0 
+[s S367 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_NOT_W 1 0 :1:2 
 ]
 "7019
-[s S369 . 1 `uc 1 . 1 0 :5:0 
+[s S370 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 D_NOT_A 1 0 :1:5 
 ]
-[s S372 . 1 `uc 1 BF 1 0 :1:0 
+[s S373 . 1 `uc 1 BF 1 0 :1:0 
 `uc 1 UA 1 0 :1:1 
 `uc 1 R_nW 1 0 :1:2 
 `uc 1 S 1 0 :1:3 
@@ -190,56 +190,56 @@
 `uc 1 CKE 1 0 :1:6 
 `uc 1 SMP 1 0 :1:7 
 ]
-[s S381 . 1 `uc 1 . 1 0 :2:0 
+[s S382 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D_A 1 0 :1:5 
 ]
-[s S386 . 1 `uc 1 . 1 0 :2:0 
+[s S387 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 I2C_READ 1 0 :1:2 
 `uc 1 I2C_START 1 0 :1:3 
 `uc 1 I2C_STOP 1 0 :1:4 
 `uc 1 I2C_DAT 1 0 :1:5 
 ]
-[s S392 . 1 `uc 1 . 1 0 :2:0 
+[s S393 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nW 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nA 1 0 :1:5 
 ]
-[s S397 . 1 `uc 1 . 1 0 :2:0 
+[s S398 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_WRITE 1 0 :1:2 
 ]
-[s S400 . 1 `uc 1 . 1 0 :5:0 
+[s S401 . 1 `uc 1 . 1 0 :5:0 
 `uc 1 NOT_ADDRESS 1 0 :1:5 
 ]
-[s S403 . 1 `uc 1 . 1 0 :2:0 
+[s S404 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 nWRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 nADDRESS 1 0 :1:5 
 ]
-[s S408 . 1 `uc 1 . 1 0 :2:0 
+[s S409 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 READ_WRITE 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 DATA_ADDRESS 1 0 :1:5 
 ]
-[s S413 . 1 `uc 1 . 1 0 :2:0 
+[s S414 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 R 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 D 1 0 :1:5 
 ]
-[s S418 . 1 `uc 1 . 1 0 :2:0 
+[s S419 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 RW 1 0 :1:2 
 `uc 1 START 1 0 :1:3 
 `uc 1 STOP 1 0 :1:4 
 `uc 1 DA 1 0 :1:5 
 ]
-[s S424 . 1 `uc 1 . 1 0 :2:0 
+[s S425 . 1 `uc 1 . 1 0 :2:0 
 `uc 1 NOT_W 1 0 :1:2 
 `uc 1 . 1 0 :2:3 
 `uc 1 NOT_A 1 0 :1:5 
 ]
-[u S429 . 1 `S366 1 . 1 0 `S369 1 . 1 0 `S372 1 . 1 0 `S381 1 . 1 0 `S386 1 . 1 0 `S392 1 . 1 0 `S397 1 . 1 0 `S400 1 . 1 0 `S403 1 . 1 0 `S408 1 . 1 0 `S413 1 . 1 0 `S418 1 . 1 0 `S424 1 . 1 0 ]
-[v _SSPSTATbits SSPSTATbits `VES429  1 e 1 @4039 ]
+[u S430 . 1 `S367 1 . 1 0 `S370 1 . 1 0 `S373 1 . 1 0 `S382 1 . 1 0 `S387 1 . 1 0 `S393 1 . 1 0 `S398 1 . 1 0 `S401 1 . 1 0 `S404 1 . 1 0 `S409 1 . 1 0 `S414 1 . 1 0 `S419 1 . 1 0 `S425 1 . 1 0 ]
+[v _SSPSTATbits SSPSTATbits `VES430  1 e 1 @4039 ]
 "7184
 [v _SSPADD SSPADD `VEuc  1 e 1 @4040 ]
 "7191
@@ -293,51 +293,53 @@
 [v _digitPtr digitPtr `uc  1 e 1 0 ]
 "37
 [v _tmrIsr tmrIsr `uc  1 e 1 0 ]
-"40
+"38
+[v _showDemoMessage showDemoMessage `uc  1 e 1 0 ]
+"41
 [v _segMap segMap `[9]ul  1 e 36 0 ]
-"181
-[v _divisor divisor `ui  1 e 2 0 ]
-"182
-[v _display display `[9]uc  1 e 9 0 ]
-"183
-[v _disdot disdot `[9]uc  1 e 9 0 ]
 "184
+[v _divisor divisor `ui  1 e 2 0 ]
+"185
+[v _display display `[9]uc  1 e 9 0 ]
+"186
+[v _disdot disdot `[9]uc  1 e 9 0 ]
+"187
 [v _writeItr writeItr `ui  1 e 2 0 ]
 "23 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\segFonts.h
 [v _fontList fontList `[129]ul  1 e 516 0 ]
-"101 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+"102 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"150
+"151
 [v main@dotflag dotflag `ul  1 a 4 12 ]
-"148
-[v main@RxData RxData `uc  1 a 1 17 ]
 "149
+[v main@RxData RxData `uc  1 a 1 17 ]
+"150
 [v main@digitSelector digitSelector `uc  1 a 1 16 ]
-"178
+"181
 } 0
-"200
+"203
 [v _isr isr `II(v  1 e 1 0 ]
 {
-"208
+"211
 } 0
-"77
+"78
 [v _refreshShiftRegister refreshShiftRegister `(v  1 e 1 0 ]
 {
-"87
+"88
 [v refreshShiftRegister@i i `i  1 a 2 60 ]
-"80
+"81
 [v refreshShiftRegister@map map `ul  1 a 4 54 ]
-"78
+"79
 [v refreshShiftRegister@ledSelector ledSelector `ui  1 a 2 58 ]
-"77
+"78
 [v refreshShiftRegister@ptr ptr `i  1 p 2 0 ]
-"99
+"100
 } 0
-"186
+"189
 [v _handleMessage handleMessage `(v  1 e 1 0 ]
 {
-"197
+"200
 } 0
 "8 D:\Microchip\xc8\v1.45\sources\common\strncpy.c
 [v _strncpy strncpy `(*.39uc  1 e 2 0 ]
@@ -350,15 +352,15 @@
 [v strncpy@size size `ui  1 p 2 4 ]
 "27
 } 0
-"71 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
+"72 C:\PIC\16_Segment_9_Digit_Display_Controller_Ver1.0\Firmware\hexSegController.X\main.c
 [v _setMsgWithDot setMsgWithDot `(v  1 e 1 0 ]
 {
-"72
+"73
 [v setMsgWithDot@i i `i  1 a 2 20 ]
-"71
+"72
 [v setMsgWithDot@message message `*.39uc  1 p 2 0 ]
 [v setMsgWithDot@dotFlag dotFlag `*.39uc  1 p 2 2 ]
-"75
+"76
 } 0
 "8 D:\Microchip\xc8\v1.45\sources\common\awmod.c
 [v ___awmod __awmod `(i  1 e 2 0 ]

@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=D:\Microchip\xc8\v1.45\dat\en_msgs.txt -cs \
   -h+dist/default/production\hexSegController.X.production.sym \
   --cmf=dist/default/production\hexSegController.X.production.cmf -z \
-  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\sfro.2 \
+  -Q18F4553 -oC:\Users\THOTGA~1\AppData\Local\Temp\scvs.2 \
   -Mdist/default/production/hexSegController.X.production.map -E1 -ver=XC8 \
   -ASTACK=02ADh-07ffh -pstack=STACK -ACODE=00h-07FFFh -ACONST=00h-07FFFh \
   -ASMALLCONST=0800h-08FFhx120 -AMEDIUMCONST=0800h-07FFFh -ACOMRAM=01h-05Fh \
@@ -22,7 +22,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\THOTGA~1\AppData\Local\Temp\sfro.obj \
+  C:\Users\THOTGA~1\AppData\Local\Temp\scvs.obj \
   dist/default/production\hexSegController.X.production.obj 
 
 Object code version is 3.11
@@ -35,31 +35,31 @@ Call graph: (short form)
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\THOTGA~1\AppData\Local\Temp\sfro.obj
+C:\Users\THOTGA~1\AppData\Local\Temp\scvs.obj
                 init                                  E        E        4        4       0
                 reset_vec                             0        0        4        0       0
                 idloc                            200000   200000        8   200000       0
                 config                           300000   300000        E   300000       0
 dist/default/production\hexSegController.X.production.obj
                 intcode                               8        8        6        4       0
-                temp                                 57       57        1        1       1
+                temp                                 58       58        1        1       1
                 smallconst                          800      800       A8      400       0
-                text6                              1076     1076       70      454       0
-                text5                               E2A      E2A       CE      454       0
-                text4                              1152     1152       60      454       0
-                text3                               FC4      FC4       B2      454       0
+                text6                              107E     107E       70      454       0
+                text5                               EFE      EFE       CE      454       0
+                text4                              115A     115A       60      454       0
+                text3                               FCC      FCC       B2      454       0
                 text2                               8A8      8A8      252      454       0
-                intcode_body                        EF8      EF8       CC      454       0
-                text0                               CFE      CFE      12C      454       0
+                intcode_body                        E2E      E2E       D0      454       0
+                text0                               CFE      CFE      130      454       0
                 cstackCOMRAM                          1        1       50        1       1
                 cstackBANK0                          97       97       12       60       1
                 dataBIGRAM                           A9       A9      204       A9       1
                 dataBANK0                            60       60       24       60       1
                 bssBANK0                             84       84       13       60       1
                 bssCOMRAM                            51       51        5        1       1
-                cinit                              10E6     10E6       6C      454       0
-                nvCOMRAM                             56       56        1        1       1
-                idataBANK0                         11B2     11B2       24      454       0
+                cinit                              10EE     10EE       6C      454       0
+                nvCOMRAM                             56       56        2        1       1
+                idataBANK0                         11BA     11BA       24      454       0
                 idataBIGRAM                         AFA      AFA      204      454       0
 
 TOTAL           Name                               Link     Load   Length     Space
@@ -69,15 +69,15 @@ TOTAL           Name                               Link     Load   Length     Sp
                 intcode                               8        8        6         0
                 init                                  E        E        4         0
                 reset_vec                             0        0        4         0
-                text6                              1076     1076       70         0
-                text5                               E2A      E2A       CE         0
-                text4                              1152     1152       60         0
-                text3                               FC4      FC4       B2         0
+                text6                              107E     107E       70         0
+                text5                               EFE      EFE       CE         0
+                text4                              115A     115A       60         0
+                text3                               FCC      FCC       B2         0
                 text2                               8A8      8A8      252         0
-                intcode_body                        EF8      EF8       CC         0
-                text0                               CFE      CFE      12C         0
-                cinit                              10E6     10E6       6C         0
-                idataBANK0                         11B2     11B2       24         0
+                intcode_body                        E2E      E2E       D0         0
+                text0                               CFE      CFE      130         0
+                cinit                              10EE     10EE       6C         0
+                idataBANK0                         11BA     11BA       24         0
                 idataBIGRAM                         AFA      AFA      204         0
 
         CLASS   CONST          
@@ -88,10 +88,10 @@ TOTAL           Name                               Link     Load   Length     Sp
         CLASS   MEDIUMCONST    
 
         CLASS   COMRAM         
-                temp                                 57       57        1         1
+                temp                                 58       58        1         1
                 cstackCOMRAM                          1        1       50         1
                 bssCOMRAM                            51       51        5         1
-                nvCOMRAM                             56       56        1         1
+                nvCOMRAM                             56       56        2         1
 
         CLASS   ABS1           
 
@@ -136,12 +136,12 @@ TOTAL           Name                               Link     Load   Length     Sp
 SEGMENTS        Name                           Load    Length   Top    Selector   Space  Class
 
                 reset_vec                      000000  000004  000004         0       0  CODE    
-                cstackCOMRAM                   000001  000057  000058         1       1  COMRAM  
+                cstackCOMRAM                   000001  000058  000059         1       1  COMRAM  
                 intcode                        000008  00000A  000012         4       0  CODE    
                 dataBANK0                      000060  000049  0000A9        60       1  BANK0   
                 dataBIGRAM                     0000A9  000204  0002AD        A9       1  BIGRAM  
                 smallconst                     000800  0000A8  0008A8       400       0  SMALLCON
-                text2                          0008A8  00092E  0011D6       454       0  CODE    
+                text2                          0008A8  000936  0011DE       454       0  CODE    
                 idloc                          200000  000008  200008    200000       0  IDLOC   
                 config                         300000  00000E  30000E    300000       0  CONFIG  
 
@@ -155,20 +155,20 @@ UNUSED ADDRESS RANGES
         BANK5            000500-0005FF              100
         BANK6            000600-0006FF              100
         BANK7            000700-0007FF              100
-        BIGRAM           000058-00005F                8
+        BIGRAM           000059-00005F                7
                          0002AD-0007FF              553
         CODE             000004-000007                4
                          000012-0007FF              7EE
-                         0011D6-007FFF             6E2A
-        COMRAM           000058-00005F                8
+                         0011DE-007FFF             6E22
+        COMRAM           000059-00005F                7
         CONST            000004-000007                4
                          000012-0007FF              7EE
-                         0011D6-007FFF             6E2A
+                         0011DE-007FFF             6E22
         EEDATA           F00000-F000FF              100
-        MEDIUMCONST      0011D6-007FFF             6E2A
+        MEDIUMCONST      0011DE-007FFF             6E22
         RAM              0002AD-0007FF              100
         SFR              000F60-000FFF               A0
-        SMALLCONST       0011D6-007FFF              100
+        SMALLCONST       0011DE-007FFF              100
         STACK            0002AD-0007FF              553
 
                                   Symbol Table
@@ -276,7 +276,7 @@ __Hspace_1                       (abs)        0002AD
 __Hspace_2                       (abs)        000000
 __Hstack                         stack        000000
 __Hstruct                        struct       000000
-__Htemp                          temp         000058
+__Htemp                          temp         000059
 __Htext                          text         000000
 __Htext0                         text0        000000
 __Htext2                         text2        000000
@@ -348,7 +348,7 @@ __Lspace_1                       (abs)        000000
 __Lspace_2                       (abs)        000000
 __Lstack                         stack        000000
 __Lstruct                        struct       000000
-__Ltemp                          temp         000057
+__Ltemp                          temp         000058
 __Ltext                          text         000000
 __Ltext0                         text0        000000
 __Ltext2                         text2        000000
@@ -359,7 +359,7 @@ __Ltext6                         text6        000000
 __S0                             (abs)        30000E
 __S1                             (abs)        0002AD
 __S2                             (abs)        000000
-___awmod                         text6        001076
+___awmod                         text6        00107E
 ___awmod@counter                 cstackCOMRAM 000005
 ___awmod@dividend                cstackCOMRAM 000001
 ___awmod@divisor                 cstackCOMRAM 000003
@@ -374,35 +374,35 @@ __activetblptr                   (abs)        000001
 __end_of_DEMO_DOTFLAG            smallconst   000855
 __end_of_DEMO_MESSAGE            smallconst   0008A7
 __end_of_MESSAGE_LENGTH          smallconst   000803
-__end_of___awmod                 text6        0010E6
-__end_of__initialization         cinit        001140
-__end_of_handleMessage           text3        001076
-__end_of_isr                     intcode_body 000FC4
-__end_of_main                    text0        000E2A
+__end_of___awmod                 text6        0010EE
+__end_of__initialization         cinit        001148
+__end_of_handleMessage           text3        00107E
+__end_of_isr                     intcode_body 000EFE
+__end_of_main                    text0        000E2E
 __end_of_refreshShiftRegister    text2        000AFA
-__end_of_setMsgWithDot           text5        000EF8
-__end_of_strncpy                 text4        0011B2
-__initialization                 cinit        0010E6
+__end_of_setMsgWithDot           text5        000FCC
+__end_of_strncpy                 text4        0011BA
+__initialization                 cinit        0010EE
 __mediumconst                    mediumconst  000000
 __pbssBANK0                      bssBANK0     000084
 __pbssCOMRAM                     bssCOMRAM    000051
-__pcinit                         cinit        0010E6
+__pcinit                         cinit        0010EE
 __pcstackBANK0                   cstackBANK0  000097
 __pcstackCOMRAM                  cstackCOMRAM 000001
 __pdataBANK0                     dataBANK0    000060
 __pdataBIGRAM                    dataBIGRAM   0000A9
-__pidataBANK0                    idataBANK0   0011B2
+__pidataBANK0                    idataBANK0   0011BA
 __pidataBIGRAM                   idataBIGRAM  000AFA
 __pintcode                       intcode      000008
-__pintcode_body                  intcode_body 000EF8
+__pintcode_body                  intcode_body 000E2E
 __pnvCOMRAM                      nvCOMRAM     000056
 __psmallconst                    smallconst   000800
 __ptext0                         text0        000CFE
 __ptext2                         text2        0008A8
-__ptext3                         text3        000FC4
-__ptext4                         text4        001152
-__ptext5                         text5        000E2A
-__ptext6                         text6        001076
+__ptext3                         text3        000FCC
+__ptext4                         text4        00115A
+__ptext5                         text5        000EFE
+__ptext6                         text6        00107E
 __ramtop                         ramtop       000800
 __size_of___awmod                (abs)        000000
 __size_of_handleMessage          (abs)        000000
@@ -417,20 +417,21 @@ _disdot                          bssBANK0     000085
 _display                         bssBANK0     00008E
 _divisor                         bssCOMRAM    000053
 _fontList                        dataBIGRAM   0000A9
-_handleMessage                   text3        000FC4
+_handleMessage                   text3        000FCC
 _isr                             intcode      000008
-_led_stat                        nvCOMRAM     000056
+_led_stat                        nvCOMRAM     000057
 _main                            text0        000CFE
 _refreshShiftRegister            text2        0008A8
 _segMap                          dataBANK0    000060
-_setMsgWithDot                   text5        000E2A
-_strncpy                         text4        001152
+_setMsgWithDot                   text5        000EFE
+_showDemoMessage                 nvCOMRAM     000056
+_strncpy                         text4        00115A
 _tmrIsr                          bssBANK0     000084
 _writeItr                        bssCOMRAM    000051
-btemp                            temp         000057
-end_of_initialization            cinit        001140
-int$flags                        temp         000057
-int_func                         intcode_body 000EF8
+btemp                            temp         000058
+end_of_initialization            cinit        001148
+int$flags                        temp         000058
+int_func                         intcode_body 000E2E
 intlevel0                        text         000000
 intlevel1                        text         000000
 intlevel2                        text         000000
@@ -448,19 +449,19 @@ setMsgWithDot@message            cstackCOMRAM 000001
 stackhi                          (abs)        0007FF
 stacklo                          (abs)        0002AD
 start                            init         00000E
-start_initialization             cinit        0010E6
+start_initialization             cinit        0010EE
 strncpy@cp                       cstackCOMRAM 000007
 strncpy@from                     cstackCOMRAM 000003
 strncpy@size                     cstackCOMRAM 000005
 strncpy@to                       cstackCOMRAM 000001
-wtemp6                           temp         000058
+wtemp6                           temp         000059
 
 
 FUNCTION INFORMATION:
 
  *************** function _main *****************
  Defined at:
-		line 101 in file "main.c"
+		line 102 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -491,7 +492,7 @@ Total ram usage:       18 bytes
 
  *************** function _isr *****************
  Defined at:
-		line 200 in file "main.c"
+		line 203 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -523,7 +524,7 @@ Total ram usage:       18 bytes
 
  *************** function _refreshShiftRegister *****************
  Defined at:
-		line 77 in file "main.c"
+		line 78 in file "main.c"
  Parameters:    Size  Location     Type
   ptr             2    0[COMRAM] int 
  Auto vars:     Size  Location     Type
@@ -554,7 +555,7 @@ Total ram usage:       62 bytes
 
  *************** function _handleMessage *****************
  Defined at:
-		line 186 in file "main.c"
+		line 189 in file "main.c"
  Parameters:    Size  Location     Type
 		None
  Auto vars:     Size  Location     Type
@@ -619,7 +620,7 @@ Total ram usage:        8 bytes
 
  *************** function _setMsgWithDot *****************
  Defined at:
-		line 71 in file "main.c"
+		line 72 in file "main.c"
  Parameters:    Size  Location     Type
   message         2    0[COMRAM] PTR unsigned char 
 		 -> display(9), 
@@ -685,29 +686,29 @@ MODULE INFORMATION
 
 Module		Function		Class		Link	Load	Size
 D:\Microchip\xc8\v1.45\sources\common\strncpy.c
-		_strncpy       		CODE           	1152	0000	97
+		_strncpy       		CODE           	115A	0000	97
 
 D:\Microchip\xc8\v1.45\sources\common\strncpy.c estimated size: 97
 
 shared
 		_MESSAGE_LENGTH		SMALLCONST     	0801	0000	3
-		__initialization		CODE           	10E6	0000	91
+		__initialization		CODE           	10EE	0000	91
 		_DEMO_DOTFLAG  		SMALLCONST     	0803	0000	83
 		_DEMO_MESSAGE  		SMALLCONST     	0855	0000	83
 
 shared estimated size: 260
 
 D:\Microchip\xc8\v1.45\sources\common\awmod.c
-		___awmod       		CODE           	1076	0000	113
+		___awmod       		CODE           	107E	0000	113
 
 D:\Microchip\xc8\v1.45\sources\common\awmod.c estimated size: 113
 
 main.c
-		_handleMessage 		CODE           	0FC4	0000	179
+		_handleMessage 		CODE           	0FCC	0000	179
 		_refreshShiftRegister		CODE           	08A8	0000	595
-		_setMsgWithDot 		CODE           	0E2A	0000	207
-		_main          		CODE           	0CFE	0000	301
-		_isr           		CODE           	0008	0000	211
+		_setMsgWithDot 		CODE           	0EFE	0000	207
+		_main          		CODE           	0CFE	0000	305
+		_isr           		CODE           	0008	0000	215
 
-main.c estimated size: 1493
+main.c estimated size: 1501
 

@@ -35,6 +35,7 @@ const uint16_t MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 uint8_t led_stat;     // コントローラについてる4つのbarLEDの点灯状態
 uint8_t digitPtr = 0;　// 現在表示している桁数
 bool    tmrIsr = false;    // タイマー割り込みがあったことをmainに伝えるのに使う
+bool    showDemoMessage = false;
 
 //初期値"*********"
 uint32_t segMap[9] = {
@@ -149,6 +150,8 @@ void main(void) {
     uint8_t digitSelector;    // 書き換え桁数
     uint32_t dotflag;  // ドットをつけるかどうか
     
+    // TODO: dipスイッチの状態をここに入力する
+    showDemoMessage = true;
     
     while (1){
         
@@ -201,7 +204,7 @@ void interrupt isr(void) {
     if (PIR1bits.TMR2IF) {
         PIR1bits.TMR2IF = 0;    // フラグを下げる
         tmrIsr = true;
-        handleMessage();
+        if (showDemoMessage) handleMessage();
         refreshShiftRegister(digitPtr);
         digitPtr = (digitPtr+1)%9;      // digitPtrを次の値にセット
     }
