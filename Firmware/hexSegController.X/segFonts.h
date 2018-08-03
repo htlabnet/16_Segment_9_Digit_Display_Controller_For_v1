@@ -14,11 +14,13 @@
 #ifndef SEGFONTS_H
 #define	SEGFONTS_H
 
+#include <stdint.h>
+
 #ifdef	__cplusplus
 extern "C" {
 #endif
 
-	unsigned int fontList[] = {
+	uint32_t fontList[] = {
 		0b00000000000000000,    //0
 		0b00000000000000000,    //1
 		0b00000000000000000,    //2

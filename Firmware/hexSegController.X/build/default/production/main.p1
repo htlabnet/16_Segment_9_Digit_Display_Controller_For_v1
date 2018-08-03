@@ -105,6 +105,8 @@ Version 3.2 HI-TECH Software Intermediate Code
 [v _PIR1bits `VS172 ~T0 @X0 0 e@3998 ]
 "5412
 [v _RCREG `Vuc ~T0 @X0 0 e@4014 ]
+"39 D:\Microchip\xc8\v1.45\include\string.h
+[v _strncpy `(*uc ~T0 @X0 0 ef3`*uc`*Cuc`ui ]
 [; ;htc.h: 26: extern const char __xc8_OPTIM_SPEED;
 [; ;htc.h: 28: extern double __fpnormalize(double);
 [; ;xc8debug.h: 14: extern void __builtin_software_breakpoint(void);
@@ -3615,273 +3617,299 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;pic18.h: 164: extern __nonreentrant void _delay(unsigned long);
 [; ;pic18.h: 166: extern __nonreentrant void _delaywdt(unsigned long);
 [; ;pic18.h: 168: extern __nonreentrant void _delay3(unsigned char);
-"21 segFonts.h
-[v _fontList `ui ~T0 @X0 -> 0 `x e ]
+[; ;stdint.h: 13: typedef signed char int8_t;
+[; ;stdint.h: 20: typedef signed int int16_t;
+[; ;stdint.h: 28: typedef signed short long int int24_t;
+[; ;stdint.h: 36: typedef signed long int int32_t;
+[; ;stdint.h: 43: typedef unsigned char uint8_t;
+[; ;stdint.h: 49: typedef unsigned int uint16_t;
+[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
+[; ;stdint.h: 63: typedef unsigned long int uint32_t;
+[; ;stdint.h: 71: typedef signed char int_least8_t;
+[; ;stdint.h: 78: typedef signed int int_least16_t;
+[; ;stdint.h: 90: typedef signed short long int int_least24_t;
+[; ;stdint.h: 98: typedef signed long int int_least32_t;
+[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
+[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
+[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
+[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
+[; ;stdint.h: 137: typedef signed char int_fast8_t;
+[; ;stdint.h: 144: typedef signed int int_fast16_t;
+[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
+[; ;stdint.h: 164: typedef signed long int int_fast32_t;
+[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
+[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
+[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
+[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
+[; ;stdint.h: 200: typedef int32_t intmax_t;
+[; ;stdint.h: 205: typedef uint32_t uintmax_t;
+[; ;stdint.h: 210: typedef int16_t intptr_t;
+[; ;stdint.h: 215: typedef uint16_t uintptr_t;
+"23 segFonts.h
+[v _fontList `ul ~T0 @X0 -> 0 `x e ]
 [i _fontList
 :U ..
-"22
--> -> 0 `i `ui
-"23
--> -> 0 `i `ui
 "24
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "25
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "26
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "27
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "28
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "29
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "30
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "31
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "32
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "33
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "34
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "35
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "36
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "37
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "38
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "39
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "40
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "41
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "42
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "43
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "44
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "45
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "46
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "47
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "48
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "49
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "50
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "51
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "52
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "53
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "54
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "55
--> -> 6162 `i `ui
+-> -> -> 0 `i `l `ul
 "56
--> -> 2176 `i `ui
+-> -> -> 0 `i `l `ul
 "57
--> -> 0 `i `ui
+-> -> -> 6162 `i `l `ul
 "58
--> 52275 `ui
+-> -> -> 2176 `i `l `ul
 "59
--> -> 31657 `i `ui
+-> -> -> 0 `i `l `ul
 "60
--> 46139 `ui
+-> -> 52275 `ui `ul
 "61
--> -> 128 `i `ui
+-> -> -> 31657 `i `l `ul
 "62
--> 36864 `ui
+-> -> 46139 `ui `ul
 "63
--> -> 9216 `i `ui
+-> -> -> 128 `i `l `ul
 "64
--> 65280 `ui
+-> -> 36864 `ui `ul
 "65
--> -> 19200 `i `ui
+-> -> -> 9216 `i `l `ul
 "66
--> -> 0 `i `ui
+-> -> 65280 `ui `ul
 "67
--> -> 768 `i `ui
+-> -> -> 19200 `i `l `ul
 "68
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "69
--> -> 12288 `i `ui
+-> -> -> 768 `i `l `ul
 "70
--> -> 255 `i `ui
+-> -> -> 0 `i `l `ul
 "71
--> -> 18432 `i `ui
+-> -> -> 12288 `i `l `ul
 "72
--> -> 887 `i `ui
+-> -> -> 255 `i `l `ul
 "73
--> -> 831 `i `ui
+-> -> -> 18432 `i `l `ul
 "74
--> -> 908 `i `ui
+-> -> -> 887 `i `l `ul
 "75
--> -> 955 `i `ui
+-> -> -> 831 `i `l `ul
 "76
--> -> 1019 `i `ui
+-> -> -> 908 `i `l `ul
 "77
--> -> 143 `i `ui
+-> -> -> 955 `i `l `ul
 "78
--> -> 1023 `i `ui
+-> -> -> 1019 `i `l `ul
 "79
--> -> 959 `i `ui
+-> -> -> 143 `i `l `ul
 "80
--> -> 0 `i `ui
+-> -> -> 1023 `i `l `ul
 "81
--> -> 0 `i `ui
+-> -> -> 959 `i `l `ul
 "82
--> 36864 `ui
+-> -> -> 0 `i `l `ul
 "83
--> -> 816 `i `ui
+-> -> -> 0 `i `l `ul
 "84
--> -> 9216 `i `ui
+-> -> 36864 `ui `ul
 "85
--> -> 4115 `i `ui
+-> -> -> 816 `i `l `ul
 "86
--> -> 0 `i `ui
+-> -> -> 9216 `i `l `ul
 "87
--> -> 975 `i `ui
+-> -> -> 4115 `i `l `ul
 "88
--> 37363 `ui
+-> -> -> 0 `i `l `ul
 "89
--> -> 243 `i `ui
+-> -> -> 975 `i `l `ul
 "90
--> -> 892 `i `ui
+-> -> 37363 `ui `ul
 "91
--> -> 1011 `i `ui
+-> -> -> 243 `i `l `ul
 "92
--> -> 963 `i `ui
+-> -> -> 892 `i `l `ul
 "93
--> -> 763 `i `ui
+-> -> -> 1011 `i `l `ul
 "94
--> -> 972 `i `ui
+-> -> -> 963 `i `l `ul
 "95
--> -> 18483 `i `ui
+-> -> -> 763 `i `l `ul
 "96
--> -> 18451 `i `ui
+-> -> -> 972 `i `l `ul
 "97
--> 37312 `ui
+-> -> -> 18483 `i `l `ul
 "98
--> -> 240 `i `ui
+-> -> -> 18451 `i `l `ul
 "99
--> -> 5324 `i `ui
+-> -> 37312 `ui `ul
 "100
--> 33996 `ui
+-> -> -> 240 `i `l `ul
 "101
--> -> 255 `i `ui
+-> -> -> 5324 `i `l `ul
 "102
--> -> 967 `i `ui
+-> -> 33996 `ui `ul
 "103
--> 33023 `ui
+-> -> -> 255 `i `l `ul
 "104
--> 33735 `ui
+-> -> -> 967 `i `l `ul
 "105
--> -> 955 `i `ui
+-> -> 33023 `ui `ul
 "106
--> -> 18435 `i `ui
+-> -> 33735 `ui `ul
 "107
--> -> 252 `i `ui
+-> -> -> 955 `i `l `ul
 "108
--> -> 12480 `i `ui
+-> -> -> 18435 `i `l `ul
 "109
--> 41164 `ui
+-> -> -> 252 `i `l `ul
 "110
--> 46080 `ui
+-> -> -> 12480 `i `l `ul
 "111
--> -> 21504 `i `ui
+-> -> 41164 `ui `ul
 "112
--> -> 12339 `i `ui
+-> -> 46080 `ui `ul
 "113
--> -> 209 `i `ui
+-> -> -> 21504 `i `l `ul
 "114
--> 33792 `ui
+-> -> -> 12339 `i `l `ul
+"115
+-> -> -> 209 `i `l `ul
 "116
--> -> 3 `i `ui
-"117
--> -> 48 `i `ui
+-> -> 33792 `ui `ul
 "118
--> 43776 `ui
+-> -> -> 3 `i `l `ul
 "119
--> -> 13504 `i `ui
+-> -> -> 48 `i `l `ul
 "120
--> -> 2939 `i `ui
+-> -> 43776 `ui `ul
 "121
--> -> 22275 `i `ui
+-> -> -> 13504 `i `l `ul
 "122
--> -> 0 `i `ui
+-> -> -> 2939 `i `l `ul
 "123
--> -> 0 `i `ui
+-> -> -> 22275 `i `l `ul
 "124
--> -> 0 `i `ui
+-> -> -> 0 `i `l `ul
 "125
--> 65535 `ui
+-> -> -> 0 `i `l `ul
 "126
--> -> 1 `i `ui
+-> -> -> 0 `i `l `ul
 "127
--> -> 2 `i `ui
+-> -> 65535 `ui `ul
 "128
--> -> 4 `i `ui
+-> -> -> 1 `i `l `ul
 "129
--> -> 8 `i `ui
+-> -> -> 2 `i `l `ul
 "130
--> -> 32 `i `ui
+-> -> -> 4 `i `l `ul
 "131
--> -> 16 `i `ui
+-> -> -> 8 `i `l `ul
 "132
--> -> 64 `i `ui
+-> -> -> 32 `i `l `ul
 "133
--> -> 128 `i `ui
+-> -> -> 16 `i `l `ul
 "134
--> -> 2048 `i `ui
+-> -> -> 64 `i `l `ul
 "135
--> -> 4096 `i `ui
+-> -> -> 128 `i `l `ul
 "136
--> -> 512 `i `ui
+-> -> -> 2048 `i `l `ul
 "137
--> 32768 `ui
+-> -> -> 4096 `i `l `ul
 "138
--> -> 16384 `i `ui
+-> -> -> 512 `i `l `ul
 "139
--> -> 8192 `i `ui
+-> -> 32768 `ui `ul
 "140
--> -> 256 `i `ui
+-> -> -> 16384 `i `l `ul
 "141
--> -> 1024 `i `ui
+-> -> -> 8192 `i `l `ul
 "142
--> -> 2048 `i `ui
+-> -> -> 256 `i `l `ul
 "143
--> -> 6144 `i `ui
+-> -> -> 1024 `i `l `ul
 "144
--> -> 6656 `i `ui
+-> -> -> 2048 `i `l `ul
 "145
--> 39424 `ui
+-> -> -> 6144 `i `l `ul
 "146
--> 55808 `ui
+-> -> -> 6656 `i `l `ul
 "147
--> 64000 `ui
+-> -> 39424 `ui `ul
 "148
--> 64256 `ui
+-> -> 55808 `ui `ul
 "149
--> 65280 `ui
+-> -> 64000 `ui `ul
 "150
--> -> 0 `i `ui
+-> -> 64256 `ui `ul
 "151
--> -> 0 `i `ui
+-> -> 65280 `ui `ul
+"152
+-> -> -> 0 `i `l `ul
+"153
+-> -> -> 0 `i `l `ul
 ..
 ]
-[; ;segFonts.h: 21: unsigned int fontList[] = {
-[; ;segFonts.h: 22: 0b00000000000000000,
-[; ;segFonts.h: 23: 0b00000000000000000,
+[; ;segFonts.h: 23: uint32_t fontList[] = {
 [; ;segFonts.h: 24: 0b00000000000000000,
 [; ;segFonts.h: 25: 0b00000000000000000,
 [; ;segFonts.h: 26: 0b00000000000000000,
@@ -3913,140 +3941,141 @@ Version 3.2 HI-TECH Software Intermediate Code
 [; ;segFonts.h: 52: 0b00000000000000000,
 [; ;segFonts.h: 53: 0b00000000000000000,
 [; ;segFonts.h: 54: 0b00000000000000000,
-[; ;segFonts.h: 55: 0b00001100000010010,
-[; ;segFonts.h: 56: 0b00000100010000000,
-[; ;segFonts.h: 57: 0b00000000000000000,
-[; ;segFonts.h: 58: 0b01100110000110011,
-[; ;segFonts.h: 59: 0b00111101110101001,
-[; ;segFonts.h: 60: 0b01011010000111011,
-[; ;segFonts.h: 61: 0b00000000010000000,
-[; ;segFonts.h: 62: 0b01001000000000000,
-[; ;segFonts.h: 63: 0b00010010000000000,
-[; ;segFonts.h: 64: 0b01111111100000000,
-[; ;segFonts.h: 65: 0b00100101100000000,
-[; ;segFonts.h: 66: 0b00000000000000000,
-[; ;segFonts.h: 67: 0b00000001100000000,
+[; ;segFonts.h: 55: 0b00000000000000000,
+[; ;segFonts.h: 56: 0b00000000000000000,
+[; ;segFonts.h: 57: 0b00001100000010010,
+[; ;segFonts.h: 58: 0b00000100010000000,
+[; ;segFonts.h: 59: 0b00000000000000000,
+[; ;segFonts.h: 60: 0b01100110000110011,
+[; ;segFonts.h: 61: 0b00111101110101001,
+[; ;segFonts.h: 62: 0b01011010000111011,
+[; ;segFonts.h: 63: 0b00000000010000000,
+[; ;segFonts.h: 64: 0b01001000000000000,
+[; ;segFonts.h: 65: 0b00010010000000000,
+[; ;segFonts.h: 66: 0b01111111100000000,
+[; ;segFonts.h: 67: 0b00100101100000000,
 [; ;segFonts.h: 68: 0b00000000000000000,
-[; ;segFonts.h: 69: 0b00011000000000000,
-[; ;segFonts.h: 70: 0b00000000011111111,
-[; ;segFonts.h: 71: 0b00100100000000000,
-[; ;segFonts.h: 72: 0b00000001101110111,
-[; ;segFonts.h: 73: 0b00000001100111111,
-[; ;segFonts.h: 74: 0b00000001110001100,
-[; ;segFonts.h: 75: 0b00000001110111011,
-[; ;segFonts.h: 76: 0b00000001111111011,
-[; ;segFonts.h: 77: 0b00000000010001111,
-[; ;segFonts.h: 78: 0b00000001111111111,
-[; ;segFonts.h: 79: 0b00000001110111111,
-[; ;segFonts.h: 80: 0b00000000000000000,
-[; ;segFonts.h: 81: 0b00000000000000000,
-[; ;segFonts.h: 82: 0b01001000000000000,
-[; ;segFonts.h: 83: 0b00000001100110000,
-[; ;segFonts.h: 84: 0b00010010000000000,
-[; ;segFonts.h: 85: 0b00001000000010011,
-[; ;segFonts.h: 86: 0b00000000000000000,
-[; ;segFonts.h: 87: 0b00000001111001111,
-[; ;segFonts.h: 88: 0b01001000111110011,
-[; ;segFonts.h: 89: 0b00000000011110011,
-[; ;segFonts.h: 90: 0b00000001101111100,
-[; ;segFonts.h: 91: 0b00000001111110011,
-[; ;segFonts.h: 92: 0b00000001111000011,
-[; ;segFonts.h: 93: 0b00000001011111011,
-[; ;segFonts.h: 94: 0b00000001111001100,
-[; ;segFonts.h: 95: 0b00100100000110011,
-[; ;segFonts.h: 96: 0b00100100000010011,
-[; ;segFonts.h: 97: 0b01001000111000000,
-[; ;segFonts.h: 98: 0b00000000011110000,
-[; ;segFonts.h: 99: 0b00001010011001100,
-[; ;segFonts.h: 100: 0b01000010011001100,
-[; ;segFonts.h: 101: 0b00000000011111111,
-[; ;segFonts.h: 102: 0b00000001111000111,
-[; ;segFonts.h: 103: 0b01000000011111111,
-[; ;segFonts.h: 104: 0b01000001111000111,
-[; ;segFonts.h: 105: 0b00000001110111011,
-[; ;segFonts.h: 106: 0b00100100000000011,
-[; ;segFonts.h: 107: 0b00000000011111100,
-[; ;segFonts.h: 108: 0b00011000011000000,
-[; ;segFonts.h: 109: 0b01010000011001100,
-[; ;segFonts.h: 110: 0b01011010000000000,
-[; ;segFonts.h: 111: 0b00101010000000000,
-[; ;segFonts.h: 112: 0b00011000000110011,
-[; ;segFonts.h: 113: 0b00000000011010001,
-[; ;segFonts.h: 114: 0b01000010000000000,
-[; ;segFonts.h: 116: 0b00000000000000011,
-[; ;segFonts.h: 117: 0b00000000000110000,
-[; ;segFonts.h: 118: 0b01010101100000000,
-[; ;segFonts.h: 119: 0b00011010011000000,
-[; ;segFonts.h: 120: 0b00000101101111011,
-[; ;segFonts.h: 121: 0b00101011100000011,
-[; ;segFonts.h: 122: 0b00000000000000000,
-[; ;segFonts.h: 123: 0b00000000000000000,
+[; ;segFonts.h: 69: 0b00000001100000000,
+[; ;segFonts.h: 70: 0b00000000000000000,
+[; ;segFonts.h: 71: 0b00011000000000000,
+[; ;segFonts.h: 72: 0b00000000011111111,
+[; ;segFonts.h: 73: 0b00100100000000000,
+[; ;segFonts.h: 74: 0b00000001101110111,
+[; ;segFonts.h: 75: 0b00000001100111111,
+[; ;segFonts.h: 76: 0b00000001110001100,
+[; ;segFonts.h: 77: 0b00000001110111011,
+[; ;segFonts.h: 78: 0b00000001111111011,
+[; ;segFonts.h: 79: 0b00000000010001111,
+[; ;segFonts.h: 80: 0b00000001111111111,
+[; ;segFonts.h: 81: 0b00000001110111111,
+[; ;segFonts.h: 82: 0b00000000000000000,
+[; ;segFonts.h: 83: 0b00000000000000000,
+[; ;segFonts.h: 84: 0b01001000000000000,
+[; ;segFonts.h: 85: 0b00000001100110000,
+[; ;segFonts.h: 86: 0b00010010000000000,
+[; ;segFonts.h: 87: 0b00001000000010011,
+[; ;segFonts.h: 88: 0b00000000000000000,
+[; ;segFonts.h: 89: 0b00000001111001111,
+[; ;segFonts.h: 90: 0b01001000111110011,
+[; ;segFonts.h: 91: 0b00000000011110011,
+[; ;segFonts.h: 92: 0b00000001101111100,
+[; ;segFonts.h: 93: 0b00000001111110011,
+[; ;segFonts.h: 94: 0b00000001111000011,
+[; ;segFonts.h: 95: 0b00000001011111011,
+[; ;segFonts.h: 96: 0b00000001111001100,
+[; ;segFonts.h: 97: 0b00100100000110011,
+[; ;segFonts.h: 98: 0b00100100000010011,
+[; ;segFonts.h: 99: 0b01001000111000000,
+[; ;segFonts.h: 100: 0b00000000011110000,
+[; ;segFonts.h: 101: 0b00001010011001100,
+[; ;segFonts.h: 102: 0b01000010011001100,
+[; ;segFonts.h: 103: 0b00000000011111111,
+[; ;segFonts.h: 104: 0b00000001111000111,
+[; ;segFonts.h: 105: 0b01000000011111111,
+[; ;segFonts.h: 106: 0b01000001111000111,
+[; ;segFonts.h: 107: 0b00000001110111011,
+[; ;segFonts.h: 108: 0b00100100000000011,
+[; ;segFonts.h: 109: 0b00000000011111100,
+[; ;segFonts.h: 110: 0b00011000011000000,
+[; ;segFonts.h: 111: 0b01010000011001100,
+[; ;segFonts.h: 112: 0b01011010000000000,
+[; ;segFonts.h: 113: 0b00101010000000000,
+[; ;segFonts.h: 114: 0b00011000000110011,
+[; ;segFonts.h: 115: 0b00000000011010001,
+[; ;segFonts.h: 116: 0b01000010000000000,
+[; ;segFonts.h: 118: 0b00000000000000011,
+[; ;segFonts.h: 119: 0b00000000000110000,
+[; ;segFonts.h: 120: 0b01010101100000000,
+[; ;segFonts.h: 121: 0b00011010011000000,
+[; ;segFonts.h: 122: 0b00000101101111011,
+[; ;segFonts.h: 123: 0b00101011100000011,
 [; ;segFonts.h: 124: 0b00000000000000000,
-[; ;segFonts.h: 125: 0b01111111111111111,
-[; ;segFonts.h: 126: 0b00000000000000001,
-[; ;segFonts.h: 127: 0b00000000000000010,
-[; ;segFonts.h: 128: 0b00000000000000100,
-[; ;segFonts.h: 129: 0b00000000000001000,
-[; ;segFonts.h: 130: 0b00000000000100000,
-[; ;segFonts.h: 131: 0b00000000000010000,
-[; ;segFonts.h: 132: 0b00000000001000000,
-[; ;segFonts.h: 133: 0b00000000010000000,
-[; ;segFonts.h: 134: 0b00000100000000000,
-[; ;segFonts.h: 135: 0b00001000000000000,
-[; ;segFonts.h: 136: 0b00000001000000000,
-[; ;segFonts.h: 137: 0b01000000000000000,
-[; ;segFonts.h: 138: 0b00100000000000000,
-[; ;segFonts.h: 139: 0b00010000000000000,
-[; ;segFonts.h: 140: 0b00000000100000000,
-[; ;segFonts.h: 141: 0b00000010000000000,
-[; ;segFonts.h: 142: 0b00000100000000000,
-[; ;segFonts.h: 143: 0b00001100000000000,
-[; ;segFonts.h: 144: 0b00001101000000000,
-[; ;segFonts.h: 145: 0b01001101000000000,
-[; ;segFonts.h: 146: 0b01101101000000000,
-[; ;segFonts.h: 147: 0b01111101000000000,
-[; ;segFonts.h: 148: 0b01111101100000000,
-[; ;segFonts.h: 149: 0b01111111100000000,
-[; ;segFonts.h: 150: 0b00000000000000000,
-[; ;segFonts.h: 151: 0b00000000000000000,
-[; ;segFonts.h: 152: };
-[; ;stdint.h: 13: typedef signed char int8_t;
-[; ;stdint.h: 20: typedef signed int int16_t;
-[; ;stdint.h: 28: typedef signed short long int int24_t;
-[; ;stdint.h: 36: typedef signed long int int32_t;
-[; ;stdint.h: 43: typedef unsigned char uint8_t;
-[; ;stdint.h: 49: typedef unsigned int uint16_t;
-[; ;stdint.h: 56: typedef unsigned short long int uint24_t;
-[; ;stdint.h: 63: typedef unsigned long int uint32_t;
-[; ;stdint.h: 71: typedef signed char int_least8_t;
-[; ;stdint.h: 78: typedef signed int int_least16_t;
-[; ;stdint.h: 90: typedef signed short long int int_least24_t;
-[; ;stdint.h: 98: typedef signed long int int_least32_t;
-[; ;stdint.h: 105: typedef unsigned char uint_least8_t;
-[; ;stdint.h: 111: typedef unsigned int uint_least16_t;
-[; ;stdint.h: 121: typedef unsigned short long int uint_least24_t;
-[; ;stdint.h: 128: typedef unsigned long int uint_least32_t;
-[; ;stdint.h: 137: typedef signed char int_fast8_t;
-[; ;stdint.h: 144: typedef signed int int_fast16_t;
-[; ;stdint.h: 156: typedef signed short long int int_fast24_t;
-[; ;stdint.h: 164: typedef signed long int int_fast32_t;
-[; ;stdint.h: 171: typedef unsigned char uint_fast8_t;
-[; ;stdint.h: 177: typedef unsigned int uint_fast16_t;
-[; ;stdint.h: 187: typedef unsigned short long int uint_fast24_t;
-[; ;stdint.h: 194: typedef unsigned long int uint_fast32_t;
-[; ;stdint.h: 200: typedef int32_t intmax_t;
-[; ;stdint.h: 205: typedef uint32_t uintmax_t;
-[; ;stdint.h: 210: typedef int16_t intptr_t;
-[; ;stdint.h: 215: typedef uint16_t uintptr_t;
-"21 main.c
+[; ;segFonts.h: 125: 0b00000000000000000,
+[; ;segFonts.h: 126: 0b00000000000000000,
+[; ;segFonts.h: 127: 0b01111111111111111,
+[; ;segFonts.h: 128: 0b00000000000000001,
+[; ;segFonts.h: 129: 0b00000000000000010,
+[; ;segFonts.h: 130: 0b00000000000000100,
+[; ;segFonts.h: 131: 0b00000000000001000,
+[; ;segFonts.h: 132: 0b00000000000100000,
+[; ;segFonts.h: 133: 0b00000000000010000,
+[; ;segFonts.h: 134: 0b00000000001000000,
+[; ;segFonts.h: 135: 0b00000000010000000,
+[; ;segFonts.h: 136: 0b00000100000000000,
+[; ;segFonts.h: 137: 0b00001000000000000,
+[; ;segFonts.h: 138: 0b00000001000000000,
+[; ;segFonts.h: 139: 0b01000000000000000,
+[; ;segFonts.h: 140: 0b00100000000000000,
+[; ;segFonts.h: 141: 0b00010000000000000,
+[; ;segFonts.h: 142: 0b00000000100000000,
+[; ;segFonts.h: 143: 0b00000010000000000,
+[; ;segFonts.h: 144: 0b00000100000000000,
+[; ;segFonts.h: 145: 0b00001100000000000,
+[; ;segFonts.h: 146: 0b00001101000000000,
+[; ;segFonts.h: 147: 0b01001101000000000,
+[; ;segFonts.h: 148: 0b01101101000000000,
+[; ;segFonts.h: 149: 0b01111101000000000,
+[; ;segFonts.h: 150: 0b01111101100000000,
+[; ;segFonts.h: 151: 0b01111111100000000,
+[; ;segFonts.h: 152: 0b00000000000000000,
+[; ;segFonts.h: 153: 0b00000000000000000,
+[; ;segFonts.h: 154: };
+[; ;__size_t.h: 4: typedef unsigned size_t;
+[; ;string.h: 14: extern void * memcpy(void *, const void *, size_t);
+[; ;string.h: 15: extern void * memmove(void *, const void *, size_t);
+[; ;string.h: 16: extern void * memset(void *, int, size_t);
+[; ;string.h: 36: extern char * strcat(char *, const char *);
+[; ;string.h: 37: extern char * strcpy(char *, const char *);
+[; ;string.h: 38: extern char * strncat(char *, const char *, size_t);
+[; ;string.h: 39: extern char * strncpy(char *, const char *, size_t);
+[; ;string.h: 40: extern char * strdup(const char *);
+[; ;string.h: 41: extern char * strtok(char *, const char *);
+[; ;string.h: 44: extern int memcmp(const void *, const void *, size_t);
+[; ;string.h: 45: extern int strcmp(const char *, const char *);
+[; ;string.h: 46: extern int stricmp(const char *, const char *);
+[; ;string.h: 47: extern int strncmp(const char *, const char *, size_t);
+[; ;string.h: 48: extern int strnicmp(const char *, const char *, size_t);
+[; ;string.h: 49: extern void * memchr(const void *, int, size_t);
+[; ;string.h: 50: extern size_t strcspn(const char *, const char *);
+[; ;string.h: 51: extern char * strpbrk(const char *, const char *);
+[; ;string.h: 52: extern size_t strspn(const char *, const char *);
+[; ;string.h: 53: extern char * strstr(const char *, const char *);
+[; ;string.h: 54: extern char * stristr(const char *, const char *);
+[; ;string.h: 55: extern char * strerror(int);
+[; ;string.h: 56: extern size_t strlen(const char *);
+[; ;string.h: 57: extern char * strchr(const char *, int);
+[; ;string.h: 58: extern char * strichr(const char *, int);
+[; ;string.h: 59: extern char * strrchr(const char *, int);
+[; ;string.h: 60: extern char * strrichr(const char *, int);
+"22 main.c
 [p x FOSC=HS ]
-"22
-[p x MCLRE=ON ]
 "23
-[p x LVP=OFF ]
+[p x MCLRE=ON ]
 "24
+[p x LVP=OFF ]
+"25
 [p x WDT=OFF ]
-"29
+"30
 [v _DEMO_MESSAGE `Cuc ~T0 @X0 -> 0 `x e ]
 [i _DEMO_MESSAGE
 :U ..
@@ -4123,27 +4152,120 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> 76 `c
 -> 65 `c
 -> 89 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
 -> 0 `c
 ..
 ]
-[; ;main.c: 29: const char DEMO_MESSAGE[] = "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY";
-"30
-[v _MESSAGE_LENGTH `Ci ~T0 @X0 1 e ]
-[i _MESSAGE_LENGTH
--> / -> # _DEMO_MESSAGE `ui -> # `uc `ui `i
+[; ;main.c: 30: const uint8_t DEMO_MESSAGE[] = "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY        ";
+"31
+[v _DEMO_DOTFLAG `Cuc ~T0 @X0 -> 0 `x e ]
+[i _DEMO_DOTFLAG
+:U ..
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 46 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 32 `c
+-> 0 `c
+..
 ]
-[; ;main.c: 30: const int MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
+[; ;main.c: 31: const uint8_t DEMO_DOTFLAG[] = "                           .                                                     ";
 "32
+[v _MESSAGE_LENGTH `Cui ~T0 @X0 1 e ]
+[i _MESSAGE_LENGTH
+-> -> / -> # _DEMO_MESSAGE `ui -> # `uc `ui `i `ui
+]
+[; ;main.c: 32: const uint16_t MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
+"34
 [v _led_stat `uc ~T0 @X0 1 e ]
-[; ;main.c: 32: uint8_t led_stat;
-"35
+[; ;main.c: 34: uint8_t led_stat;
+"37
 [v _segMap `ul ~T0 @X0 -> 9 `i e ]
 [i _segMap
 :U ..
-"36
--> -> 196863 `l `ul
-"37
--> -> 196863 `l `ul
 "38
 -> -> 196863 `l `ul
 "39
@@ -4156,36 +4278,40 @@ Version 3.2 HI-TECH Software Intermediate Code
 -> -> 196863 `l `ul
 "43
 -> -> 196863 `l `ul
+"44
+-> -> 196863 `l `ul
 "45
+-> -> 196863 `l `ul
+"47
 -> -> 196863 `l `ul
 ..
 ]
-[; ;main.c: 35: unsigned long segMap[9] = {
-[; ;main.c: 36: 0b110000000011111111,
-[; ;main.c: 37: 0b110000000011111111,
+[; ;main.c: 37: unsigned long segMap[9] = {
 [; ;main.c: 38: 0b110000000011111111,
 [; ;main.c: 39: 0b110000000011111111,
 [; ;main.c: 40: 0b110000000011111111,
 [; ;main.c: 41: 0b110000000011111111,
 [; ;main.c: 42: 0b110000000011111111,
 [; ;main.c: 43: 0b110000000011111111,
-[; ;main.c: 44: 0b110000000011111111
-[; ;main.c: 45: };
-"48
-[v _digitPtr `s ~T0 @X0 1 e ]
+[; ;main.c: 44: 0b110000000011111111,
+[; ;main.c: 45: 0b110000000011111111,
+[; ;main.c: 46: 0b110000000011111111
+[; ;main.c: 47: };
+"50
+[v _digitPtr `uc ~T0 @X0 1 e ]
 [i _digitPtr
--> -> 0 `i `s
+-> -> 0 `i `uc
 ]
-[; ;main.c: 48: short digitPtr = 0;
-"52
+[; ;main.c: 50: uint8_t digitPtr = 0;
+"54
 [v _showBinary `(v ~T0 @X0 1 ef1`i ]
 {
-[; ;main.c: 52: void showBinary(int input){
+[; ;main.c: 54: void showBinary(int input){
 [e :U _showBinary ]
 [v _input `i ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 53: for(int i = 0; i < 8; i++){
-"53
+[; ;main.c: 55: for(int i = 0; i < 8; i++){
+"55
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -4193,48 +4319,48 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 364  ]
 [e :U 363 ]
 {
-[; ;main.c: 54: if((input & (1 << i)) == 0){
-"54
+[; ;main.c: 56: if((input & (1 << i)) == 0){
+"56
 [e $ ! == & _input << -> 1 `i _i -> 0 `i 366  ]
 {
-[; ;main.c: 55: segMap[i] = ~(uint32_t)fontList[0x30];
-"55
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ -> *U + &U _fontList * -> -> -> 48 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-"56
+[; ;main.c: 57: segMap[i] = ~fontList[0x30];
+"57
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ *U + &U _fontList * -> -> -> 48 `i `ui `ux -> -> # *U &U _fontList `ui `ux ]
+"58
 }
-[; ;main.c: 56: }else{
+[; ;main.c: 58: }else{
 [e $U 367  ]
 [e :U 366 ]
 {
-[; ;main.c: 57: segMap[i] = ~(uint32_t)fontList[0x31];
-"57
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ -> *U + &U _fontList * -> -> -> 49 `i `ui `ux -> -> # *U &U _fontList `ui `ux `ul ]
-"58
+[; ;main.c: 59: segMap[i] = ~fontList[0x31];
+"59
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ *U + &U _fontList * -> -> -> 49 `i `ui `ux -> -> # *U &U _fontList `ui `ux ]
+"60
 }
 [e :U 367 ]
-"59
+"61
 }
-"53
+"55
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 8 `i 363  ]
 [e :U 364 ]
-"59
+"61
 }
-[; ;main.c: 58: }
-[; ;main.c: 59: }
 [; ;main.c: 60: }
-"60
+[; ;main.c: 61: }
+[; ;main.c: 62: }
+"62
 [e :UE 362 ]
 }
-"62
+"64
 [v _setMsg `(v ~T0 @X0 1 ef1`*uc ]
 {
-[; ;main.c: 62: void setMsg(char input[]) {
+[; ;main.c: 64: void setMsg(char input[]) {
 [e :U _setMsg ]
 [v _input `*uc ~T0 @X0 1 r1 ]
 [f ]
-[; ;main.c: 63: for (int i = 0; i < 9; i++) {
-"63
+[; ;main.c: 65: for (int i = 0; i < 9; i++) {
+"65
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
@@ -4242,330 +4368,387 @@ Version 3.2 HI-TECH Software Intermediate Code
 [e $U 370  ]
 [e :U 369 ]
 {
-[; ;main.c: 64: segMap[i] = ~(uint32_t)(fontList[input[i]] | (1 << 16));
-"64
-[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ -> | *U + &U _fontList * -> *U + _input * -> _i `x -> -> # *U _input `i `x `ux -> -> # *U &U _fontList `ui `ux -> << -> 1 `i -> 16 `i `ui `ul ]
-"65
+[; ;main.c: 66: segMap[i] = ~fontList[input[i]];
+"66
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ *U + &U _fontList * -> *U + _input * -> _i `x -> -> # *U _input `i `x `ux -> -> # *U &U _fontList `ui `ux ]
+"67
 }
-"63
+"65
 [e ++ _i -> 1 `i ]
 [e $ < _i -> 9 `i 369  ]
 [e :U 370 ]
-"65
+"67
 }
-[; ;main.c: 65: }
-[; ;main.c: 66: }
-"66
+[; ;main.c: 67: }
+[; ;main.c: 68: }
+"68
 [e :UE 368 ]
 }
-"68
-[v _tmrIsr `i ~T0 @X0 1 e ]
-[i _tmrIsr
--> 0 `i
-]
-[; ;main.c: 68: int tmrIsr = 0;
 "70
-[v _refreshShiftRegister `(v ~T0 @X0 1 ef1`i ]
+[v _setMsgWithDot `(v ~T0 @X0 1 ef2`*uc`*uc ]
 {
-[; ;main.c: 70: void refreshShiftRegister(int ptr) {
-[e :U _refreshShiftRegister ]
-[v _ptr `i ~T0 @X0 1 r1 ]
+[; ;main.c: 70: void setMsgWithDot(char message[], char dotFlag[]) {
+[e :U _setMsgWithDot ]
+[v _message `*uc ~T0 @X0 1 r1 ]
+[v _dotFlag `*uc ~T0 @X0 1 r2 ]
 [f ]
+[; ;main.c: 71: for (int i = 0; i < 9; i++) {
 "71
-[v _ledSelector `ui ~T0 @X0 1 a ]
-[; ;main.c: 71: uint16_t ledSelector = 0b1 << ptr;
-[e = _ledSelector -> << -> 1 `i _ptr `ui ]
-"73
-[v _map `ul ~T0 @X0 1 a ]
-[; ;main.c: 73: uint32_t map = ((segMap[ptr] & 0b11111111) << 24)
-[; ;main.c: 74: | ((segMap[ptr] & 0b1111111100000000) << 8)
-[; ;main.c: 75: | ((ledSelector & 0b0000000011) << 14)
-[; ;main.c: 76: | ((led_stat & 0b00001111) << 10)
-[; ;main.c: 77: | ((segMap[ptr] & 0b110000000000000000) >> 8)
-[; ;main.c: 78: | ((ledSelector & 0b1111111100) >> 2);
-"78
-[e = _map | | | | | << & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> -> 255 `i `l `ul -> 24 `i << & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> 65280 `ui `ul -> 8 `i -> << & _ledSelector -> -> 3 `i `ui -> 14 `i `ul -> -> << & -> _led_stat `i -> 15 `i -> 10 `i `l `ul >> & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> 196608 `l `ul -> 8 `i -> >> & _ledSelector -> -> 1020 `i `ui -> 2 `i `ul ]
-[; ;main.c: 80: for (int i = 0; i < 32; i++) {
-"80
 {
 [v _i `i ~T0 @X0 1 a ]
 [e = _i -> 0 `i ]
-[e $ < _i -> 32 `i 373  ]
+[e $ < _i -> 9 `i 373  ]
 [e $U 374  ]
 [e :U 373 ]
 {
-[; ;main.c: 81: LATBbits.LATB2 = (map >> i) & 1;
-"81
-[e = . . _LATBbits 0 2 -> & >> _map _i -> -> -> 1 `i `l `ul `uc ]
-[; ;main.c: 82: LATBbits.LATB3 = 1;
-"82
-[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
-[; ;main.c: 83: _delay((unsigned long)((1)*(20000000/4000000.0)));
-"83
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 84: LATBbits.LATB3 = 0;
-"84
-[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
-[; ;main.c: 85: _delay((unsigned long)((1)*(20000000/4000000.0)));
-"85
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
-"86
+[; ;main.c: 72: segMap[i] = ~(fontList[message[i]] | ((uint32_t)(dotFlag[i] == '.') << 16));
+"72
+[e = *U + &U _segMap * -> -> _i `ui `ux -> -> # *U &U _segMap `ui `ux ~ | *U + &U _fontList * -> *U + _message * -> _i `x -> -> # *U _message `i `x `ux -> -> # *U &U _fontList `ui `ux << -> -> == -> *U + _dotFlag * -> _i `x -> -> # *U _dotFlag `i `x `ui -> 46 `ui `i `ul -> 16 `i ]
+"73
 }
-"80
+"71
 [e ++ _i -> 1 `i ]
-[e $ < _i -> 32 `i 373  ]
+[e $ < _i -> 9 `i 373  ]
 [e :U 374 ]
-"86
+"73
 }
-[; ;main.c: 86: }
-[; ;main.c: 88: LATBbits.LATB4 = 1;
+[; ;main.c: 73: }
+[; ;main.c: 74: }
+"74
+[e :UE 372 ]
+}
+"76
+[v _tmrIsr `uc ~T0 @X0 1 e ]
+[i _tmrIsr
+-> -> 0 `i `uc
+]
+[; ;main.c: 76: uint8_t tmrIsr = 0;
+"78
+[v _refreshShiftRegister `(v ~T0 @X0 1 ef1`i ]
+{
+[; ;main.c: 78: void refreshShiftRegister(int ptr) {
+[e :U _refreshShiftRegister ]
+[v _ptr `i ~T0 @X0 1 r1 ]
+[f ]
+"79
+[v _ledSelector `ui ~T0 @X0 1 a ]
+[; ;main.c: 79: uint16_t ledSelector = 0b1 << ptr;
+[e = _ledSelector -> << -> 1 `i _ptr `ui ]
+"81
+[v _map `ul ~T0 @X0 1 a ]
+[; ;main.c: 81: uint32_t map = ((segMap[ptr] & 0b11111111) << 24)
+[; ;main.c: 82: | ((segMap[ptr] & 0b1111111100000000) << 8)
+[; ;main.c: 83: | ((ledSelector & 0b0000000011) << 14)
+[; ;main.c: 84: | ((led_stat & 0b00001111) << 10)
+[; ;main.c: 85: | ((segMap[ptr] & 0b110000000000000000) >> 8)
+[; ;main.c: 86: | ((ledSelector & 0b1111111100) >> 2);
+"86
+[e = _map | | | | | << & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> -> 255 `i `l `ul -> 24 `i << & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> 65280 `ui `ul -> 8 `i -> << & _ledSelector -> -> 3 `i `ui -> 14 `i `ul -> -> << & -> _led_stat `i -> 15 `i -> 10 `i `l `ul >> & *U + &U _segMap * -> -> _ptr `ui `ux -> -> # *U &U _segMap `ui `ux -> -> 196608 `l `ul -> 8 `i -> >> & _ledSelector -> -> 1020 `i `ui -> 2 `i `ul ]
+[; ;main.c: 88: for (int i = 0; i < 32; i++) {
 "88
-[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
-[; ;main.c: 89: _delay((unsigned long)((1)*(20000000/4000000.0)));
+{
+[v _i `i ~T0 @X0 1 a ]
+[e = _i -> 0 `i ]
+[e $ < _i -> 32 `i 377  ]
+[e $U 378  ]
+[e :U 377 ]
+{
+[; ;main.c: 89: LATBbits.LATB2 = (map >> i) & 1;
 "89
-[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 90: LATBbits.LATB4 = 0;
+[e = . . _LATBbits 0 2 -> & >> _map _i -> -> -> 1 `i `l `ul `uc ]
+[; ;main.c: 90: LATBbits.LATB3 = 1;
 "90
-[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[e = . . _LATBbits 0 3 -> -> 1 `i `uc ]
 [; ;main.c: 91: _delay((unsigned long)((1)*(20000000/4000000.0)));
 "91
 [e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
-[; ;main.c: 92: }
+[; ;main.c: 92: LATBbits.LATB3 = 0;
 "92
-[e :UE 372 ]
-}
-[v $root$_main `(v ~T0 @X0 0 e ]
+[e = . . _LATBbits 0 3 -> -> 0 `i `uc ]
+[; ;main.c: 93: _delay((unsigned long)((1)*(20000000/4000000.0)));
+"93
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
 "94
-[v _main `(v ~T0 @X0 1 ef ]
-{
-[; ;main.c: 94: void main(void) {
-[e :U _main ]
-[f ]
-[; ;main.c: 96: ADCON1 = 0b00001111;
-"96
-[e = _ADCON1 -> -> 15 `i `uc ]
-[; ;main.c: 97: CMCON = 0b00000111;
-"97
-[e = _CMCON -> -> 7 `i `uc ]
-[; ;main.c: 98: TRISA = 0b00000000;
-"98
-[e = _TRISA -> -> 0 `i `uc ]
-[; ;main.c: 99: TRISB = 0b00000000;
-"99
-[e = _TRISB -> -> 0 `i `uc ]
-[; ;main.c: 100: TRISC = 0b10000000;
-"100
-[e = _TRISC -> -> 128 `i `uc ]
-[; ;main.c: 101: TRISD = 0b00000000;
-"101
-[e = _TRISD -> -> 0 `i `uc ]
-[; ;main.c: 102: TRISE = 0b00000000;
-"102
-[e = _TRISE -> -> 0 `i `uc ]
-[; ;main.c: 104: LATCbits.LATC0 = 0;
-"104
-[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
-[; ;main.c: 105: LATCbits.LATC1 = 1;
-"105
-[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 107: LATCbits.LATC2 = 0;
-"107
-[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
-[; ;main.c: 110: LATAbits.LATA4 = 0;
-"110
-[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
-[; ;main.c: 111: LATAbits.LATA5 = 0;
-"111
-[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 124: T2CON = 0;
-"124
-[e = _T2CON -> -> 0 `i `uc ]
-[; ;main.c: 125: TMR2 = 0;
-"125
-[e = _TMR2 -> -> 0 `i `uc ]
-[; ;main.c: 126: PR2 = 125;
-"126
-[e = _PR2 -> -> 125 `i `uc ]
-[; ;main.c: 127: T2CON = 0b01111101;
-"127
-[e = _T2CON -> -> 125 `i `uc ]
-[; ;main.c: 130: PIE1bits.TMR2IE = 1;
-"130
-[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
-[; ;main.c: 131: INTCONbits.PEIE = 1;
-"131
-[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
-[; ;main.c: 132: INTCONbits.GIE = 1;
-"132
-[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
-[; ;main.c: 135: RCSTA = 0b10010000;
-"135
-[e = _RCSTA -> -> 144 `i `uc ]
-[; ;main.c: 136: BAUDCON = 0b00001000;
-"136
-[e = _BAUDCON -> -> 8 `i `uc ]
-[; ;main.c: 137: SPBRGH = 0;
-"137
-[e = _SPBRGH -> -> 0 `i `uc ]
-[; ;main.c: 138: BRGH = 0;
-"138
-[e = _BRGH -> -> 0 `i `b ]
-[; ;main.c: 139: SPBRG = 129;
-"139
-[e = _SPBRG -> -> 129 `i `uc ]
-[; ;main.c: 141: led_stat = 0b11110011;
-"141
-[e = _led_stat -> -> 243 `i `uc ]
-"143
-[v _RxData `uc ~T0 @X0 1 a ]
-"144
-[v _digitSelector `s ~T0 @X0 1 a ]
-"145
-[v _dotflag `ul ~T0 @X0 1 a ]
-[; ;main.c: 143: char RxData;
-[; ;main.c: 144: short digitSelector;
-[; ;main.c: 145: unsigned long dotflag;
-[; ;main.c: 148: setMsg("ABCDEFGHI");
-"148
-[e ( _setMsg (1 -> :s 1C `*uc ]
-[; ;main.c: 150: while (1){
-"150
+}
+"88
+[e ++ _i -> 1 `i ]
+[e $ < _i -> 32 `i 377  ]
 [e :U 378 ]
-{
-[; ;main.c: 152: if (PIR1bits.RCIF) {
-"152
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 380  ]
-{
-[; ;main.c: 153: PIR1bits.RCIF = 0;
-"153
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 154: RxData = RCREG;
-"154
-[e = _RxData _RCREG ]
-[; ;main.c: 157: if ((RxData & 0b11100000) == 0b11100000) {
-"157
-[e $ ! == & -> _RxData `i -> 224 `i -> 224 `i 381  ]
-{
-[; ;main.c: 158: digitSelector = (RxData & 0b00001111);
-"158
-[e = _digitSelector -> & -> _RxData `i -> 15 `i `s ]
-[; ;main.c: 159: dotflag = (RxData & 0b00010000) >> 4;
-"159
-[e = _dotflag -> -> >> & -> _RxData `i -> 16 `i -> 4 `i `l `ul ]
-[; ;main.c: 160: while (!PIR1bits.RCIF);
-"160
-[e $U 382  ]
-[e :U 383 ]
-[e :U 382 ]
-[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 383  ]
-[e :U 384 ]
-[; ;main.c: 161: PIR1bits.RCIF = 0;
-"161
-[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
-[; ;main.c: 162: RxData = RCREG;
-"162
-[e = _RxData _RCREG ]
-[; ;main.c: 163: if (digitSelector > 8) continue;
-"163
-[e $ ! > -> _digitSelector `i -> 8 `i 385  ]
-[e $U 377  ]
-[e :U 385 ]
-[; ;main.c: 164: if (RxData > 0b01111111) RxData = ~RxData;
-"164
-[e $ ! > -> _RxData `i -> 127 `i 386  ]
-[e = _RxData -> ~ -> _RxData `i `uc ]
-[e :U 386 ]
-[; ;main.c: 165: segMap[digitSelector] = ~(fontList[RxData] | (dotflag << 16));
-"165
-[e = *U + &U _segMap * -> -> _digitSelector `us `ux -> -> # *U &U _segMap `ui `ux ~ | -> *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux `ul << _dotflag -> 16 `i ]
-"166
+"94
 }
-[e :U 381 ]
-"167
-}
-[e :U 380 ]
-[; ;main.c: 166: }
-[; ;main.c: 167: }
-[; ;main.c: 168: if (tmrIsr == 1) {
-"168
-[e $ ! == _tmrIsr -> 1 `i 387  ]
-{
-[; ;main.c: 169: tmrIsr = 0;
-"169
-[e = _tmrIsr -> 0 `i ]
-"172
-}
-[e :U 387 ]
-"174
-}
-[e :U 377 ]
-"150
-[e $U 378  ]
-[e :U 379 ]
-[; ;main.c: 172: }
-[; ;main.c: 174: }
-[; ;main.c: 175: }
-"175
+[; ;main.c: 94: }
+[; ;main.c: 96: LATBbits.LATB4 = 1;
+"96
+[e = . . _LATBbits 0 4 -> -> 1 `i `uc ]
+[; ;main.c: 97: _delay((unsigned long)((1)*(20000000/4000000.0)));
+"97
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 98: LATBbits.LATB4 = 0;
+"98
+[e = . . _LATBbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 99: _delay((unsigned long)((1)*(20000000/4000000.0)));
+"99
+[e ( __delay (1 -> * -> -> 1 `i `d / -> -> 20000000 `l `d .4000000.0 `ul ]
+[; ;main.c: 100: }
+"100
 [e :UE 376 ]
 }
-"177
+[v $root$_main `(v ~T0 @X0 0 e ]
+"102
+[v _main `(v ~T0 @X0 1 ef ]
+{
+[; ;main.c: 102: void main(void) {
+[e :U _main ]
+[f ]
+[; ;main.c: 104: ADCON1 = 0b00001111;
+"104
+[e = _ADCON1 -> -> 15 `i `uc ]
+[; ;main.c: 105: CMCON = 0b00000111;
+"105
+[e = _CMCON -> -> 7 `i `uc ]
+[; ;main.c: 106: TRISA = 0b00000000;
+"106
+[e = _TRISA -> -> 0 `i `uc ]
+[; ;main.c: 107: TRISB = 0b00000000;
+"107
+[e = _TRISB -> -> 0 `i `uc ]
+[; ;main.c: 108: TRISC = 0b10000000;
+"108
+[e = _TRISC -> -> 128 `i `uc ]
+[; ;main.c: 109: TRISD = 0b00000000;
+"109
+[e = _TRISD -> -> 0 `i `uc ]
+[; ;main.c: 110: TRISE = 0b00000000;
+"110
+[e = _TRISE -> -> 0 `i `uc ]
+[; ;main.c: 112: LATCbits.LATC0 = 0;
+"112
+[e = . . _LATCbits 0 0 -> -> 0 `i `uc ]
+[; ;main.c: 113: LATCbits.LATC1 = 1;
+"113
+[e = . . _LATCbits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 115: LATCbits.LATC2 = 0;
+"115
+[e = . . _LATCbits 0 2 -> -> 0 `i `uc ]
+[; ;main.c: 118: LATAbits.LATA4 = 0;
+"118
+[e = . . _LATAbits 0 4 -> -> 0 `i `uc ]
+[; ;main.c: 119: LATAbits.LATA5 = 0;
+"119
+[e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 130: T2CON = 0;
+"130
+[e = _T2CON -> -> 0 `i `uc ]
+[; ;main.c: 131: TMR2 = 0;
+"131
+[e = _TMR2 -> -> 0 `i `uc ]
+[; ;main.c: 132: PR2 = 125;
+"132
+[e = _PR2 -> -> 125 `i `uc ]
+[; ;main.c: 133: T2CON = 0b01111101;
+"133
+[e = _T2CON -> -> 125 `i `uc ]
+[; ;main.c: 136: PIE1bits.TMR2IE = 1;
+"136
+[e = . . _PIE1bits 0 1 -> -> 1 `i `uc ]
+[; ;main.c: 137: INTCONbits.PEIE = 1;
+"137
+[e = . . _INTCONbits 1 6 -> -> 1 `i `uc ]
+[; ;main.c: 138: INTCONbits.GIE = 1;
+"138
+[e = . . _INTCONbits 1 7 -> -> 1 `i `uc ]
+[; ;main.c: 141: RCSTA = 0b10010000;
+"141
+[e = _RCSTA -> -> 144 `i `uc ]
+[; ;main.c: 142: BAUDCON = 0b00001000;
+"142
+[e = _BAUDCON -> -> 8 `i `uc ]
+[; ;main.c: 143: SPBRGH = 0;
+"143
+[e = _SPBRGH -> -> 0 `i `uc ]
+[; ;main.c: 144: BRGH = 0;
+"144
+[e = _BRGH -> -> 0 `i `b ]
+[; ;main.c: 145: SPBRG = 129;
+"145
+[e = _SPBRG -> -> 129 `i `uc ]
+[; ;main.c: 147: led_stat = 0b11110011;
+"147
+[e = _led_stat -> -> 243 `i `uc ]
+"149
+[v _RxData `uc ~T0 @X0 1 a ]
+"150
+[v _digitSelector `uc ~T0 @X0 1 a ]
+"151
+[v _dotflag `ul ~T0 @X0 1 a ]
+[; ;main.c: 149: uint8_t RxData;
+[; ;main.c: 150: uint8_t digitSelector;
+[; ;main.c: 151: uint32_t dotflag;
+[; ;main.c: 154: while (1){
+"154
+[e :U 382 ]
+{
+[; ;main.c: 156: if (PIR1bits.RCIF) {
+"156
+[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 384  ]
+{
+[; ;main.c: 157: PIR1bits.RCIF = 0;
+"157
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 158: RxData = RCREG;
+"158
+[e = _RxData _RCREG ]
+[; ;main.c: 161: if ((RxData & 0b11100000) == 0b11100000) {
+"161
+[e $ ! == & -> _RxData `i -> 224 `i -> 224 `i 385  ]
+{
+[; ;main.c: 162: digitSelector = (RxData & 0b00001111);
+"162
+[e = _digitSelector -> & -> _RxData `i -> 15 `i `uc ]
+[; ;main.c: 163: dotflag = (RxData & 0b00010000) >> 4;
+"163
+[e = _dotflag -> -> >> & -> _RxData `i -> 16 `i -> 4 `i `l `ul ]
+[; ;main.c: 164: while (!PIR1bits.RCIF);
+"164
+[e $U 386  ]
+[e :U 387 ]
+[e :U 386 ]
+[e $ ! != -> . . _PIR1bits 0 5 `i -> -> -> 0 `i `Vuc `i 387  ]
+[e :U 388 ]
+[; ;main.c: 165: PIR1bits.RCIF = 0;
+"165
+[e = . . _PIR1bits 0 5 -> -> 0 `i `uc ]
+[; ;main.c: 166: RxData = RCREG;
+"166
+[e = _RxData _RCREG ]
+[; ;main.c: 167: if (digitSelector > 8) continue;
+"167
+[e $ ! > -> _digitSelector `i -> 8 `i 389  ]
+[e $U 381  ]
+[e :U 389 ]
+[; ;main.c: 168: if (RxData > 0b01111111) RxData = ~RxData;
+"168
+[e $ ! > -> _RxData `i -> 127 `i 390  ]
+[e = _RxData -> ~ -> _RxData `i `uc ]
+[e :U 390 ]
+[; ;main.c: 169: segMap[digitSelector] = ~(fontList[RxData] | (dotflag << 16));
+"169
+[e = *U + &U _segMap * -> _digitSelector `ux -> -> # *U &U _segMap `ui `ux ~ | *U + &U _fontList * -> _RxData `ux -> -> # *U &U _fontList `ui `ux << _dotflag -> 16 `i ]
+"170
+}
+[e :U 385 ]
+"171
+}
+[e :U 384 ]
+[; ;main.c: 170: }
+[; ;main.c: 171: }
+[; ;main.c: 172: if (tmrIsr == 1) {
+"172
+[e $ ! == -> _tmrIsr `i -> 1 `i 391  ]
+{
+[; ;main.c: 173: tmrIsr = 0;
+"173
+[e = _tmrIsr -> -> 0 `i `uc ]
+"176
+}
+[e :U 391 ]
+"178
+}
+[e :U 381 ]
+"154
+[e $U 382  ]
+[e :U 383 ]
+[; ;main.c: 176: }
+[; ;main.c: 178: }
+[; ;main.c: 179: }
+"179
+[e :UE 380 ]
+}
+"184
 [v _divisor `ui ~T0 @X0 1 e ]
 [i _divisor
 -> -> 0 `i `ui
 ]
-[; ;main.c: 177: unsigned int divisor = 0;
-"179
+[; ;main.c: 184: uint16_t divisor = 0;
+"185
+[v _display `uc ~T0 @X0 -> 9 `i e ]
+[; ;main.c: 185: uint8_t display[9];
+"186
+[v _disdot `uc ~T0 @X0 -> 9 `i e ]
+[; ;main.c: 186: uint8_t disdot[9];
+"187
+[v _writeItr `ui ~T0 @X0 1 e ]
+[i _writeItr
+-> -> 0 `i `ui
+]
+[; ;main.c: 187: uint16_t writeItr = 0;
+"189
 [v _timerfunc `(v ~T0 @X0 1 ef ]
 {
-[; ;main.c: 179: void timerfunc() {
+[; ;main.c: 189: void timerfunc() {
 [e :U _timerfunc ]
 [f ]
-[; ;main.c: 180: if (divisor++ == 100) {
-"180
-[e $ ! == ++ _divisor -> -> 1 `i `ui -> -> 100 `i `ui 389  ]
+[; ;main.c: 190: if (divisor++ == 500) {
+"190
+[e $ ! == ++ _divisor -> -> 1 `i `ui -> -> 500 `i `ui 393  ]
 {
-"182
+[; ;main.c: 191: divisor = 0;
+"191
+[e = _divisor -> -> 0 `i `ui ]
+[; ;main.c: 193: if (writeItr++ == MESSAGE_LENGTH-9) writeItr = 0;
+"193
+[e $ ! == ++ _writeItr -> -> 1 `i `ui - _MESSAGE_LENGTH -> -> 9 `i `ui 394  ]
+[e = _writeItr -> -> 0 `i `ui ]
+[e :U 394 ]
+[; ;main.c: 194: strncpy(display, DEMO_MESSAGE + writeItr, 9);
+"194
+[e ( _strncpy (3 , , &U _display + &U _DEMO_MESSAGE * -> _writeItr `ux -> -> # *U &U _DEMO_MESSAGE `ui `ux -> -> 9 `i `ui ]
+[; ;main.c: 195: strncpy(disdot, DEMO_DOTFLAG + writeItr, 9);
+"195
+[e ( _strncpy (3 , , &U _disdot + &U _DEMO_DOTFLAG * -> _writeItr `ux -> -> # *U &U _DEMO_DOTFLAG `ui `ux -> -> 9 `i `ui ]
+[; ;main.c: 197: setMsgWithDot(display, disdot);
+"197
+[e ( _setMsgWithDot (2 , &U _display &U _disdot ]
+"199
 }
-[e :U 389 ]
-[; ;main.c: 182: }
-[; ;main.c: 183: }
-"183
-[e :UE 388 ]
+[e :U 393 ]
+[; ;main.c: 199: }
+[; ;main.c: 200: }
+"200
+[e :UE 392 ]
 }
 [v $root$_isr `(v ~T0 @X0 0 e ]
-[v F3854 `(v ~T0 @X0 1 tf ]
-"186
-[v _isr `IF3854 ~T0 @X0 1 e ]
+[v F3945 `(v ~T0 @X0 1 tf ]
+"203
+[v _isr `IF3945 ~T0 @X0 1 e ]
 {
-[; ;main.c: 186: void interrupt isr(void) {
+[; ;main.c: 203: void interrupt isr(void) {
 [e :U _isr ]
 [f ]
-[; ;main.c: 187: if (PIR1bits.TMR2IF) {
-"187
-[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 391  ]
+[; ;main.c: 204: if (PIR1bits.TMR2IF) {
+"204
+[e $ ! != -> . . _PIR1bits 0 1 `i -> -> -> 0 `i `Vuc `i 396  ]
 {
-[; ;main.c: 188: PIR1bits.TMR2IF = 0;
-"188
+[; ;main.c: 205: PIR1bits.TMR2IF = 0;
+"205
 [e = . . _PIR1bits 0 1 -> -> 0 `i `uc ]
-[; ;main.c: 189: tmrIsr = 1;
-"189
-[e = _tmrIsr -> 1 `i ]
-[; ;main.c: 190: timerfunc();
-"190
+[; ;main.c: 206: tmrIsr = 1;
+"206
+[e = _tmrIsr -> -> 1 `i `uc ]
+[; ;main.c: 207: timerfunc();
+"207
 [e ( _timerfunc ..  ]
-[; ;main.c: 191: refreshShiftRegister(digitPtr);
-"191
+[; ;main.c: 208: refreshShiftRegister(digitPtr);
+"208
 [e ( _refreshShiftRegister (1 -> _digitPtr `i ]
-[; ;main.c: 192: digitPtr = (digitPtr+1)%9;
-"192
-[e = _digitPtr -> % + -> _digitPtr `i -> 1 `i -> 9 `i `s ]
-"193
+[; ;main.c: 209: digitPtr = (digitPtr+1)%9;
+"209
+[e = _digitPtr -> % + -> _digitPtr `i -> 1 `i -> 9 `i `uc ]
+"210
 }
-[e :U 391 ]
-[; ;main.c: 193: }
-[; ;main.c: 194: }
-"194
-[e :UE 390 ]
+[e :U 396 ]
+[; ;main.c: 210: }
+[; ;main.c: 211: }
+"211
+[e :UE 395 ]
 }
-[a 1C 65 66 67 68 69 70 71 72 73 0 ]
-

@@ -17,6 +17,7 @@
 
 #include "segFonts.h"
 #include <stdint.h>
+#include <string.h>
 
 #pragma config FOSC  = HS       // 20MHz Xtal(分周なし)
 #pragma config MCLRE = ON       // リセットピンを利用する
@@ -26,8 +27,9 @@
 #define _XTAL_FREQ 20000000
 
 
-const char DEMO_MESSAGE[] =  "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY";
-const int MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
+const uint8_t DEMO_MESSAGE[] =  "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY        ";
+const uint8_t DEMO_DOTFLAG[] =  "                           .                                                     ";
+const uint16_t MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 
 uint8_t  led_stat;
 
@@ -45,27 +47,33 @@ unsigned long segMap[9] = {
 };
 
 // 現在表示している桁数
-short digitPtr = 0;
+uint8_t digitPtr = 0;
 
 // (デバッグ用関数)
 // 引数の数字を二進数でディスプレイに表示する
 void showBinary(int input){
     for(int i = 0; i < 8; i++){
         if((input & (1 << i)) == 0){
-            segMap[i] = ~(uint32_t)fontList[0x30];
+            segMap[i] = ~fontList[0x30];
         }else{
-            segMap[i] = ~(uint32_t)fontList[0x31];
+            segMap[i] = ~fontList[0x31];
         }
     }
 }
 
 void setMsg(char input[]) {
     for (int i = 0; i < 9; i++) {
-        segMap[i] = ~(uint32_t)(fontList[input[i]] | (1 << 16));
+        segMap[i] = ~fontList[input[i]];
     }
 }
 
-int tmrIsr = 0;
+void setMsgWithDot(char message[], char dotFlag[]) {
+    for (int i = 0; i < 9; i++) {
+        segMap[i] = ~(fontList[message[i]] | ((uint32_t)(dotFlag[i] == '.') << 16));
+    }
+}
+
+uint8_t tmrIsr = 0;
 
 void refreshShiftRegister(int ptr) {
     uint16_t ledSelector = 0b1 << ptr;
@@ -118,8 +126,6 @@ void main(void) {
     A/D Control Register 2 (ADCON2)     (ADFM,-,ACQT2,ACQT1,ADCS2,ADCS1,ADCS0)
     */
 
-
-
     //タイマー設定。比較機が使えるTimer2を使う
     T2CON = 0;
     TMR2 = 0;
@@ -140,12 +146,10 @@ void main(void) {
 
     led_stat = 0b11110011;
 
-    char RxData;            // 受信データ用バッファ
-    short digitSelector;    // 書き換え桁数
-    unsigned long dotflag;  // ドットをつけるかどうか
+    uint8_t RxData;            // 受信データ用バッファ
+    uint8_t digitSelector;    // 書き換え桁数
+    uint32_t dotflag;  // ドットをつけるかどうか
     
-    
-    setMsg("ABCDEFGHI");
     
     while (1){
         
@@ -174,10 +178,23 @@ void main(void) {
     }
 }
 
-unsigned int divisor = 0;
+//const char DEMO_MESSAGE[] =  "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY";
+//const int MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
+
+uint16_t divisor = 0;
+uint8_t display[9];
+uint8_t disdot[9];
+uint16_t writeItr = 0;
 
 void timerfunc() {
-    if (divisor++ == 100) {
+    if (divisor++ == 500) {
+        divisor = 0;
+        
+        if (writeItr++ == MESSAGE_LENGTH-9) writeItr = 0;
+        strncpy(display, DEMO_MESSAGE + writeItr, 9);
+        strncpy(disdot,  DEMO_DOTFLAG + writeItr, 9);
+        
+        setMsgWithDot(display, disdot);
         
     }
 }

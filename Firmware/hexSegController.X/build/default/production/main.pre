@@ -4805,8 +4805,98 @@ extern __nonreentrant void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __nonreentrant void _delay3(unsigned char);
 
-# 21 "segFonts.h"
-unsigned int fontList[] = {
+# 13 "D:\Microchip\xc8\v1.45\include\stdint.h"
+typedef signed char int8_t;
+
+# 20
+typedef signed int int16_t;
+
+# 28
+typedef signed short long int int24_t;
+
+# 36
+typedef signed long int int32_t;
+
+# 43
+typedef unsigned char uint8_t;
+
+# 49
+typedef unsigned int uint16_t;
+
+# 56
+typedef unsigned short long int uint24_t;
+
+# 63
+typedef unsigned long int uint32_t;
+
+# 71
+typedef signed char int_least8_t;
+
+# 78
+typedef signed int int_least16_t;
+
+# 90
+typedef signed short long int int_least24_t;
+
+# 98
+typedef signed long int int_least32_t;
+
+# 105
+typedef unsigned char uint_least8_t;
+
+# 111
+typedef unsigned int uint_least16_t;
+
+# 121
+typedef unsigned short long int uint_least24_t;
+
+# 128
+typedef unsigned long int uint_least32_t;
+
+# 137
+typedef signed char int_fast8_t;
+
+# 144
+typedef signed int int_fast16_t;
+
+# 156
+typedef signed short long int int_fast24_t;
+
+# 164
+typedef signed long int int_fast32_t;
+
+# 171
+typedef unsigned char uint_fast8_t;
+
+# 177
+typedef unsigned int uint_fast16_t;
+
+# 187
+typedef unsigned short long int uint_fast24_t;
+
+# 194
+typedef unsigned long int uint_fast32_t;
+
+# 200
+typedef int32_t intmax_t;
+
+
+
+
+typedef uint32_t uintmax_t;
+
+
+
+
+typedef int16_t intptr_t;
+
+
+
+
+typedef uint16_t uintptr_t;
+
+# 23 "segFonts.h"
+uint32_t fontList[] = {
 0b00000000000000000,
 0b00000000000000000,
 0b00000000000000000,
@@ -4901,7 +4991,7 @@ unsigned int fontList[] = {
 0b00000000011010001,
 0b01000010000000000,
 
-# 116
+# 118
 0b00000000000000011,
 0b00000000000110000,
 0b01010101100000000,
@@ -4940,98 +5030,43 @@ unsigned int fontList[] = {
 0b00000000000000000,
 };
 
-# 13 "D:\Microchip\xc8\v1.45\include\stdint.h"
-typedef signed char int8_t;
+# 4 "D:\Microchip\xc8\v1.45\include\__size_t.h"
+typedef unsigned size_t;
 
-# 20
-typedef signed int int16_t;
-
-# 28
-typedef signed short long int int24_t;
+# 14 "D:\Microchip\xc8\v1.45\include\string.h"
+extern void * memcpy(void *, const void *, size_t);
+extern void * memmove(void *, const void *, size_t);
+extern void * memset(void *, int, size_t);
 
 # 36
-typedef signed long int int32_t;
-
-# 43
-typedef unsigned char uint8_t;
-
-# 49
-typedef unsigned int uint16_t;
-
-# 56
-typedef unsigned short long int uint24_t;
-
-# 63
-typedef unsigned long int uint32_t;
-
-# 71
-typedef signed char int_least8_t;
-
-# 78
-typedef signed int int_least16_t;
-
-# 90
-typedef signed short long int int_least24_t;
-
-# 98
-typedef signed long int int_least32_t;
-
-# 105
-typedef unsigned char uint_least8_t;
-
-# 111
-typedef unsigned int uint_least16_t;
-
-# 121
-typedef unsigned short long int uint_least24_t;
-
-# 128
-typedef unsigned long int uint_least32_t;
-
-# 137
-typedef signed char int_fast8_t;
-
-# 144
-typedef signed int int_fast16_t;
-
-# 156
-typedef signed short long int int_fast24_t;
-
-# 164
-typedef signed long int int_fast32_t;
-
-# 171
-typedef unsigned char uint_fast8_t;
-
-# 177
-typedef unsigned int uint_fast16_t;
-
-# 187
-typedef unsigned short long int uint_fast24_t;
-
-# 194
-typedef unsigned long int uint_fast32_t;
-
-# 200
-typedef int32_t intmax_t;
+extern char * strcat(char *, const char *);
+extern char * strcpy(char *, const char *);
+extern char * strncat(char *, const char *, size_t);
+extern char * strncpy(char *, const char *, size_t);
+extern char * strdup(const char *);
+extern char * strtok(char *, const char *);
 
 
+extern int memcmp(const void *, const void *, size_t);
+extern int strcmp(const char *, const char *);
+extern int stricmp(const char *, const char *);
+extern int strncmp(const char *, const char *, size_t);
+extern int strnicmp(const char *, const char *, size_t);
+extern void * memchr(const void *, int, size_t);
+extern size_t strcspn(const char *, const char *);
+extern char * strpbrk(const char *, const char *);
+extern size_t strspn(const char *, const char *);
+extern char * strstr(const char *, const char *);
+extern char * stristr(const char *, const char *);
+extern char * strerror(int);
+extern size_t strlen(const char *);
+extern char * strchr(const char *, int);
+extern char * strichr(const char *, int);
+extern char * strrchr(const char *, int);
+extern char * strrichr(const char *, int);
 
 
-typedef uint32_t uintmax_t;
-
-
-
-
-typedef int16_t intptr_t;
-
-
-
-
-typedef uint16_t uintptr_t;
-
-
-# 21 "main.c"
+# 22 "main.c"
 #pragma config FOSC = HS
 #pragma config MCLRE = ON
 #pragma config LVP = OFF
@@ -5040,8 +5075,9 @@ typedef uint16_t uintptr_t;
 
 
 
-const char DEMO_MESSAGE[] = "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY";
-const int MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
+const uint8_t DEMO_MESSAGE[] = "MAKER FAIRE TOKYO 2018 HTLABNET BOOTH! THIS IS 16 SEGMENT 9 DIGIT DISPLAY        ";
+const uint8_t DEMO_DOTFLAG[] = "                           .                                                     ";
+const uint16_t MESSAGE_LENGTH = (int)(sizeof(DEMO_MESSAGE)/sizeof(char));
 
 uint8_t led_stat;
 
@@ -5059,27 +5095,33 @@ unsigned long segMap[9] = {
 };
 
 
-short digitPtr = 0;
+uint8_t digitPtr = 0;
 
 
 
 void showBinary(int input){
 for(int i = 0; i < 8; i++){
 if((input & (1 << i)) == 0){
-segMap[i] = ~(uint32_t)fontList[0x30];
+segMap[i] = ~fontList[0x30];
 }else{
-segMap[i] = ~(uint32_t)fontList[0x31];
+segMap[i] = ~fontList[0x31];
 }
 }
 }
 
 void setMsg(char input[]) {
 for (int i = 0; i < 9; i++) {
-segMap[i] = ~(uint32_t)(fontList[input[i]] | (1 << 16));
+segMap[i] = ~fontList[input[i]];
 }
 }
 
-int tmrIsr = 0;
+void setMsgWithDot(char message[], char dotFlag[]) {
+for (int i = 0; i < 9; i++) {
+segMap[i] = ~(fontList[message[i]] | ((uint32_t)(dotFlag[i] == '.') << 16));
+}
+}
+
+uint8_t tmrIsr = 0;
 
 void refreshShiftRegister(int ptr) {
 uint16_t ledSelector = 0b1 << ptr;
@@ -5124,7 +5166,7 @@ LATCbits.LATC2 = 0;
 LATAbits.LATA4 = 0;
 LATAbits.LATA5 = 0;
 
-# 124
+# 130
 T2CON = 0;
 TMR2 = 0;
 PR2 = 125;
@@ -5144,12 +5186,10 @@ SPBRG = 129;
 
 led_stat = 0b11110011;
 
-char RxData;
-short digitSelector;
-unsigned long dotflag;
+uint8_t RxData;
+uint8_t digitSelector;
+uint32_t dotflag;
 
-
-setMsg("ABCDEFGHI");
 
 while (1){
 
@@ -5178,10 +5218,23 @@ tmrIsr = 0;
 }
 }
 
-unsigned int divisor = 0;
+
+
+
+uint16_t divisor = 0;
+uint8_t display[9];
+uint8_t disdot[9];
+uint16_t writeItr = 0;
 
 void timerfunc() {
-if (divisor++ == 100) {
+if (divisor++ == 500) {
+divisor = 0;
+
+if (writeItr++ == MESSAGE_LENGTH-9) writeItr = 0;
+strncpy(display, DEMO_MESSAGE + writeItr, 9);
+strncpy(disdot, DEMO_DOTFLAG + writeItr, 9);
+
+setMsgWithDot(display, disdot);
 
 }
 }
